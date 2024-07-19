@@ -1,0 +1,159 @@
+const { AgCharts } = agCharts;
+
+const dateFormatter = new Intl.DateTimeFormat("en-US");
+const tooltip = {
+    renderer: ({ title, datum, xKey, yKey }) => ({
+        title,
+        content: `${datum[xKey]} : ${datum[yKey].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} %`,
+    }),
+};
+
+const options = {
+    container: document.getElementById("myChart"),
+    data: getData(),
+    theme: 'ag-default-dark',
+
+    title: {
+        text: "CPU 사용률",
+        color: '#FFFFFF',
+        enabled: false,
+    },
+    /*
+    footnote: {
+        text: "Source: Department for Business, Energy & Industrial Strategy",
+    },
+    */
+    background: {
+        fill: 'rgb(20, 20, 20)',
+    },
+    legend: {
+        item: {
+            label: {
+                fontSize: 14,
+                //fontStyle: 'italic',
+                //fontWeight: 'bold',
+                //fontFamily: 'Papyrus',
+                color: '#E5E5E5',
+                maxLength: 25,
+            },
+        },
+    },
+    series: [
+        {
+            type: "area",
+            xKey: "mm",
+            xName: "",
+            yKey: "d01",
+            yName: "CPU사용률",
+            tooltip,
+            stacked: true,
+        },
+    ],
+    axes: [
+        {
+            max : 200,
+            interval: { step: 45 },
+        },
+    ],
+};
+
+const chart = agCharts.AgCharts.create( options);
+
+function getData() {
+    const data = [
+        {
+            mm: 1,
+            d01: 100,
+            d02: 200,
+            d03: 130,
+            d04: 150,
+        },
+        {
+            mm: 2,
+            b04: 100,
+            b05: 200,
+            b11: 130,
+            b12: 150,
+        },
+        {
+            mm: 3,
+            b04: 100,
+            b05: 200,
+            b11: 130,
+            b12: 150,
+        },
+        {
+            mm: 4,
+            b04: 100,
+            b05: 200,
+            b11: 130,
+            b12: 150,
+        },
+        {
+            mm: 1,
+            b04: 100,
+            b05: 200,
+            b11: 130,
+            b12: 150,
+        },
+        {
+            mm: 5,
+            b04: 100,
+            b05: 200,
+            b11: 130,
+            b12: 150,
+        },
+        {
+            mm: 6,
+            b04: 100,
+            b05: 200,
+            b11: 130,
+            b12: 150,
+        },
+        {
+            mm: 7,
+            b04: 100,
+            b05: 200,
+            b11: 130,
+            b12: 150,
+        },
+        {
+            mm: 8,
+            b04: 100,
+            b05: 200,
+            b11: 130,
+            b12: 150,
+        },
+        {
+            mm: 9,
+            b04: 100,
+            b05: 200,
+            b11: 130,
+            b12: 150,
+        },
+        {
+            mm: 10,
+            b04: 100,
+            b05: 200,
+            b11: 130,
+            b12: 150,
+        },
+        {
+            mm: 11,
+            b04: 100,
+            b05: 200,
+            b11: 130,
+            b12: 150,
+        },
+        {
+            mm: 12,
+            b04: 100,
+            b05: 200,
+            b11: 130,
+            b12: 150,
+        },
+    ];
+
+    return data;
+}
+

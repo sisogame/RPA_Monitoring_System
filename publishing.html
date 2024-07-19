@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<meta charset="utf-8">
+	<title>Web - INDEX </title>
+	<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+	<style type="text/css">
+		body{font-size: 13px;}
+		a{text-decoration: none;}
+		h2{display: inline-block; cursor: pointer;}
+		table{width: 100%; table-layout: fixed; margin: 0; padding: 0; border-collapse: separate; border-spacing: 0}
+		table tr th{border-bottom: 1px solid #eee; border-left: solid #eee; padding: 10px 0; background: #544E91; color: #fff; font-weight: bold;}
+		table tr td{border-bottom: 1px solid #eee; border-left: solid #eee; padding: 6px 10px}
+		.status{text-align: center; color: #3366ff}
+	</style>
+
+</head>
+
+<body>
+	<div id="wrap">
+		<h1>현대삼호 RPA Monitoring System</h1>
+
+		<table class="listTbl" summary="코딩 파일 리스트">
+			<caption></caption>
+			<colgroup>
+				<col width="200px" />
+				<col width="200px" />
+				<col width="400px" />
+				<col width="80px" />
+				<col width="" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th>1depth</th>
+					<th>2depth</th>
+					<th>URL</th>
+					<th>진행상태</th>
+					<th>비고</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>main</td>
+					<td>main-현대삼호.html</td>
+					<td><a href="현대삼호_down/main/현대삼호.html" target="_blank">현대삼호.html</a></td>
+					<td class="status">O</td>
+					<td> (예) gnb 수정, 컬러 변경</td>
+				</tr>
+				<!-- worker -->
+				<tr>
+					<td rowspan="4">worker</td>
+					<td>home</td>
+					<td><a href="현대삼호_down/worker/home/HS Home.html" target="_blank">HS Home.html</a></td>
+					<td class="status">x</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>공지사항</td>
+					<td><a href="현대삼호_down/worker/공지사항/HS 공지사항.html" target="_blank">HS 공지사항.html</a></td>
+					<td class="status">x</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>상시과제</td>
+					<td><a href="현대삼호_down/worker/상시과제/HS 상시과제제출.html" target="_blank">HS 상시과제제출.html</a></td>
+					<td class="status">x</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>작업현황</td>
+					<td><a href="현대삼호_down/worker/작업현황/HS RPA 과제별 작업현황.html" target="_blank">HS RPA 과제별 작업현황.html</a></td>
+					<td class="status">x</td>
+					<td></td>
+				</tr>
+
+				<!-- 대시보드 -->
+				<tr>
+					<td rowspan="3">대시보드</td>
+					<td>home</td>
+					<td><a href="현대삼호_down/대시보드/home/HS RPA Activity-Monitoring.html" target="_blank">HS RPA Activity-Monitoring.html</a></td>
+					<td class="status">x</td>
+					<td>각 항목 타이틀 폰트 사이즈 변경</td>
+				</tr>
+				<tr>
+					<td>가동률</td>
+					<td><a href="현대삼호_down/대시보드/가동률/HS RPA Activity-Monitoring.html" target="_blank">jHS RPA Activity-Monitoring.html</a></td>
+					<td class="status">x</td>
+					<td>디자인 대기중</td>
+				</tr>
+				<tr>
+					<td>리소스</td>
+					<td><a href="현대삼호_down/대시보드/리소스/HS RPA Resource-Monitoring.html" target="_blank">HS RPA Resource-Monitoring.html</a></td>
+					<td class="status">x</td>
+					<td>보류</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

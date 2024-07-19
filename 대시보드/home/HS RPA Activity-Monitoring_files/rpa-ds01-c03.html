@@ -1,0 +1,546 @@
+
+<!-- saved from url=(0060)http://localhost:5080/tt/ex/report/chart/rpa-ds01-c03.loader -->
+<html style="cursor: auto;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Main Dashboard</title>
+
+<style>
+/* Reset */
+
+[class^='ag-charts'],
+[class^='ag-charts']:focus,
+[class^='ag-charts']:after,
+[class^='ag-charts']:before {
+    box-sizing: border-box;
+    outline: none;
+}
+
+button[class^='ag-charts'] {
+    background: none;
+    border: 0;
+}
+
+
+
+/* Icons */
+
+[class^='ag-charts-icon'] {
+    display: block;
+    /* speak: none; */
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    background-color: currentColor;
+}
+
+.ag-charts-icon-zoom-in {
+    mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXpvb20taW4iPjxjaXJjbGUgY3g9IjExIiBjeT0iMTEiIHI9IjgiLz48bGluZSB4MT0iMjEiIHgyPSIxNi42NSIgeTE9IjIxIiB5Mj0iMTYuNjUiLz48bGluZSB4MT0iMTEiIHgyPSIxMSIgeTE9IjgiIHkyPSIxNCIvPjxsaW5lIHgxPSI4IiB4Mj0iMTQiIHkxPSIxMSIgeTI9IjExIi8+PC9zdmc+);
+}
+
+.ag-charts-icon-zoom-out {
+    mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXpvb20tb3V0Ij48Y2lyY2xlIGN4PSIxMSIgY3k9IjExIiByPSI4Ii8+PGxpbmUgeDE9IjIxIiB4Mj0iMTYuNjUiIHkxPSIyMSIgeTI9IjE2LjY1Ii8+PGxpbmUgeDE9IjgiIHgyPSIxNCIgeTE9IjExIiB5Mj0iMTEiLz48L3N2Zz4=);
+}
+
+.ag-charts-icon-reset {
+    mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXJvdGF0ZS1jY3ciPjxwYXRoIGQ9Ik0zIDEyYTkgOSAwIDEgMCA5LTkgOS43NSA5Ljc1IDAgMCAwLTYuNzQgMi43NEwzIDgiLz48cGF0aCBkPSJNMyAzdjVoNSIvPjwvc3ZnPg==);
+}
+
+.ag-charts-icon-pan-left {
+    mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWNoZXZyb24tbGVmdCI+PHBhdGggZD0ibTE1IDE4LTYtNiA2LTYiLz48L3N2Zz4=);
+}
+
+.ag-charts-icon-pan-right {
+    mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWNoZXZyb24tcmlnaHQiPjxwYXRoIGQ9Im05IDE4IDYtNi02LTYiLz48L3N2Zz4=);
+}
+
+.ag-charts-icon-pan-start {
+    mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWNoZXZyb24tZmlyc3QiPjxwYXRoIGQ9Im0xNyAxOC02LTYgNi02Ii8+PHBhdGggZD0iTTcgNnYxMiIvPjwvc3ZnPg==);
+}
+
+.ag-charts-icon-pan-end {
+    mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWNoZXZyb24tbGFzdCI+PHBhdGggZD0ibTcgMTggNi02LTYtNiIvPjxwYXRoIGQ9Ik0xNyA2djEyIi8+PC9zdmc+);
+}
+
+
+
+/* AG Charts Theme Default */
+
+.ag-charts-theme-default,
+.ag-charts-theme-default-dark {
+    /* Colors */
+    --ag-charts-active-color: var(--ag-active-color, #2196f3);
+    --ag-charts-background-color: var(--ag-background-color, #fff);
+    --ag-charts-foreground-color: var(--ag-foreground-color, #181d1f);
+    --ag-charts-border-color: var(--ag-border-color, #dddddd);
+
+    /* Sizing */
+    --ag-charts-font-size: var(--ag-font-size, 14px);
+    --ag-charts-size: var(--ag-grid-size, 8px);
+
+    /* Borders */
+    --ag-charts-border: var(--ag-borders, solid 1px);
+    --ag-charts-border-critical: var(--ag-borders-critical, solid 1px);
+
+    /* Toolbar */
+    --ag-charts-toolbar-foreground-color: var(--ag-header-foreground-color, var(--ag-charts-foreground-color));
+    --ag-charts-toolbar-background-color: var(
+        --ag-header-background-color,
+        color-mix(in srgb, var(--ag-charts-background-color), var(--ag-charts-foreground-color) 2%)
+    );
+    --ag-charts-toolbar-size: var(--ag-header-height, 48px);
+    --ag-charts-toolbar-padding: calc(var(--ag-charts-size) * 2);
+    --ag-charts-toolbar-border: var(--ag-charts-border, solid 1px) var(--ag-charts-border-color);
+    --ag-charts-toolbar-border-critical: var(--ag-charts-border-critical, solid 1px) var(--ag-charts-border-color);
+    --ag-charts-toolbar-hover-color: color-mix(in srgb, var(--ag-charts-background-color), var(--ag-charts-active-color) 12%);
+    --ag-charts-toolbar-disabled-foreground-color: var(
+        --ag-disabled-foreground-color,
+        color-mix(in srgb, transparent, var(--ag-charts-toolbar-foreground-color) 50%)
+    );
+    --ag-charts-toolbar-disabled-background-color: var(
+        --ag-input-disabled-background-color,
+        color-mix(in srgb, var(--ag-charts-toolbar-background-color), var(--ag-charts-toolbar-foreground-color) 6%)
+    );
+    --ag-charts-toolbar-gap: var(--ag-charts-size);
+
+    /* Buttons */
+    --ag-charts-button-padding: var(--ag-charts-size);
+    --ag-charts-button-radius: var(--ag-border-radius, 4px);
+
+    /* Focus Indicator */
+    --ag-charts-focus-border: solid 2px var(--ag-input-focus-border-color, var(--ag-charts-active-color));
+    --ag-charts-focus-border-shadow: var(--ag-input-focus-box-shadow, 0 0 0 3px color-mix(in srgb, transparent, var(--ag-charts-focus-border) 47%));
+
+    /* Icons */
+    --ag-charts-icon-font-family: 'agChartsDefault';
+    --ag-charts-icon-font-weight: normal;
+    --ag-charts-icon-font-color: color-mix(in srgb, transparent, var(--ag-charts-foreground-color), 90%);
+}
+
+
+
+/* AG Charts Theme Default Dark */
+
+.ag-charts-theme-default-dark {
+    /* Colors */
+    --ag-charts-background-color: var(--ag-background-color, color-mix(in srgb, #fff, #182230 97%));
+    --ag-charts-foreground-color: var(--ag-foreground-color, #fff);
+    --ag-charts-border-color: var(--ag-border-color, rgba(255, 255, 255, 0.16));
+    --ag-charts-hover-color: var(
+        --ag-row-hover-color,
+        color-mix(in srgb, transparent, var(--ag-charts-active-color) 20%)
+    );
+
+    /* Toolbar */
+    --ag-charts-toolbar-background-color: var(--ag-header-background-color, color-mix(in srgb, #fff, #182230 93%));
+}
+
+
+</style><style>
+.ag-charts-toolbar {
+    align-items: center;
+    background: var(--ag-charts-toolbar-background-color);
+    border-bottom: var(--ag-charts-toolbar-border-critical);
+    border-top: var(--ag-charts-toolbar-border-critical);
+    border-left: var(--ag-charts-toolbar-border);
+    border-right: var(--ag-charts-toolbar-border);
+    display: flex;
+    flex-wrap: nowrap;
+    opacity: 1;
+    position: absolute;
+    transform: translateY(0);
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.ag-charts-toolbar--hidden,
+.ag-charts-toolbar--prevent-flash {
+    visibility: hidden;
+}
+
+.ag-charts-toolbar--floating-hidden {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.ag-charts-toolbar--top,
+.ag-charts-toolbar--bottom {
+    flex-direction: row;
+    height: var(--ag-charts-toolbar-size);
+    padding: 0 var(--ag-charts-toolbar-padding);
+    width: 100%;
+}
+
+.ag-charts-toolbar--left,
+.ag-charts-toolbar--right {
+    flex-direction: column;
+    padding: var(--ag-charts-toolbar-padding) 0;
+    width: var(--ag-charts-toolbar-size);
+}
+
+.ag-charts-toolbar--floating-top,
+.ag-charts-toolbar--floating-bottom {
+    background: none;
+    border: none;
+    flex-direction: row;
+    height: var(--ag-charts-toolbar-size);
+    overflow: hidden;
+    padding: 0 var(--ag-charts-toolbar-padding);
+    pointer-events: none;
+    width: 100%;
+}
+
+.ag-charts-toolbar__align {
+    display: flex;
+    flex-direction: inherit;
+    flex-wrap: inherit;
+    max-width: 100%;
+}
+
+.ag-charts-toolbar__align--center,
+.ag-charts-toolbar__align--end {
+    margin-left: auto;
+}
+
+.ag-charts-toolbar--left .ag-charts-toolbar__align--center,
+.ag-charts-toolbar--left .ag-charts-toolbar__align--end,
+.ag-charts-toolbar--right .ag-charts-toolbar__align--center,
+.ag-charts-toolbar--right .ag-charts-toolbar__align--end {
+    margin-left: 0;
+    margin-top: auto;
+}
+
+.ag-charts-toolbar--floating-top .ag-charts-toolbar__align,
+.ag-charts-toolbar--floating-bottom .ag-charts-toolbar__align {
+    gap: var(--ag-charts-toolbar-gap);
+    transition: transform 0.4s ease-in-out;
+}
+
+.ag-charts-toolbar__button {
+    align-items: center;
+    border-radius: var(--ag-charts-button-radius);
+    color: var(--ag-charts-toolbar-foreground-color);
+    display: flex;
+    font-size: 14px;
+    font-weight: 500;
+    justify-content: center;
+    margin: 0;
+    padding: var(--ag-charts-button-padding);
+    pointer-events: all;
+    transition: background-color .25s ease-in-out;
+}
+
+.ag-charts-toolbar--left .ag-charts-toolbar__button,
+.ag-charts-toolbar--right .ag-charts-toolbar__button {
+    height: var(--ag-charts-toolbar-size);
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.ag-charts-toolbar--floating-top .ag-charts-toolbar__button,
+.ag-charts-toolbar--floating-bottom .ag-charts-toolbar__button {
+    background: var(--ag-charts-toolbar-background-color);
+    border: var(--ag-charts-toolbar-border-critical);
+}
+
+.ag-charts-toolbar__button--hidden {
+    display: none;
+}
+
+.ag-charts-toolbar__button:hover {
+    background: var(--ag-charts-toolbar-hover-color);
+}
+
+.ag-charts-toolbar__button:disabled {
+    background: var(--ag-charts-toolbar-disabled-background-color);
+    color: var(--ag-charts-toolbar-disabled-foreground-color);
+}
+
+.ag-charts-toolbar__button:not([disabled]) {
+    cursor: pointer;
+}
+
+.ag-charts-toolbar__icon {
+    height: 1.2em;
+    width: 1.2em;
+}
+
+.ag-charts-toolbar__icon + .ag-charts-toolbar__label {
+    margin-left: var(--ag-charts-size);
+}
+
+.ag-charts-toolbar__icon,
+.ag-charts-toolbar__label {
+    pointer-events: none;
+}
+
+</style><style>
+.ag-chart-tooltip {
+    transition: transform 0.1s ease;
+    max-width: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 99999;
+    font: 12px Verdana, sans-serif;
+    color: rgb(70, 70, 70);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.ag-chart-tooltip-wrap-always {
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: none;
+}
+
+.ag-chart-tooltip-wrap-hyphenate {
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+}
+
+.ag-chart-tooltip-wrap-on-space {
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+.ag-chart-tooltip-wrap-never {
+    white-space: pre;
+    text-overflow: ellipsis;
+}
+
+.ag-chart-tooltip-no-interaction {
+    pointer-events: none;
+    user-select: none;
+}
+
+.ag-chart-tooltip-no-animation {
+    transition: none !important;
+}
+
+.ag-chart-tooltip-hidden {
+    visibility: hidden;
+}
+
+.ag-chart-tooltip-title {
+    overflow: hidden;
+    position: relative;
+    padding: 8px 14px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    color: white;
+    background-color: #888888;
+    z-index: 1;
+    text-overflow: inherit;
+}
+
+.ag-chart-tooltip-title:only-child {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.ag-chart-tooltip-content {
+    overflow: hidden;
+    padding: 6px 14px;
+    line-height: 1.7em;
+    background: white;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    text-overflow: inherit;
+}
+
+.ag-chart-tooltip-arrow::before {
+    content: "";
+
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    border: 5px solid #d9d9d9;
+
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+
+    width: 0;
+    height: 0;
+
+    margin: 0 auto;
+}
+
+.ag-chart-tooltip-arrow::after {
+    content: "";
+
+    position: absolute;
+    top: calc(100% - 1px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    border: 5px solid white;
+
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+
+    width: 0;
+    height: 0;
+
+    margin: 0 auto;
+}
+
+.ag-chart-wrapper {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+</style><style>
+.ag-charts-focus.ag-charts-focus__wrapper {
+    position: relative;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+.ag-charts-focus.ag-charts-focus__indicator {
+    position: absolute;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+    border: var(--ag-charts-focus-border);
+    box-shadow: var(--ag-charts-focus-border-shadow);
+}
+
+.ag-charts-focus--hidden {
+    visibility: hidden;
+}
+</style><style>
+.ag-chart-wrapper {
+    touch-action: none;
+}
+</style></head>
+<body>
+
+<style>
+	#unit-label {
+		float: right;
+		position:absolute;
+		z-index:1000 !important;
+		background: transparent;
+		width: 100px !important;
+		height:20px !important;
+		color: #E5E5E5;
+		right: 40px;
+		top: -8px;
+		text-align:right;
+		line-height: 0.8rem;
+		font-size: 0.75rem;
+		padding:0;
+		font-weight: 600;
+	}
+
+</style>
+
+
+<p id="unit-label">단위:만원</p>
+
+<!---------------- 컨텐츠 시작 MN ---------------->
+<div id="myChart" style="background:black" data-ag-charts="">
+<div class="ag-chart-wrapper ag-charts-theme-default-dark" tabindex="0" style="position: relative; user-select: none; display: block; width: 100%; height: 100%;"><canvas width="485" height="384" style="position: absolute; display: block; width: 485px; height: 384px;" role="figure" aria-label="chart, 3 series, "><div class="ag-charts-aria-announcer" role="status" aria-live="assertive"></div></canvas><div class="ag-charts-focus ag-charts-focus__wrapper" style="width: 485px; height: 384px;"><div class="ag-charts-focus ag-charts-focus__indicator ag-charts-focus--hidden"></div></div><div class="ag-charts-toolbar ag-charts-toolbar--top ag-charts-toolbar--hidden" style="top: -48px; left: 10px; width: calc(100% - 20px);"><div class="ag-charts-toolbar__align ag-charts-toolbar__align--start"><button class="ag-charts-toolbar__button ag-charts-toolbar__button--hidden" data-toolbar-group="ranges" tabindex="-1" data-toolbar-value="2592000000"><span class="ag-charts-toolbar__label">1m</span></button><button class="ag-charts-toolbar__button ag-charts-toolbar__button--hidden" data-toolbar-group="ranges" tabindex="-1" data-toolbar-value="7776000000"><span class="ag-charts-toolbar__label">3m</span></button><button class="ag-charts-toolbar__button ag-charts-toolbar__button--hidden" data-toolbar-group="ranges" tabindex="-1" data-toolbar-value="15552000000"><span class="ag-charts-toolbar__label">6m</span></button><button class="ag-charts-toolbar__button ag-charts-toolbar__button--hidden" data-toolbar-group="ranges" tabindex="-1"><span class="ag-charts-toolbar__label">YTD</span></button><button class="ag-charts-toolbar__button ag-charts-toolbar__button--hidden" data-toolbar-group="ranges" tabindex="-1" data-toolbar-value="31536000000"><span class="ag-charts-toolbar__label">1y</span></button><button class="ag-charts-toolbar__button ag-charts-toolbar__button--hidden" data-toolbar-group="ranges" tabindex="-1"><span class="ag-charts-toolbar__label">All</span></button></div><div class="ag-charts-toolbar__align ag-charts-toolbar__align--center"></div><div class="ag-charts-toolbar__align ag-charts-toolbar__align--end"><button class="ag-charts-toolbar__button ag-charts-toolbar__button--hidden" data-toolbar-group="zoom" tabindex="-1" data-toolbar-value="zoom-out" title="Zoom out"><span class="ag-charts-icon-zoom-out ag-charts-toolbar__icon"></span></button><button class="ag-charts-toolbar__button ag-charts-toolbar__button--hidden" data-toolbar-group="zoom" tabindex="-1" data-toolbar-value="zoom-in" title="Zoom in"><span class="ag-charts-icon-zoom-in ag-charts-toolbar__icon"></span></button><button class="ag-charts-toolbar__button ag-charts-toolbar__button--hidden" data-toolbar-group="zoom" tabindex="-1" data-toolbar-value="pan-left" title="Pan left"><span class="ag-charts-icon-pan-left ag-charts-toolbar__icon"></span></button><button class="ag-charts-toolbar__button ag-charts-toolbar__button--hidden" data-toolbar-group="zoom" tabindex="-1" data-toolbar-value="pan-right" title="Pan right"><span class="ag-charts-icon-pan-right ag-charts-toolbar__icon"></span></button><button class="ag-charts-toolbar__button ag-charts-toolbar__button--hidden" data-toolbar-group="zoom" tabindex="-1" data-toolbar-value="pan-start" title="Pan to the start"><span class="ag-charts-icon-pan-start ag-charts-toolbar__icon"></span></button><button class="ag-charts-toolbar__button ag-charts-toolbar__button--hidden" data-toolbar-group="zoom" tabindex="-1" data-toolbar-value="pan-end" title="Pan to the end"><span class="ag-charts-icon-pan-end ag-charts-toolbar__icon"></span></button><button class="ag-charts-toolbar__button ag-charts-toolbar__button--hidden" data-toolbar-group="zoom" tabindex="-1" data-toolbar-value="reset" title="Reset the zoom"><span class="ag-charts-icon-reset ag-charts-toolbar__icon"></span></button></div></div><div class="ag-charts-toolbar ag-charts-toolbar--right ag-charts-toolbar--hidden" style="top: 30px; right: 10px; height: calc(100% - 40px);"><div class="ag-charts-toolbar__align ag-charts-toolbar__align--start"></div><div class="ag-charts-toolbar__align ag-charts-toolbar__align--center"></div><div class="ag-charts-toolbar__align ag-charts-toolbar__align--end"></div></div><div class="ag-charts-toolbar ag-charts-toolbar--bottom ag-charts-toolbar--hidden" style="bottom: 10px; left: 10px; width: calc(100% - 20px);"><div class="ag-charts-toolbar__align ag-charts-toolbar__align--start"></div><div class="ag-charts-toolbar__align ag-charts-toolbar__align--center"></div><div class="ag-charts-toolbar__align ag-charts-toolbar__align--end"></div></div><div class="ag-charts-toolbar ag-charts-toolbar--left ag-charts-toolbar--hidden" style="top: 20px; left: 10px; height: calc(100% - 40px);"><div class="ag-charts-toolbar__align ag-charts-toolbar__align--start"><button class="ag-charts-toolbar__button ag-charts-toolbar__button--hidden" data-toolbar-group="annotations" tabindex="-1" data-toolbar-value="line"><span class="ag-charts-toolbar__label">Li</span></button><button class="ag-charts-toolbar__button ag-charts-toolbar__button--hidden" data-toolbar-group="annotations" tabindex="-1" data-toolbar-value="parallel-channel"><span class="ag-charts-toolbar__label">PCh</span></button></div><div class="ag-charts-toolbar__align ag-charts-toolbar__align--center"></div><div class="ag-charts-toolbar__align ag-charts-toolbar__align--end"></div></div><div class="ag-charts-toolbar ag-charts-toolbar--floating-top ag-charts-toolbar--floating-hidden ag-charts-toolbar--hidden" style="top: 20px; padding-top: 10px;"><div class="ag-charts-toolbar__align ag-charts-toolbar__align--start"></div><div class="ag-charts-toolbar__align ag-charts-toolbar__align--center"></div><div class="ag-charts-toolbar__align ag-charts-toolbar__align--end"></div></div><div class="ag-charts-toolbar ag-charts-toolbar--floating-bottom ag-charts-toolbar--floating-hidden ag-charts-toolbar--hidden" style="top: 250px; padding-bottom: 10px;"><div class="ag-charts-toolbar__align ag-charts-toolbar__align--start"></div><div class="ag-charts-toolbar__align ag-charts-toolbar__align--center"></div><div class="ag-charts-toolbar__align ag-charts-toolbar__align--end"></div></div></div></div>
+
+<!----------------- 컨텐츠 끝 ------------------->
+
+
+<link rel="stylesheet" href="./index_rpa_ds01.css">
+
+<!----------------- (Style) AG_GRID CHART RESORCE ------------------->
+
+<script>
+	(function () {
+		const appLocation = "/gallery/examples/simple-line";
+
+		window.__basePath = appLocation;
+	})();
+</script>
+
+<script type="text/javascript" src="./jquery-1.12.3.js.다운로드"></script>
+<script src="./ag-charts-community.js.다운로드"></script>
+
+<script type="text/javascript" src="./tt_script_api.js.다운로드">"></script>
+<script type="text/javascript" src="./tt_script_common.js.다운로드">"></script>
+<script type="text/javascript" src="./ux.js.다운로드"></script>
+
+<script src="./main_rpa_ds01_3.js.다운로드"></script>
+
+<script src="./ttex_script_c1.js.다운로드"></script>
+
+
+
+<!----------------- Util Script ------------------->
+<script type="text/javascript">
+	var gcontextPath = "";
+
+	(function($) {
+		$(document).ready(function() {
+			btn_click_search();
+		});
+	}) (jQuery);
+
+	function result_search_data(list){
+
+		//options.data = list;
+		let series = [];
+		let sobj = {};
+
+		for( var i = 0; i < list.length; i++){
+			var obj = list[i];
+
+			sobj.type = 'line';
+			sobj.xKey = 'mm';
+			sobj.xName = '1월';
+			sobj.yKey = obj.si_dept;
+			sobj.yName = obj.si_dept;
+			series[i] = sobj;
+		}
+		//options.series = series;
+
+		let data = [];
+		let b04_sum, b05_sum, b11_sum, b12_sum;
+		let sum_act = 0;
+
+		for( var i = 0; i < list.length; i++){
+			var obj = list[i];
+			//console.log(obj);
+			let row = {};
+
+			row.mm = obj.mm;
+			row.d01 = obj.d01;
+			row.d02 = obj.d02;
+			row.d03 = obj.d03;
+			row.d04 = obj.d04;
+			row.d05 = obj.d05;
+			sum_act = sum_act + obj.d01 + obj.d02 + obj.d03 + obj.d04 + obj.d05;
+			row.sum_act = sum_act;
+
+			data[i] = row;
+
+			if( obj.unit != null) {
+				$('#unit-label').text(obj.unit);
+			}
+		}
+		options.data = JSON.parse( JSON.stringify(data));
+
+		agCharts.AgCharts.create( options)
+		console.log('---------------- option test');
+		console.log(agCharts );
+		console.log(options.series);
+		console.log(options.data);
+		//agCharts.options[data] = list;
+	}
+</script>
+
+
+
+
+
+<div class="ag-chart-tooltip ag-chart-tooltip-no-interaction ag-chart-tooltip-hidden ag-chart-tooltip-arrow ag-chart-dark-tooltip ag-chart-tooltip-wrap-hyphenate" aria-hidden="true"></div></body></html>
