@@ -79,7 +79,17 @@ body
     width:100%;font-family:'NotoKrR', '나눔 고딕', NotoKrR Gothic, "맑은 고딕", Malgun Gothic, '돋움',dotum,Helvetica,sans-serif;font-size:0.8em;line-height:150%;color:#666; letter-spacing:-0.5px; text-align:left;word-break:break-all;-ms-word-break:break-all;
     background:#FFFFFF;
 }
-html {margin:0;padding:0;border:0; background:#181d26; color: #aeaeae;}
+
+/* 20240719 modify[s] */
+html {
+  margin:0;
+  padding:0;
+  border:0; 
+  /* background: #181d26;*/
+  background: #1a1a1f; 
+  color: #aeaeae;}
+/* 20240719 modify[e] */
+
 h1, h2, h3, h4, h5, h6, form, fieldset, img {margin:0;padding:0;border:0; background:transparent; color: #aeaeae;}
 h1 {font-size:0.4rem;}
 h2 {font-size:0.75rem; font-weight: 600;}
@@ -90,7 +100,15 @@ h5 {font-size:1.2rem;}
 h6 {font-size:1.4rem;}
 
 /* 각 항목 타이틀 */
-h3.title{ font-size:0.95rem; font-weight: 600; color: #aeaeae ! important; }
+
+/* 20240719 modify 변경[s] */
+h3.title{ 
+    /* font-size:0.95rem;  */
+    font-size:16px; 
+    font-weight: 600; 
+    color: #aeaeae !important; 
+}
+/* 20240719 modify 변경[e] */
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block}
 
@@ -110,7 +128,9 @@ select {margin:0; }
 p {margin:0;padding:0; position:relative; left: 15px; top:5px; word-break:break-all}
 hr {display:none}
 pre {overflow-x:scroll;font-size:1.1em}
-a:link, a:visited {color:#000;text-decoration:none;  width:100%;}
+/* 20240719 modify [s] */
+a:link, a:visited {color:#000;text-decoration:none;  width:100%; height: 100%; display: inline-block;}
+/* 20240719 modify [e] */
 a:hover, a:focus, a:active {color:#000;text-decoration:none;}
 
 input{box-sizing:content-box !important;}
@@ -318,6 +338,33 @@ li{list-style:none; margin:0px; padding:0px;}
     height: 100%;
     display:inline-block;
 } */
+
+.tt-btn-box .graph-wrap {
+  border-radius: 35px;
+}
+
+.tt-btn-box .title.tt-wrap {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tt-wrap .btn-reg {
+  width: 20px;
+  height: 20px;
+}
+
+.tt-wrap .title {
+  color: #fff !important;
+}
+
+.graph-wrap ul {
+  background: #232328;
+}
+
+.graph-wrap {
+}
+
 /* 20240719 modify [e] */
 
 .btn-search {

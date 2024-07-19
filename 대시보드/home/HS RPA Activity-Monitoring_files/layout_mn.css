@@ -449,7 +449,20 @@ p.bul strong {color: #cecece; font-weight:500; margin-right:10px;}
 /*--------------------------------------------------------------*/
 /* 메인 : 버튼박스 */
 /*--------------------------------------------------------------*/
-.tt-btn-box { display:block; position:relative; width:94%; float:left; height:580px; border:1px solid #dcdcdc; border-bottom:1px solid #dcdcdc; padding:0 20px 20px 20px; }
+
+/* 20240719 modify [s] */
+.tt-btn-box { 
+  display:block; 
+  position:relative; 
+  width:94%; 
+  float:left; 
+  height:580px; 
+  /* border:1px solid #dcdcdc; 
+  border-bottom:1px solid #dcdcdc;  */
+  padding:0 20px 20px 20px; 
+}
+/* 20240719 modify [e] */
+
 .tt-btn-box ul { height:auto; width:100%; margin-left:50px; margin:0; padding:0;}
 .tt-btn-box ul li { display:block; float:left; width:100%; height:60px; text-align:center; font-size:0.8rem; line-height:40px; }
 .tt-btn-box ul li.title { display:block; float:left; width:100%; text-align:left; }
