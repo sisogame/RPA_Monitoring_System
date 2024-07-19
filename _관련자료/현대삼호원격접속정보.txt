@@ -1,0 +1,29 @@
+메인화면 : http://hsrpa.oop.kr
+
+대시보드 : 
+         http://hsrpa.oop.kr/ds
+         아이디 : dsuser / 12345678
+
+대시보드 운영관리자 : (ADMIN/ROOT)
+ http://hsrpa.oop.kr/mn
+         아이디 : dsadmin / 12345678
+
+대시보드 업무사용자 
+         http:/hsrpa.oop.kr/cu
+         아이디 : test / 12345678
+
+각 업무별 접근은 메인 화면 링크해 놨습니다.
+업무에 참고하시기 바랍니다.
+
+
+원격접속주소 : hsrpa.oop.kr:33883
+	아이디 : v1user
+	비  번 : v1user!@#$
+
+이즈파크 접속시 아이디패스워드
+	ID : infop99
+	PW : ~~Qhdkswnstn99## (~~뽀안준수99##)
+
+HD  현대삼호 통합인증 정보
+	iD : P998004
+	PW : q1w2e3r!128
