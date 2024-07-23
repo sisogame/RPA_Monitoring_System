@@ -98,8 +98,8 @@
 		}
 
 		#wrapper.move {
-			margin-left:120px;
-
+			/* margin-left:120px;*/
+			margin-left:150px;
 		}
 	</style>
 
@@ -111,21 +111,20 @@
 	<div class="wrap_slidebar">
 
 		<!--leftmenu-->
-		<div id="allmenu" style="width: 120px; height:100%; padding-left:0px; border-right:1px solid #2e2e2e;">
+		<div id="allmenu">
 
-			<div class="al_acc" style="width:260px; top:0; margin:0; padding:0; padding-left: 15px; height:60px; background:#181d26;">
-				<img src="./HS RPA Activity-Monitoring_files/left_menu_m.png" alt="" style="width:70px; margin-top:0px; margin-bottom:0; padding:0;">
+			<div class="al_acc navbarWrap">
 				<a href="http://localhost:5080/" class="logo-text">
-					<h3 style="color:#e5e5e5; font-weight:600; margin-top:0px; font-size:1.0rem; padding:0; line-height:150%;">RPA Monitoring System</h3>
-				</a>
+                        <img src="./HS RPA Activity-Monitoring_files/left_menu_m.png" alt="" class="navbar__logoimg">
+                        <h3 class="navbar__logo__tit">RPA Monitoring System</h3>
+                    </a>
 				<div style="display: none; width: 50px; height: 18px; margin-top:-28px; margin-left:180px; position:absolute; text-align:center; border-radius:5px; line-height:18px; border:1px solid #287dfa;">
 					<h2 style="color:#e5e5e5;">대시보드</h2>
 				</div>
 			</div>
 
 			<ul id="al_1dul" class="al_1dul" style="padding-top:0px;">
-				<li style="width:100%; height:1px; background:#0049C4 ;">
-				</li>
+				<li class="al_1dul_lnbTop"></li>
 			</ul>
 			<ul id="al_1dul" class="al_1dul" style="padding:0px 0 0 0;">
 				<li>
@@ -134,10 +133,10 @@
 
 						<!-- 기본 서비스 메뉴 -->
 						<li>
-							<a style="padding:0;" href="http://localhost:5080/tt/ds/home" class="st2"><img src="./HS RPA Activity-Monitoring_files/icon_028_on.png" title="RPA 메인 대시보드" alt="모니터링">
-								<p style="color:#aeaeae; font-size:0.8rem; float: left; font-weight:600;">모니터링</p>
-							</a>
-						</li>
+                                <a rel="모니터링" href="http://localhost:5080/tt/cu/home" class="st2">
+                                    <p class="ico-01">Home</p>
+                                </a>
+                            </li>
 					</ul>
 				</li>
 			</ul>
@@ -152,15 +151,15 @@
 
 						<!-- 기본 서비스 메뉴 -->
 						<li>
-							<a style="padding:0;" href="http://localhost:5080/tt/ds/page/dash-act" class="st2"><img src="./HS RPA Activity-Monitoring_files/icon_029.png" title="RPA Activity-Monitoring" alt="가동율모니터링">
-								<p style="color:#aeaeae; font-size:0.8rem; float: left; font-weight:600;">가동률</p>
-							</a>
-						</li>
+                                <a rel="가동율모니터링" href="http://localhost:5080/tt/ds/page/dash-act" class="st2">
+                                    <p class="ico-08">가동률</p>
+                                </a>
+                            </li>
 						<li>
-							<a style="padding:0;" href="http://localhost:5080/tt/ds/page/dash-sys" class="st2"><img src="./HS RPA Activity-Monitoring_files/icon_019.png" title="RPA Resource-Monitoring" alt="리소스모니터링">
-								<p style="color:#aeaeae; font-size:0.8rem; float: left; font-weight:600;">리소스</p>
-							</a>
-						</li>
+                                <a rel="리소스모니터링" href="http://localhost:5080/tt/ds/page/dash-sys" class="st2">
+                                    <p class="ico-09">리소스</p>
+                                </a>
+                            </li>
 					</ul>
 				</li>
 			</ul>
@@ -170,10 +169,10 @@
 				</li>
 			</ul>
 
-			<div class="al_bottom" style="width:80%; height: 25px; margin-top:5px; margin-left:7px; background:#222222; border-radius:5px;">
+			<div class="al_bottom">
 
-				<a href="http://localhost:5080/account/login/ds/logout?param_apps=" style="width:100%; font-size:0.7rem; line-height: 230%; color:#5E5E5E;">로그아웃</a>
-			</div>
+<a href="http://localhost:5080/account/login/cu/logout?param_apps=" >로그아웃</a>
+</div>
 		</div>
 		<!--leftmenu-->
 
@@ -185,14 +184,14 @@
 
 <div id="sb-site">
 
-	<header id="top_header">
-		<div class="navbar__menu" style="width:auto; height:40px; position:absolute; text-align:right; display:block; margin-left:225px; margin-top:15px; z-index:1000;">
-			<a href="http://localhost:5080/" id="url_btn_3" class="home__contact btn"> Main </a>
-			<a href="http://localhost:5080/cu" id="url_btn_3" class="home__contact btn"> WorkUser </a>
-			<a href="http://localhost:5080/ds" id="url_btn_1" class="home__contact btn" style="background: #0000FF; color: #E5E5E5 ! important; font-weight: 600;"> Dashboard </a>
-			<a href="http://localhost:5080/mn" id="url_btn_2" class="home__contact btn"> Management </a>
+	<header id="top_header" class="top_headerWrap">
+		<div class="navbar__menu" >
+			<a href="http://localhost:5080/" id="url_btn_3" class="home__contact btn btn-purple"> Main </a>
+                <a href="http://localhost:5080/cu" id="url_btn_3" class="home__contact btn btn-sky"> WorkUser </a>
+                <a href="http://localhost:5080/ds" id="url_btn_1" class="home__contact btn btn-bluePurple active"> Dashboard </a>
+                <a href="http://localhost:5080/mn" id="url_btn_2" class="home__contact btn btn-tea"> Management </a>
 		</div>
-		<div id="top_menu" style="width:20%; min-width:300px; float:right;">
+		<div id="top_menu" class="top_menu-right">
 
 			<div class="top_tit">
 
@@ -205,10 +204,8 @@
 				<div class="logo_home" style="display:none; float:left; margin-left:90px; margin-top: 14px;">
 					<img id="top_logo" src="./HS RPA Activity-Monitoring_files/login_logo.png" alt="HD" style="width:220px; margin:0; padding:0; top:50px; float:left; left:100px; opacity:1.0;">
 				</div>
-				<h3 style="width: 200px; height:16px; padding:0 10px 0 0; color:#c5c5c5; float:right; line-height: 10px; margin-left:130px; margin-top:37px; font-size:0.8rem; font-weight:400; text-align:right;">RPA Activity-Monitoring</h3>
-				<span class="top_home_btn">
-
-							</span>
+				<h3 class="gnb_btn_rt" >RPA Activity-Monitoring</h3>
+				<span class="top_home_btn"></span>
 			</div>
 		</div>
 
@@ -346,5 +343,23 @@
 	}) (jQuery);
 </script>
 
+
+<script>
+        document.addEventListener('DOMContentLoaded',
+            function () {
+                // 20240720 add script - ley
+                const navItems = document
+                    .querySelectorAll('.st2');
+
+                navItems.forEach(item => {
+                    item.addEventListener('click',
+                        function () {
+                            navItems.forEach(navItem => navItem
+                                .classList.remove('active'));
+                            this.classList.add('active');
+                        });
+                });
+            });
+    </script>
 <!-- template..account -->
 </body></html>

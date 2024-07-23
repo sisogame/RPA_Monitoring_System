@@ -422,8 +422,9 @@ button[class^='ag-charts'] {
 <body>
 
 <style>
-	#unit-label {
-		float: right;
+/* 20240722 modify [s] */
+#unit-label {
+            /* float: right;
 		position:absolute;
 		z-index:1000 !important;
 		background: transparent;
@@ -436,8 +437,23 @@ button[class^='ag-charts'] {
 		line-height: 0.8rem;
 		font-size: 0.75rem;
 		padding:0;
-		font-weight: 600;
-	}
+		font-weight: 600; */
+
+            float: right;
+            position: absolute;
+            z-index: 1000 !important;
+            background: transparent;
+            width: auto !important;
+            height: 20px !important;
+            color: #E5E5E5;
+            right: 20px;
+            top: 0;
+            text-align: right;
+            line-height: 0.8rem;
+            font-size: 0.75rem;
+            padding: 0;
+            font-weight: 600;
+        }
 
 </style>
 
