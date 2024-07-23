@@ -1615,4 +1615,12 @@ li {
 
 .dashborad-table table tbody tr{border-bottom: 1px solid #ddd;height:5%!important; padding:0!important; }
 
-.dashborad-table table tbody tr>td{border-right: 1px solid #ddd; }
+.mdsp.mdsp-defaults.forceDefaultElements table th:nth-last-child(1){border-right: none !important}
+
+.dashborad-table tbody tr:nth-last-child(1),
+.mdsp.mdsp-defaults.forceDefaultElements table td:last-child{border-right: none !important}
+
+
+.dashborad-table .t-bg-darkGy{background: #4D4D4D;}
+.dashborad-table .t-bg-grape{background: #58468B;}
+.dashborad-table .t-bg-lightGy{background: #BBBBBB;}
