@@ -246,9 +246,122 @@ li { list-style:none; margin:0px; padding:0px; }
 .btnv2 { width:250px; height:65px; border-radius:30px; line-height:40px; color:#fff; font-weight:500; background: #cfcfcf; border:none; cursor:pointer; font-size:22px; top: 70px; right:30px; -webkit-appearance: none; } 
 
 
+/* 20240723 modify [s] */
+.btn .circle {
+    width: 0%;
+    height: 0%;
+    opacity: 0;
+    line-height: 40px;
+    border-radius: 50%;
+    background: #222296;
+    position: absolute;
+    transition: all .5s ease-Out;
+    top: 20px;
+    left: 70px;
+}
+
+.btn-search { 
+  width: 100%; 
+  float: left; 
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+} 
+
+.link-search {
+  position: relative;
+  transition: all .45s ease-Out;
+}
+
+.btn:hover .circle {
+  width: 200%;
+  height: 500%;
+  opacity: 1;
+  top: -70px;
+  left: -70px;
+}
+
+.btn:hover a {
+  color: #fff;
+}
+
+/* nav-menu hover effect */
+.btn-nav {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btn-nav .circle {
+  width: 0%;
+  height: 0%;
+  opacity: 0;
+  line-height: 40px;
+  border-radius: 80%;
+  background: #7699bd;
+  position: absolute;
+  transition: all .5s ease-Out;
+  top: 20px;
+  left: 70px;
+}
+
+.btn-nav .st2 {
+  position: relative;
+  transition: all .45s ease-Out;
+}
+
+.btn-nav:hover .circle {
+  width: 200%;
+  height: 500%;
+  opacity: 1;
+  top: -70px;
+  left: -70px;
+}
+
+.btn-nav:hover .st2 {
+  color: #fff;
+}
+
+.al_bottom {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.al_bottom .circle {
+  width: 0%;
+  height: 0%;
+  opacity: 0;
+  line-height: 40px;
+  border-radius: 80%;
+  background: #000;
+  position: absolute;
+  transition: all .5s ease-Out;
+  top: 20px;
+  left: 70px;
+}
+
+.al_bottom .logout {
+  position: relative;
+  transition: all .45s ease-Out;
+}
+
+.al_bottom:hover .circle {
+  width: 200%;
+  height: 500%;
+  opacity: 1;
+  top: -70px;
+  left: -70px;
+}
+
+.al_bottom:hover .st2 {
+  color: #fff;
+}
 
 
-.btn-search { width: 100%; float: left; } 
+
+/* 20240723 modify [e] */
+
 
 /* 20240719 modify [s] */
 .home__contact.btn { display: inline-flex; width: 7.5rem; height: 2.5rem; min-height: 2.5rem; /* border: .125rem solid #0000FF !important; background: #000000; */
@@ -292,7 +405,20 @@ li { list-style:none; margin:0px; padding:0px; }
  font-size: 12px; width: 100%; height: 100%; display: inline-block; } 
 
 
-.btn-search { width:100%; height:26px; float:right; text-align:center; background:#191970; border:1px solid #0000FF; border-radius: 5px; font-weight:100; line-height:1.5rem !important; } 
+ /* 20240723 modify [s] */
+.btn-search { 
+  width:100%; 
+  height:26px; 
+  float:right; 
+  text-align:center; 
+  /* background:#191970; */
+  border:1px solid #0000FF; 
+  border-radius: 5px; 
+  font-weight:100; 
+  line-height:1.5rem !important; 
+} 
+ /* 20240723 modify [e] */
+
 .btn-search > a { color:#e5e5e5; /* line-height:0; */
  font-size:0.9rem; width: 100%; height: 100%; display:inline-block; } 
 
