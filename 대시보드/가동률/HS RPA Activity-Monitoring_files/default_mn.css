@@ -491,6 +491,7 @@ li {
     top: 10%;
     transform: translateY(50%);
     left: 15px !important;
+    width: calc(100% - 45PX);
 }
 
 #allmenu a.st2>p::before {
