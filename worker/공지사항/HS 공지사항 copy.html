@@ -301,10 +301,10 @@
 
 		<div class="tt-input-box input-wrap">
 			<ul>
-				<li class="title"><h2>공지유형</h2></li>
+				<li class="title tt"><h2>공지유형</h2></li>
 				<li class="input input-select">
 					<input type="hidden" id="rr_rnidx" value="" placeholder="">
-					<select id="sch_rn_ty" class="name">
+					<select id="sch_rn_ty" class="name ">
 						<option value="">공지유형항목 없음</option>
 					</select>
 				</li>
@@ -319,8 +319,8 @@
 			</ul>
 			<ul>
 				<li class="title"><h2>검색 키워드</h2></li>
-				<li class="input">
-					<input type="text" id="sch_rn_tt" value="" placeholder="아이디/사용자명 검색">
+				<li class="input input-search">
+					<input type="text" id="sch_rn_tt" placeholder="" value="아이디/사용자명 검색">
 				</li>
 			</ul>
 			<ul class="btn-flex-end">
@@ -349,9 +349,13 @@
 		<div class="tt-grid-box" style="margin:0px 10px;">
 
 
-			<ul style="width:100%; height:40px; position:relative; float:left;">
-				<li class="title" style="width:50%;">
+			<ul>
+				<li class="title">
 					<h3 class="title">공지사항목록</h3>
+					<a href="" class="btn-down">
+						<div class="circle"></div>
+						<button class="btn-excel">엑셀다운로드</button>
+					</a>
 				</li>
 				<li style="width:50%;">
 					<div class="btn" style="display:none; width:320px; float:right;">
