@@ -192,22 +192,22 @@
 						<!-- 기본 서비스 메뉴 -->
 						<li class="btn-nav">
 							<div class="circle"></div>
-                                <a rel="과제별대기현황" href="http://localhost:5080/tt/cu/page/rpa-stay" class="st2">
-                                    <p class="ico-02">대기현황</p>
-                                </a>
-                            </li>
+								<a rel="과제별대기현황" href="http://localhost:5080/tt/cu/page/rpa-stay" class="st2">
+										<p class="ico-02">대기현황</p>
+								</a>
+						</li>
 						<li class="btn-nav">
 							<div class="circle"></div>
-                                <a rel="과제별동작현황" href="http://localhost:5080/tt/cu/page/rpa-act" class="st2">
-                                    <p class="ico-03">동작현황</p>
-                                </a>
-                            </li>
-                            <li class="btn-nav">
-															<div class="circle"></div>
-                                <a rel="과제별작업내역" href="http://localhost:5080/tt/cu/page/rpa-wk" class="st2">
-                                    <p class="ico-04">작업내역</p>
-                                </a>
-                            </li>
+							<a rel="과제별동작현황" href="http://localhost:5080/tt/cu/page/rpa-act" class="st2">
+									<p class="ico-03">동작현황</p>
+							</a>
+					</li>
+					<li class="btn-nav">
+						<div class="circle"></div>
+							<a rel="과제별작업내역" href="http://localhost:5080/tt/cu/page/rpa-wk" class="st2">
+									<p class="ico-04">작업내역</p>
+							</a>
+					</li>
 					</ul>
 				</li>
 			</ul>
@@ -223,22 +223,22 @@
 						<!-- 기본 서비스 메뉴 -->
 						<li class="btn-nav">
 							<div class="circle"></div>
-                                <a rel="공지사항"  href="http://localhost:5080/tt/cu/page/nt" class="st2">
-                                    <p class="ico-05">공지사항</p>
-                                </a>
-                            </li>
-                            <li class="btn-nav">
-															<div class="circle"></div>
-                                <a rel="FAQ게시판" href="http://localhost:5080/tt/cu/page/fa" class="st2">
-                                    <p class="ico-06">FAQ</p>
-                                </a>
-                            </li>
-                            <li class="btn-nav">
-															<div class="circle"></div>
-                                <a rel="상시과제제출" href="http://localhost:5080/tt/cu/page/rd" class="st2">
-                                    <p class="ico-07">상시과제</p>
-                                </a>
-                            </li>
+								<a rel="공지사항"  href="http://localhost:5080/tt/cu/page/nt" class="st2">
+										<p class="ico-05">공지사항</p>
+								</a>
+						</li>
+						<li class="btn-nav">
+							<div class="circle"></div>
+								<a rel="FAQ게시판" href="http://localhost:5080/tt/cu/page/fa" class="st2">
+										<p class="ico-06">FAQ</p>
+								</a>
+						</li>
+						<li class="btn-nav">
+							<div class="circle"></div>
+								<a rel="상시과제제출" href="http://localhost:5080/tt/cu/page/rd" class="st2">
+										<p class="ico-07">상시과제</p>
+								</a>
+						</li>
 					</ul>
 				</li>
 			</ul>
@@ -299,49 +299,33 @@
 	<!---------------- 컨텐츠 시작 MN ---------------->
 	<div id="wrapper" style="width:100%; height:100%;">
 
-		<div class="tt-input-box" style="margin:10px 10px;">
+		<div class="tt-input-box input-wrap">
 			<ul>
 				<li class="title"><h2>공지유형</h2></li>
-				<li class="input">
+				<li class="input input-select">
 					<input type="hidden" id="rr_rnidx" value="" placeholder="">
-
 					<select id="sch_rn_ty" class="name">
-						
-							
-								<option value="">공지유형항목 없음</option>
-							
-							
-						
-
-
-						
-						
+						<option value="">공지유형항목 없음</option>
 					</select>
 				</li>
 			</ul>
-
-			<ul>
+			<ul class="date-wrap">
 				<li class="title"><h2>날짜구간</h2></li>
-				<li class="input" style="width:38%; float:left;">
+				<li class="input date-list">
 					<input type="text" id="sch_date_s" class="calendar" placeholder="" value="2024-07-01">
-				</li>
-				<li class="input" style="width:15%; float:left; text-align:center;">
-					<h3>~</h3>
-				</li>
-				<li class="input" style="width:38%; float:left;">
+					<span class="wave">~</span>
 					<input type="text" id="sch_date_e" class="calendar" placeholder="" value="2024-07-18">
 				</li>
 			</ul>
-
 			<ul>
 				<li class="title"><h2>검색 키워드</h2></li>
 				<li class="input">
 					<input type="text" id="sch_rn_tt" value="" placeholder="아이디/사용자명 검색">
 				</li>
 			</ul>
-			<ul style="width: 50px; height:60px; min-width: 100px;">
-				<li class="" style="width:100%; height:100%;">
-					<div class="btn btn-wrap" style="width:96%; margin-top:28px;">
+			<ul class="btn-flex-end">
+				<li>
+					<div class="btn btn-wrap">
 						<div class="btn-search">
 							<div class="circle"></div>
 							<a href="http://localhost:5080/tt/cu/page/nt#none" onclick="btn_click_search()" class="link-search">검색하기</a>
