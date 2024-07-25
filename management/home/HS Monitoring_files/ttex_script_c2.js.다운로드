@@ -1,0 +1,51 @@
+/**
+ * 조회 검색 영역 --------------------------------------------------------------------------------------------------------
+ * @returns {{}}
+ */
+function btn_click_search(){
+    var method = 'POST';
+    var url = '/tt/ex/data/ds/c2/search.api/';
+    var paramdata = schGet();
+    var callback = result_search;
+
+    console.log('------------------ btn_click_search() C2 ');
+    reqSearch(method, url, paramdata, callback)
+}
+
+// 조회 데이터 파라미터
+function schGet(){
+    var params = {};
+
+    params.index_key = $('#index_key').val();
+    params.sch_cn_ty = $('#sch_cn_ty').val();
+    params.sch_date_s = $('#sch_date_s').val();
+    params.sch_date_e = $('#sch_date_e').val();
+    params.sch_cn_tt = $('#sch_cn_tt').val();
+
+    return params;
+}
+/**
+ * Callback 영역 --------------------------------------------------------------------------------------------------------
+ * @returns {{}}
+ */
+function result_search(data){
+
+    result_search_data(data.list);
+    //draw_grid(data.list);
+}
+/**
+ * 데이터 처리 영역 -------------------------------------------------------------------------------------------------------
+ * @returns {{}}
+ */
+function draw_grid(list){
+
+}
+
+
+/**
+ * 기타 이벤트 기능/디자인요소 처리 영역 -------------------------------------------------------------------------------------
+ * @returns {{}}
+ */
+
+
+

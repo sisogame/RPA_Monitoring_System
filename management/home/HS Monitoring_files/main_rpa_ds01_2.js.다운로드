@@ -1,0 +1,441 @@
+const dateFormatter = new Intl.DateTimeFormat("en-US");
+const tooltip = {
+    renderer: ({ title, datum, xKey, yKey }) => ({
+        title,
+        content: `${datum[xKey]}월: ${datum[yKey].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} 만원`,
+    }),
+};
+
+const options = {
+    container: document.getElementById("myChart"),
+    data: getData(),
+    theme: 'ag-default-dark',
+
+    labels: ['1M', '2M', '3M', '4M', '5M', '6M', '7M', '8M', '9M', '10M', '11M', '12M'],
+    title: {
+        text: "RPA 설계부문 절감추이",
+        color: '#FFFFFF',
+        enabled: false,
+    },
+    /*
+    footnote: {
+        text: "Source: Department for Business, Energy & Industrial Strategy",
+    },
+    */
+    background: {
+        fill: 'rgb(20, 20, 20)',
+    },
+    palette: {
+        fills: ["#5C2983", "#0076C5", "#21B372", "#FDDE02", "#F76700", "#D30018"],
+        strokes: ["yellow"],
+    },
+    overrides: {
+        common: {
+            title: {
+                fontSize: 24,
+            },
+        },
+        bar: {
+            series: {
+                label: {
+                    enabled: true,
+                    color: 'black',
+                },
+            },
+        },
+    },
+    legend: {
+        item: {
+            label: {
+                fontSize: 9,
+                //fontStyle: 'italic',
+                fontWeight: 'bold',
+                //fontFamily: 'Papyrus',
+                color: '#E5E5E5',
+                maxLength: 25,
+            },
+        },
+    },
+    series: [
+        {
+            type: "bar",
+            xKey: "mm",
+            xName: "월",
+            yKey: "d01",
+            yName: "D0001",
+            tooltip,
+            stacked: true,
+        },
+        {
+            type: "bar",
+            xKey: "mm",
+            xName: "월",
+            yKey: "d02",
+            yName: "D0003",
+            tooltip,
+            stacked: true,
+        },
+        {
+            type: "bar",
+            xKey: "mm",
+            xName: "월",
+            yKey: "d03",
+            yName: "D0004",
+            tooltip,
+            stacked: true,
+        },
+        {
+            type: "bar",
+            xKey: "mm",
+            xName: "월",
+            yKey: "d04",
+            yName: "D0007",
+            tooltip,
+            stacked: true,
+        },
+        {
+            type: "bar",
+            xKey: "mm",
+            xName: "월",
+            yKey: "d05",
+            yName: "D0008",
+            tooltip,
+            stacked: true,
+        },
+        {
+            type: "bar",
+            xKey: "mm",
+            xName: "월",
+            yKey: "d06",
+            yName: "D0013",
+            tooltip,
+            stacked: true,
+        },
+        {
+            type: "bar",
+            xKey: "mm",
+            xName: "월",
+            yKey: "d07",
+            yName: "D0014",
+            tooltip,
+            stacked: true,
+        },
+        {
+            type: "bar",
+            xKey: "mm",
+            xName: "월",
+            yKey: "d08",
+            yName: "D0015",
+            tooltip,
+            stacked: true,
+        },
+        {
+            type: "bar",
+            xKey: "mm",
+            xName: "월",
+            yKey: "d09",
+            yName: "D0019",
+            tooltip,
+            stacked: true,
+        },
+        {
+            type: "bar",
+            xKey: "mm",
+            xName: "월",
+            yKey: "d10",
+            yName: "D0020",
+            tooltip,
+            stacked: true,
+        },
+        {
+            type: "bar",
+            xKey: "mm",
+            xName: "월",
+            yKey: "d11",
+            yName: "D0022",
+            tooltip,
+            stacked: true,
+        },
+        {
+            type: "bar",
+            xKey: "mm",
+            xName: "월",
+            yKey: "d12",
+            yName: "D0023",
+            tooltip,
+            stacked: true,
+        },
+        {
+            type: "bar",
+            xKey: "mm",
+            xName: "월",
+            yKey: "d13",
+            yName: "D0024",
+            tooltip,
+            stacked: true,
+        },
+        {
+            type: "bar",
+            xKey: "mm",
+            xName: "월",
+            yKey: "d14",
+            yName: "D0025_1",
+            tooltip,
+            stacked: true,
+        },
+        {
+            type: "bar",
+            xKey: "mm",
+            xName: "월",
+            yKey: "d15",
+            yName: "D0025_2",
+            tooltip,
+            stacked: true,
+        },
+        {
+            type: "bar",
+            xKey: "mm",
+            xName: "월",
+            yKey: "d16",
+            yName: "D0026_1",
+            tooltip,
+            stacked: true,
+        },
+        {
+            type: "bar",
+            xKey: "mm",
+            xName: "월",
+            yKey: "d17",
+            yName: "D0026_2",
+            tooltip,
+            stacked: true,
+        },
+        {
+            type: "bar",
+            xKey: "mm",
+            xName: "월",
+            yKey: "d18",
+            yName: "D0027",
+            tooltip,
+            stacked: true,
+        },
+        {
+            type: "bar",
+            xKey: "mm",
+            xName: "월",
+            yKey: "d19",
+            yName: "D0027_1",
+            tooltip,
+            stacked: true,
+        },
+        {
+            type: "bar",
+            xKey: "mm",
+            xName: "월",
+            yKey: "d20",
+            yName: "D0028_1",
+            tooltip,
+            stacked: true,
+        },
+        {
+            type: "bar",
+            xKey: "mm",
+            xName: "월",
+            yKey: "d21",
+            yName: "D0028_2",
+            tooltip,
+            stacked: true,
+        },
+        {
+            type: "bar",
+            xKey: "mm",
+            xName: "월",
+            yKey: "d22",
+            yName: "D0029",
+            tooltip,
+            stacked: true,
+        },
+        {
+            type: "bar",
+            xKey: "mm",
+            xName: "월",
+            yKey: "d23",
+            yName: "D0030_1",
+            tooltip,
+            stacked: true,
+        },
+        {
+            type: "bar",
+            xKey: "mm",
+            xName: "월",
+            yKey: "d24",
+            yName: "D0030_2",
+            tooltip,
+            stacked: true,
+        },
+        {
+            type: "bar",
+            xKey: "mm",
+            xName: "월",
+            yKey: "d25",
+            yName: "D0031",
+            tooltip,
+            stacked: true,
+        },
+
+        {
+            type: "line",
+            xKey: "mm",
+            xName: "월",
+            yKey: "sum_plan",
+            yName: "계획",
+            tooltip,
+        },
+        {
+            type: "line",
+            xKey: "mm",
+            xName: "월",
+            yKey: "sum_act",
+            yName: "실적",
+            tooltip,
+        },
+    ],
+    axes: [
+        {
+            position: "bottom",
+            title: {
+                text: "",
+            },
+            label: {
+                format: "",
+            },
+            min: 1,
+            max: 12,
+            crossLines: [
+                {
+                    type: "range",
+                    range: [6, 7],
+                },
+            ],
+        },
+        {
+            // primary y axis
+            type: "number",
+            position: "left",
+            keys: ["women", "men", "children", "adults"],
+            title: {
+                text: "Adults Who Eat 5 A Day (%)",
+            },
+        },
+        {
+            // secondary y axis
+            type: "number",
+            position: "right",
+            keys: ["sum_plan", "sum_act"],
+            title: {
+                text: "",
+            },
+        },
+    ],
+};
+
+//agCharts.AgCharts.create( options);
+
+function getData() {
+    const data = [
+        {
+            mm: 1,
+            d01: 100,
+            d02: 200,
+            d03: 130,
+            d04: 150,
+        },
+        {
+            mm: 2,
+            b04: 100,
+            b05: 200,
+            b11: 130,
+            b12: 150,
+        },
+        {
+            mm: 3,
+            b04: 100,
+            b05: 200,
+            b11: 130,
+            b12: 150,
+        },
+        {
+            mm: 4,
+            b04: 100,
+            b05: 200,
+            b11: 130,
+            b12: 150,
+        },
+        {
+            mm: 1,
+            b04: 100,
+            b05: 200,
+            b11: 130,
+            b12: 150,
+        },
+        {
+            mm: 5,
+            b04: 100,
+            b05: 200,
+            b11: 130,
+            b12: 150,
+        },
+        {
+            mm: 6,
+            b04: 100,
+            b05: 200,
+            b11: 130,
+            b12: 150,
+        },
+        {
+            mm: 7,
+            b04: 100,
+            b05: 200,
+            b11: 130,
+            b12: 150,
+        },
+        {
+            mm: 8,
+            b04: 100,
+            b05: 200,
+            b11: 130,
+            b12: 150,
+        },
+        {
+            mm: 9,
+            b04: 100,
+            b05: 200,
+            b11: 130,
+            b12: 150,
+        },
+        {
+            mm: 10,
+            b04: 100,
+            b05: 200,
+            b11: 130,
+            b12: 150,
+        },
+        {
+            mm: 11,
+            b04: 100,
+            b05: 200,
+            b11: 130,
+            b12: 150,
+        },
+        {
+            mm: 12,
+            b04: 100,
+            b05: 200,
+            b11: 130,
+            b12: 150,
+        },
+    ];
+
+    return data;
+}
+

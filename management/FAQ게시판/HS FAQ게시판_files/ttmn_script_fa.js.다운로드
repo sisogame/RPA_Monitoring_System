@@ -1,0 +1,199 @@
+
+/**
+ * 데이터 저장 영역 -------------------------------------------------------------------------------------------------------
+ * @returns {{}}
+ */
+function btn_click_save(){
+    var method = 'POST';
+    var url = '/tt/mn/data/fa/save.api/';
+    var callback = 'result_save';
+
+    let formdata = dataGet();
+
+    if(formdata.rn_tt == ''){
+        var msg = 'FAQ제목을 입력해주세요!';
+        result_msg('', '', msg, '', '');
+        alert_msg_show();
+
+        return false;
+    }
+    if(formdata.rr_rn_desc == ''){
+        var msg = 'FAQ내용을 입력해주세요!';
+        result_msg('', '', msg, '', '');
+        alert_msg_show();
+
+        return false;
+    }
+
+    reqSave(method, url, formdata, callback);
+}
+
+function result_save(data){
+    console.log(data);
+
+    if(data.flag == '1'){
+        result_msg('', '', data.msg, '', '');
+    }else{
+        result_msg('', '', data.msg, '', '');
+    }
+
+    result_msg_show();
+
+    $('#index_key').val(data.key);
+
+    btn_click_search();
+
+    click_close();
+}
+
+// 저장 데이터 파라미터
+function dataGet(){
+    const f = {};
+
+    f.index_key = $('#index_key').val();
+    f.rnidx = $('#rr_rnidx').val();
+    f.rn_ty = $('#rr_rn_ty').val();
+    f.rn_tt = $('#rr_rn_tt').val();
+    f.rn_desc = $('#rr_rn_desc').val();
+    f.memo = $('#rr_memo').val();
+
+    return f;
+}
+
+
+
+/**
+ * 조회 검색 영역 --------------------------------------------------------------------------------------------------------
+ * @returns {{}}
+ */
+function btn_click_search(){
+    var method = 'POST';
+    var url = '/tt/mn/data/fa/search.api/';
+    var paramdata = schGet();
+    var callback = result_search;
+
+    reqSearch(method, url, paramdata, callback)
+}
+
+// 조회 데이터 파라미터
+function schGet(){
+    var params = {};
+
+    params.index_key = $('#index_key').val();
+    params.sch_rn_ty = $('#sch_rn_ty').val();
+    params.sch_date_s = $('#sch_date_s').val();
+    params.sch_date_e = $('#sch_date_e').val();
+    params.sch_rn_tt = $('#sch_rn_tt').val();
+
+    return params;
+}
+
+function btn_click_search_dtl(rnidx){
+    var method = 'POST';
+    var url = '/tt/mn/data/fa/search-dtl.api/';
+    var paramdata = schGet();
+    var callback = result_search_dtl;
+
+    $('#index_key').val(rnidx);
+    paramdata.index_key = rnidx;
+    paramdata.sch_cnidx = rnidx;
+
+console.log('0000000000000000 ' +rnidx);
+    if(rnidx != ''){
+        reqSearch_dtl(method, url, paramdata, callback)
+    }
+}
+
+
+/**
+ * Callback 영역 --------------------------------------------------------------------------------------------------------
+ * @returns {{}}
+ */
+function result_search(data){
+
+    result_search_data(data.list);
+    //draw_grid(data.list);
+}
+
+
+function result_search_dtl(data){
+
+    let list = data.list;
+
+    init_dtl();
+
+    if( list.length > 0 ){
+        var obj = list[0];
+
+        $('#index_key').val(obj.rnidx);
+        $('#rr_rnidx').val(obj.rnidx);
+        $('#rr_rn_no').val(obj.rnidx);
+        $('#rr_rn_ty').val(obj.rn_ty);
+        $('#rr_rn_tt').val(obj.rn_tt);
+        $('#rr_rn_desc').val(obj.rn_desc);
+        $('#rr_memo').val(obj.memo);
+        $('#rr_idate').val(obj.idate);
+    }
+
+    //draw_grid(data.list);
+}
+
+function init_dtl(){
+    $('#index_key').val('');
+    $('#rr_rnidx').val('');
+    $('#rr_rn_ty').val('');
+    $('#rr_rn_tt').val('');
+    $('#rr_rn_desc').val('');
+    $('#rr_memo').val('');
+    $('#rr_idate').val('');
+}
+
+
+/**
+ * 데이터 처리 영역 -------------------------------------------------------------------------------------------------------
+ * @returns {{}}
+ */
+function draw_grid(list){
+
+}
+
+
+/**
+ * 기타 이벤트 기능/디자인요소 처리 영역 -------------------------------------------------------------------------------------
+ * @returns {{}}
+ */
+
+
+
+
+function btn_click_del(){
+    var method = 'POST';
+    var url = '/tt/mn/data/nt/delete.api/';
+    var callback = 'result_save';
+    let formdata = dataGet();
+
+    formdata.rnidx = $('#rr_rnidx').val();
+
+    if(formdata.rnidx == ''){
+        return false;
+    }
+
+    reqDelete(method, url, formdata, callback);
+}
+
+function result_delete(data){
+    console.log(data);
+
+    if(data.flag == '1'){
+        result_msg('', '', data.msg, '', '');
+    }else{
+        result_msg('', '', data.msg, '', '');
+    }
+
+    result_msg_show();
+
+    btn_click_close_modal_dtl();
+
+    btn_click_search();
+}
+

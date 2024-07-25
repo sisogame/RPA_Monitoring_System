@@ -1,0 +1,275 @@
+
+/**
+ * 데이터 저장 영역 -------------------------------------------------------------------------------------------------------
+ * @returns {{}}
+ */
+function btn_click_save(){
+    var method = 'POST';
+    var url = '/tt/mn/data/us/save.api/';
+    var callback = 'result_save';
+
+    let formdata = dataGet();
+
+    // Validate ----------------------------------------------------------
+    if( formdata.cu_id == ''){
+        var msg = '아이디가 입력되지 않았습니다.';
+        result_msg('', '', msg, '', '');
+        alert_msg_show();
+
+        return false;
+    }
+
+    if ( formdata.index_key == ''){
+        if( formdata.cu_id_chk == ''){
+            var msg = '중복확인을 해주세요';
+            result_msg('', '', msg, '', '');
+            alert_msg_show();
+
+            return false;
+        }
+
+        if( formdata.cu_id_chk == 'N'){
+            var msg = '중복아이디 입니다. 다시 확인 해주세요';
+            result_msg('', '', msg, '', '');
+            alert_msg_show();
+
+            return false;
+        }
+    }
+
+    if( formdata.cu_pw == ''){
+        var msg = '비밀번호가 입력되지 않았습니다.';
+        result_msg('', '', msg, '', '');
+        alert_msg_show();
+
+        return false;
+    }
+    // Validate ----------------------------------------------------------
+
+    reqSave(method, url, formdata, callback);
+}
+
+function result_save(data){
+    console.log(data);
+
+    if(data.flag == '1'){
+        result_msg('', '', data.msg, '', '');
+    }else{
+        result_msg('', '', data.msg, '', '');
+    }
+
+    result_msg_show();
+
+    $('#index_key').val(data.key);
+
+    btn_click_search();
+
+    click_close();
+}
+
+// 저장 데이터 파라미터
+function dataGet(){
+    const f = {};
+
+    f.index_key = $('#index_key').val();
+    f.cuidx = $('#index_key').val();
+    f.cu_id = $('#rr_cu_id').val();
+    f.cu_pw = $('#rr_cu_pw').val();
+    f.cu_nm = $('#rr_cu_nm').val();
+    f.cu_nnm = $('#rr_cu_nnm').val();
+    f.cu_dept = $('#rr_cu_dept').val();
+    f.cu_memo = $('#rr_cu_memo').val();
+    f.cu_stype = $('#rr_cu_stype').val();
+    f.cu_tel = $('#rr_cu_tel').val();
+    f.cu_email = $('#rr_cu_email').val();
+
+    f.cu_id_chk = $('#rr_cu_id_chk').val();
+    f.cu_delyn = $('#rr_cu_delyn').val();
+
+    return f;
+}
+
+
+
+/**
+ * 조회 검색 영역 --------------------------------------------------------------------------------------------------------
+ * @returns {{}}
+ */
+function btn_click_search(){
+    var method = 'POST';
+    var url = '/tt/mn/data/us/search.api/';
+    var paramdata = schGet();
+    var callback = result_search;
+
+    reqSearch(method, url, paramdata, callback)
+}
+
+// 조회 데이터 파라미터
+function schGet(){
+    var params = {};
+
+    params.sch_delyn = $('#sch_delyn').val();
+    params.sch_date_s = $('#sch_date_s').val();
+    params.sch_date_e = $('#sch_date_e').val();
+    params.sch_txt = $('#sch_txt').val();
+
+    return params;
+}
+
+
+
+
+/**
+ * Callback 영역 --------------------------------------------------------------------------------------------------------
+ * @returns {{}}
+ */
+function result_search(data){
+
+    result_search_data(data.list);
+    //draw_grid(data.list);
+}
+
+/**
+ * 데이터 처리 영역 -------------------------------------------------------------------------------------------------------
+ * @returns {{}}
+ */
+function draw_grid(list){
+
+}
+
+
+/**
+ * 기타 이벤트 기능/디자인요소 처리 영역 -------------------------------------------------------------------------------------
+ * @returns {{}}
+ */
+
+
+/**
+ * MODAL 팝업 이벤트 처리  -------------------------------------------------------------------------------------
+ * @returns {{}}
+ */
+
+// 팝업 : 저장 처리
+function btn_click_reg(){
+    var method = 'POST';
+    var url = '/tt/mn/data/us/save.api/';
+    var callback = 'result_save';
+
+    let formdata = dataGet();
+        formdata.action = 'reg';
+
+console.log(formdata);
+
+    //reqSave(method, url, formdata, callback);
+}
+
+
+// 팝업 : 사업자아이디 중복 체크
+function btn_click_chkbsn(){
+    var method = 'POST';
+    var url = '/tt/mn/data/us/check-bsn.api/';
+    var paramdata = checkGet();
+    var flag = 'bsn';
+
+    reqCheck(method, url, paramdata, flag)
+}
+
+// 조회 데이터 파라미터
+function checkGet(){
+    var params = {};
+
+    params.rr_cu_id = $('#rr_cu_id').val().replaceAll('-', '');
+
+    return params;
+}
+
+function result_check(data, flag){
+
+    if( flag == 'bsn'){
+        result_check_bsn(data);
+    }
+}
+
+// 사업자번호 중복 확인
+function result_check_bsn(data){
+
+    console.log('1');
+    console.log(data);
+    if( Number(data.chkcnt) == 0){
+        $('#rr_cu_id_chk').val('Y');
+        $('#lb_cu_id_chk').text('아이디(가능)' );
+        $('#lb_cu_id_chk').css('font-weight', '600');
+        $('#lb_cu_id_chk').css('color', '#FFFFFF');
+        console.log('3');
+    }else{
+        $('#rr_cu_id_chk').val('N');
+        $('#lb_cu_id_chk').text('아이디(중복)' );
+        $('#lb_cu_id_chk').css('font-weight', '600');
+        $('#lb_cu_id_chk').css('color', 'red');
+        console.log('4');
+    }
+}
+
+// 사용자 정보 상세 조회
+function btn_click_search_dtl(index_key){
+    var method = 'POST';
+    var url = '/tt/mn/data/us/search-dtl.api/';
+    var paramdata = {};
+    var callback = result_search_dtl;
+
+    paramdata.index_key = index_key;
+
+    reqSearch_dtl(method, url, paramdata, callback);
+}
+
+function result_search_dtl(data){
+
+    let list = data.list;
+
+    init_dtl();
+
+    if( list.length > 0 ){
+        var obj = list[0];
+
+        $('#index_key').val(obj.cuidx);
+
+        $('#rr_cu_id').val(obj.cu_id);
+        $('#rr_cu_pw').val(obj.cu_pw);
+        $('#rr_cu_nm').val(obj.cu_nm);
+        $('#rr_cu_nnm').val(obj.cu_nnm);
+        $('#rr_cu_dept').val(obj.cu_dept);
+        $('#rr_cu_birth').val(obj.cu_birth);
+        $('#rr_cu_memo').val(obj.cu_memo);
+        $('#rr_cu_stype').val(obj.cu_stype);
+        $('#rr_cu_tel').val(obj.cu_tel);
+        $('#rr_cu_email').val(obj.cu_email);
+        $('#rr_idate').val(obj.idate);
+        $('#rr_udate').val(obj.udate);
+
+        $('#rr_cu_id_chk').val(obj.cu_id_chk);
+        $('#rr_cu_delyn').val(obj.cu_delyn);
+    }
+
+    //draw_grid(data.list);
+}
+
+function init_dtl(){
+    $('#index_key').val('');
+
+    $('#rr_cu_id').val('');
+    $('#rr_cu_pw').val('');
+    $('#rr_cu_nm').val('');
+    $('#rr_cu_nnm').val('');
+    $('#rr_cu_dept').val('');
+    $('#rr_cu_memo').val('');
+    $('#rr_cu_stype').val('');
+    $('#rr_cu_tel').val('');
+    $('#rr_cu_email').val('');
+    $('#rr_idate').val('');
+    $('#rr_udate').val('');
+
+    $('#rr_cu_id_chk').val('');
+    $('#rr_cu_delyn').val('Y');
+
+    //$('#lb_cu_id_chk').text('');
+}

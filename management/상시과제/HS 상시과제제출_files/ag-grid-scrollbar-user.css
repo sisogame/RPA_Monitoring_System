@@ -1,0 +1,80 @@
+/* Scroll Bar */
+ .ag-body-horizontal-scroll {
+     background: #000;
+     height: 6px ! important;
+     min-height: 6px ! important;
+ }
+.ag-body-horizontal-scroll-viewport{
+    /* padding: 0 0.5rem; */
+    height: 6px ! important;
+    min-height: 6px ! important;
+}
+.ag-body-horizontal-scroll-container {
+    height: 6px ! important;
+    min-height: 6px ! important;
+}
+.ag-body-horizontal-scroll-viewport::-webkit-scrollbar {
+    width: 10px;
+}
+.ag-body-horizontal-scroll-viewport::-webkit-scrollbar-track {
+    background-color: #1c1c1c;
+}
+.ag-body-horizontal-scroll-viewport::-webkit-scrollbar-thumb {
+    background-color: 	#191970;
+}
+.ag-body-horizontal-scroll-viewport::-webkit-scrollbar-button {
+    display: none;
+}
+/* hover 효과 */
+.ag-body-horizontal-scroll-viewport::-webkit-scrollbar-thumb:hover {
+    background-color: #33aaff ;
+    transition: all 0.2s; /* 작동 안 됨 */
+}
+
+
+/* 코너에 라운드 효과 */
+.ag-body-horizontal-scroll-viewport::-webkit-scrollbar-track,
+.ag-body-horizontal-scroll-viewport::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    /* display:none; */
+}
+
+.ag-body-vertical-scroll {
+    background: #000;
+    width: 6px ! important;
+    min-width: 6px ! important;
+}
+.ag-body-vertical-scroll-viewport{
+    /* padding: 0 0.5rem; */
+    width: 6px ! important;
+    min-width: 6px ! important;
+}
+.ag-body-vertical-scroll-container {
+    width: 6px ! important;
+    min-width: 6px ! important;
+}
+.ag-body-vertical-scroll-viewport::-webkit-scrollbar {
+    height: 10px;
+}
+.ag-body-vertical-scroll-viewport::-webkit-scrollbar-track {
+    background-color: #1c1c1c;
+}
+.ag-body-vertical-scroll-viewport::-webkit-scrollbar-thumb {
+    background-color: 	#191970;
+}
+.ag-body-vertical-scroll-viewport::-webkit-scrollbar-button {
+    display: none;
+}
+/* hover 효과 */
+.ag-body-vertical-scroll-viewport::-webkit-scrollbar-thumb:hover {
+    background-color: #33aaff ;
+    transition: all 0.2s; /* 작동 안 됨 */
+}
+
+
+/* 코너에 라운드 효과 */
+.ag-body-vertical-scroll-viewport::-webkit-scrollbar-track,
+.ag-body-vertical-scroll-viewport::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    /* display:none; */
+}

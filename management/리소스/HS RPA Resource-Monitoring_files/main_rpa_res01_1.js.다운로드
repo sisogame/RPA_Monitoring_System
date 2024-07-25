@@ -1,0 +1,83 @@
+const { AgCharts } = agCharts;
+
+const dateFormatter = new Intl.DateTimeFormat("en-US");
+const tooltip = {
+    renderer: ({ title, datum, xKey, yKey }) => ({
+        title,
+        content: `${datum[xKey]} : ${datum[yKey].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} %`,
+    }),
+};
+
+const options = {
+    container: document.getElementById("myChart"),
+    data: getData(),
+    theme: 'ag-default-dark',
+
+    title: {
+        text: "CPU 사용률",
+        color: '#FFFFFF',
+        enabled: false,
+    },
+    /*
+    footnote: {
+        text: "Source: Department for Business, Energy & Industrial Strategy",
+    },
+    */
+    background: {
+        fill: 'rgb(20, 20, 20)',
+    },
+    legend: {
+        item: {
+            label: {
+                fontSize: 14,
+                //fontStyle: 'italic',
+                //fontWeight: 'bold',
+                //fontFamily: 'Papyrus',
+                color: '#E5E5E5',
+                maxLength: 25,
+            },
+        },
+    },
+    series: [
+        {
+            type: "area",
+            xKey: "mm",
+            xName: "",
+            yKey: "d01",
+            yName: "CPU사용률",
+            tooltip,
+            stacked: true,
+        },
+    ],
+    axes: [
+        {
+            type: 'category',
+            position: 'bottom',
+            label: { color: '#8e8e8e'},
+        },
+        {
+            type: 'number',
+            min : 0,
+            max : 100,
+            position: 'left',
+        },
+    ],
+};
+
+const chart = agCharts.AgCharts.create( options);
+
+function getData() {
+    const data = [
+        {
+            mm: 1,
+            d01: 100,
+            d02: 70,
+            d03: 30,
+            d04: 50,
+        },
+
+    ];
+
+    return data;
+}
+

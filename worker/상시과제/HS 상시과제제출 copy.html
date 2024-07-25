@@ -22838,13 +22838,13 @@
 
 			background: #58468B ! important;
 			border-radius: 25px;
-			font-size:14px ! important;
-			padding: 4px ;
+			font-size: 14px ! important;
+			padding: 4px;
 			color: #e5e5e5;
 			margin-left: -13px;
 			border: 1px solid rgba(255, 255, 255, 0.2);
 			width: 100%;
-			margin-bottom: 7px;	
+			margin-bottom: 7px;
 		}
 
 		.ag-ltr .ag-cell {
@@ -22876,7 +22876,7 @@
 		}
 
 		.top_tit {
-			padding: 10px 30px 0 10px;
+			padding: 0 30px 0 10px;
 			border-bottom: 0px solid #5E5E5E;
 		}
 
@@ -22952,7 +22952,8 @@
 						<ul id="al_2dul" class="al_2dul" style="padding:0;">
 
 							<!-- 기본 서비스 메뉴 -->
-							<li>
+							<li class="btn-nav">
+								<div class="circle"></div>
 								<a rel="모니터링" href="http://localhost:5080/tt/cu/home" class="st2">
 									<p class="ico-01">Home</p>
 								</a>
@@ -22970,18 +22971,20 @@
 						<ul id="al_2dul" class="al_2dul" style="padding:0;">
 
 							<!-- 기본 서비스 메뉴 -->
-							<li>
+							<li class="btn-nav">
+								<div class="circle"></div>
 								<a rel="과제별대기현황" href="http://localhost:5080/tt/cu/page/rpa-stay" class="st2">
 									<p class="ico-02">대기현황</p>
 								</a>
 							</li>
-							<li>
+							<li class="btn-nav">
+								<div class="circle"></div>
 								<a rel="과제별동작현황" href="http://localhost:5080/tt/cu/page/rpa-act" class="st2">
 									<p class="ico-03">동작현황</p>
 								</a>
 							</li>
-
-							<li>
+							<li class="btn-nav">
+								<div class="circle"></div>
 								<a rel="과제별작업내역" href="http://localhost:5080/tt/cu/page/rpa-wk" class="st2">
 									<p class="ico-04">작업내역</p>
 								</a>
@@ -22999,17 +23002,20 @@
 						<ul id="al_2dul" class="al_2dul" style="padding:0;">
 
 							<!-- 기본 서비스 메뉴 -->
-							<li>
+							<li class="btn-nav">
+								<div class="circle"></div>
 								<a rel="공지사항" href="http://localhost:5080/tt/cu/page/nt" class="st2">
 									<p class="ico-05">공지사항</p>
 								</a>
 							</li>
-							<li>
+							<li class="btn-nav">
+								<div class="circle"></div>
 								<a rel="FAQ게시판" href="http://localhost:5080/tt/cu/page/fa" class="st2">
 									<p class="ico-06">FAQ</p>
 								</a>
 							</li>
-							<li>
+							<li class="btn-nav">
+								<div class="circle"></div>
 								<a rel="상시과제제출" href="http://localhost:5080/tt/cu/page/rd" class="st2">
 									<p class="ico-07">상시과제</p>
 								</a>
@@ -23024,8 +23030,8 @@
 				</ul>
 
 				<div class="al_bottom">
-
-					<a href="http://localhost:5080/account/login/cu/logout?param_apps=">로그아웃</a>
+					<div class="circle"></div>
+					<a href="http://localhost:5080/account/login/cu/logout?param_apps=" class="logout">로그아웃</a>
 				</div>
 			</div>
 			<!--leftmenu-->
@@ -23070,62 +23076,41 @@
 		<!---------------- 컨텐츠 시작 MN ---------------->
 		<div id="wrapper" class="move" style="width:100%; height:100%;">
 
-			<div class="tt-input-box" style="margin:10px 10px;">
-				<ul>
-					<li class="title">
-						<h2>과제구분항목</h2>
-					</li>
-					<li class="input">
-						<input type="hidden" id="rr_rnidx" value="" placeholder="">
-
-						<select id="sch_rn_ty" class="name">
-
-
-							<option value="">과제구분항목 없음</option>
-
-
-
-
-
-
-
-						</select>
-					</li>
-				</ul>
-
-				<ul>
-					<li class="title">
-						<h2>날짜구간</h2>
-					</li>
-					<li class="input" style="width:38%; float:left;">
-						<input type="text" id="sch_date_s" class="calendar" placeholder="" value="2024-07-01">
-					</li>
-					<li class="input" style="width:15%; float:left; text-align:center;">
-						<h3>~</h3>
-					</li>
-					<li class="input" style="width:38%; float:left;">
-						<input type="text" id="sch_date_e" class="calendar" placeholder="" value="2024-07-18">
-					</li>
-				</ul>
-
-				<ul>
-					<li class="title">
-						<h2>검색 키워드</h2>
-					</li>
-					<li class="input">
-						<input type="text" id="sch_rn_tt" value="" placeholder="매출/매입 사업자명 검색">
-					</li>
-				</ul>
-				<ul style="width: 50px; height:60px; min-width: 100px;">
-					<li class="" style="width:100%; height:100%;">
-						<div class="btn" style="width:96%; height:100%; margin-top:28px;">
-							<div class="btn-search">
-								<a href="http://localhost:5080/tt/cu/page/rd#none" onclick="btn_click_search()" class="btn-search">검색하기</a>
-							</div>
+			<div class="tt-input-box input-wrap">
+			<ul>
+				<li class="title tt"><h2>과제구분항목</h2></li>
+				<li class="input input-select">
+					<input type="hidden" id="rr_rnidx" value="" placeholder="">
+					<select id="sch_rn_ty" class="name ">
+						<option value="">과제구분항목 없음</option>
+					</select>
+				</li>
+			</ul>
+			<ul class="date-wrap">
+				<li class="title"><h2>날짜구간</h2></li>
+				<li class="input date-list">
+					<input type="text" id="sch_date_s" class="calendar" placeholder="" value="2024-07-01">
+					<span class="wave">~</span>
+					<input type="text" id="sch_date_e" class="calendar" placeholder="" value="2024-07-18">
+				</li>
+			</ul>
+			<ul>
+				<li class="title"><h2>검색 키워드</h2></li>
+				<li class="input input-search">
+					<input type="text" id="sch_rn_tt" placeholder="" value="매출/매입 사업자명 검색">
+				</li>
+			</ul>
+			<ul class="btn-flex-end">
+				<li>
+					<div class="btn btn-wrap">
+						<div class="btn-search">
+							<div class="circle"></div>
+							<a href="http://localhost:5080/tt/cu/page/nt#none" onclick="btn_click_search()" class="link-search">검색하기</a>
 						</div>
-					</li>
-				</ul>
-			</div>
+					</div>
+				</li>
+			</ul>
+		</div>
 
 			<div class="tt-input-box" style="margin:0px 25px; display:none;">
 				<!-- 상담입력창 이벤트처리 -->
@@ -23139,15 +23124,24 @@
 			</div>
 
 			<div class="tt-grid-box" style="margin:0px 10px;">
-
 				<ul class="titleWrap">
-					<li class="title" style="width:50%;">
+					<li class="title">
 						<h3 class="title">상시과제제출목록</h3>
+						<div class="btn-wrap">
+							<a href="" class="btn-down">
+								<div class="circle"></div>
+								<button class="btn-excel">엑셀다운로드</button>
+							</a>
+							<a href="#" class="btn-link btn-innerTxt" onclick="click_row(&#39;&#39;, &#39;&#39;);">
+								<div class="circle"></div>
+								<button class="btn-pj">신규과제등록</button>
+							</a>
+						</div>
 					</li>
 					<li style="width:50%;">
-						<div class="btn" style="width:320px; float:right;">
+						<div class="btn" style="display:none; width:320px; float:right;">
 							<div class="btn-reg btn-new">
-								<a href="#" onclick="click_row(&#39;&#39;, &#39;&#39;);" class="btn-innerTxt">신규과제등록</a>
+							 <a href="#" onclick="click_row(&#39;&#39;, &#39;&#39;);" class="btn-innerTxt">신규과제등록</a>
 							</div>
 							<div class="btn-reg" style="display:none; width:45%; height:22px; margin-top:10px; background:#1e1e1e; border:1px solid #0D47A1; border-radius: 10px; font-size:0.65rem; font-weight:100; line-height:220%; background-image: url(/assets/img/icon_excel.png); background-repeat: no-repeat; background-size:14px; background-position-x:10px; background-position-y:5px; ">
 								<a href="http://localhost:5080/path/form/upload_tax_report.xlsx" download="RAP_과제별_시간대별_동작현황_.xlsx" style="display:block; width:100%;  color:#e5e5e5;" target="_self">엑셀다운로드</a>
@@ -23159,7 +23153,7 @@
 
 				<!-- gridArea -->
 				<div id="myGrid" class="ag-theme-quartz gridAreaWrap">
-					<div class="ag-root-wrapper ag-layout-normal ag-ltr" role="presentation" grid-id="1" style="display: none;">
+					<div class="ag-root-wrapper ag-layout-normal ag-ltr" role="presentation" grid-id="1">
 
 						<div class="ag-root-wrapper-body ag-layout-normal ag-focus-managed" ref="rootWrapperBody" role="presentation">
 							<div class="ag-tab-guard ag-tab-guard-top" role="presentation" tabindex="0"></div>
@@ -23549,7 +23543,7 @@
 			.ag-header-cell-text {
 				/* Header Cell 값 표시 Font-size */
 				/*font-size: 0.85rem;
-			 color: #858585; */
+			 	color: #858585; */
 				font-size: 15px;
 				color: #ffffff;
 				font-weight: 600;
@@ -23642,73 +23636,87 @@
 
 		<input type="hidden" id="index_key" value="" placeholder="">
 
-		<div id="modal-dtl" class="modal-dtl">
-			<div id="onetrust-banner-sdk" class="otFloatingRoundedCorner ot-bottom-left ot-wo-title vertical-align-content" tabindex="0" role="region" aria-label="Cookie banner">
-				<div class="ot-sdk-container" role="alertdialog" aria-describedby="onetrust-policy-text" aria-label="Privacy">
-					<div class="ot-sdk-row">
-						<div id="onetrust-group-container" class="ot-sdk-twelve ot-sdk-columns">
-							<div id="onetrust-policy" style="height:100%;">
+		
+			<div id="modal-dtl" class="modal-dtl">
+				<div id="onetrust-banner-sdk" class="otFloatingRoundedCorner ot-bottom-left ot-wo-title vertical-align-content" tabindex="0" role="region" aria-label="Cookie banner">
+					<div class="ot-sdk-container" role="alertdialog" aria-describedby="onetrust-policy-text" aria-label="Privacy">
+						<div class="ot-sdk-row">
+							<div id="onetrust-group-container" class="ot-sdk-twelve ot-sdk-columns" style="display: flex;    flex-direction: column;">
 								<div class="banner-header">
 									<div class="banner-actions-container">
 										<p style="float:left;">상시과제등록관리</p>
-										<button onclick="btn_click_save();" style="background: #1E90FF">저장</button>
-										<button onclick="btn_click_del();" style="background: #FF6347">삭제</button>
+										
+
+										<button id="onetrust-reject-all-handler" onclick="click_close();" style="top:10px;">
+											<img src="../../images/btn-close.svg" alt="닫기"  class="btn-close">
+											
+											<!-- Close -->
+											</button>
+									</div>
+								</div>
+	
+								<div id="onetrust-policy" class="modal-container" style="">
+	
+									<input type="hidden" id="rr_rnidx" value="" readonly="readonly">
+									<input type="hidden" id="rr_rn_no" style="width:80%; float:left; background:#1c1c1c;" value="" placeholder="-" readonly="readonly">
+									<input type="hidden" id="rr_idate" style="width:80%; float:left; background:#1c1c1c;" value="" placeholder="-" readonly="readonly">
+									<textarea type="text" id="rr_memo" style="display:none; width:90%; height:200px; float:left; color:#e5e5e5;" value="" placeholder="-"></textarea>
+	
+									<div id="onetrust-policy-title" style="width:50%;">
+										<p>부서</p> <input id="rr_rn_dept" value="" type="text" name="제출자부서" placeholder="제출자부서">
+									</div>
+									<div id="onetrust-policy-title" style="width:50%;">
+										<p>성명</p> <input id="rr_rn_nm" value="" type="text" name="제출자성명" placeholder="제출자성명">
+									</div>
+									<div id="onetrust-policy-title" style="width:50%;">
+										<p>범위</p> <input id="rr_rn_area" value="" type="text" name="적용범위" placeholder="적용범위">
+									</div>
+									<div id="onetrust-policy-title" style="width:50%;">
+										<p>시간</p> <input id="rr_rn_min" value="" type="text" name="소요시간/1회(분:min)" placeholder="소요시간/1회(분:min)">
+									</div>
+									<div id="onetrust-policy-title" style="width:50%;">
+										<p>횟수</p> <input id="rr_rn_cnt" value="" type="text" name="동작횟수(회/월)" placeholder="동작횟수(회/월)">
+									</div>
+									<div id="onetrust-policy-title" style="width:50%;">
+										<p>유형</p>
+										<select id="rr_rn_ty">
+											<option value="">과제유형선택</option>
+											<option value="0">일반</option>
+											<option value="1">중요</option>
+										</select>
+									</div>
+									<div id="onetrust-policy-title">
+										<p style="width:15.0%;">제목</p> <input id="rr_rn_tt" value="" name="과제명칭" placeholder="과제명칭" style="width:80%">
+									</div>
+									<div id="onetrust-policy-text">
+										<textarea id="rr_rn_desc" placeholder="내용글"></textarea>
 									</div>
 								</div>
 
-								<input type="hidden" id="rr_rnidx" value="" readonly="readonly">
-								<input type="hidden" id="rr_rn_no" style="width:80%; float:left; background:#1c1c1c;" value="" placeholder="-" readonly="readonly">
-								<input type="hidden" id="rr_idate" style="width:80%; float:left; background:#1c1c1c;" value="" placeholder="-" readonly="readonly">
-								<textarea type="text" id="rr_memo" style="display:none; width:90%; height:200px; float:left; color:#e5e5e5;" value="" placeholder="-"></textarea>
+								<div id="onetrust-button-group-parent">
+									<div id="onetrust-button-group">
+										<div class="banner-actions-container banner-btn-wrap">
+											<!-- <button id="onetrust-reject-all-handler" onclick="click_close();" style="top:10px;">Close</button> -->
+											<button onclick="btn_click_save();" class="btn-save">저장</button>
+										<button onclick="btn_click_del();" class="btn-del">삭제</button>
 
-								<div id="onetrust-policy-title" style="width:50%;">
-									<p>부서</p> <input id="rr_rn_dept" value="제출자부서">
-								</div>
-								<div id="onetrust-policy-title" style="width:50%;">
-									<p>성명</p> <input id="rr_rn_nm" value="제출자성명">
-								</div>
-								<div id="onetrust-policy-title" style="width:50%;">
-									<p>범위</p> <input id="rr_rn_area" value="적용범위">
-								</div>
-								<div id="onetrust-policy-title" style="width:50%;">
-									<p>시간</p> <input id="rr_rn_min" value="소요시간/1회(분:min)">
-								</div>
-								<div id="onetrust-policy-title" style="width:50%;">
-									<p>횟수</p> <input id="rr_rn_cnt" value="동작횟수(회/월)">
-								</div>
-								<div id="onetrust-policy-title" style="width:50%;">
-									<p>유형</p>
-									<select id="rr_rn_ty">
-										<option value="">과제유형선택</option>
-										<option value="0">일반</option>
-										<option value="1">중요</option>
-									</select>
-								</div>
-								<div id="onetrust-policy-title">
-									<p style="width:15.0%;">제목</p> <input id="rr_rn_tt" value="과제명칭" style="width:81.5%">
-								</div>
-								<div id="onetrust-policy-text">
-									<textarea id="rr_rn_desc">내용글</textarea>
+
+										</div>
+									</div>
 								</div>
 							</div>
+	
+							
+	
+							<!-- Close Button -->
+							<div id="onetrust-close-btn-container"></div>
+							<!-- Close Button END-->
 						</div>
-
-						<div id="onetrust-button-group-parent">
-							<div id="onetrust-button-group">
-								<div class="banner-actions-container">
-									<button id="onetrust-reject-all-handler" onclick="click_close();" style="top:10px;">Close</button>
-								</div>
-							</div>
-						</div>
-
-						<!-- Close Button -->
-						<div id="onetrust-close-btn-container"></div>
-						<!-- Close Button END-->
 					</div>
 				</div>
+	
 			</div>
-
-		</div>
+		
 
 		<script>
 			function click_row(brdid, idx) {
@@ -23856,22 +23864,22 @@
 
 
 	<script>
-        document.addEventListener('DOMContentLoaded',
-            function () {
-                // 20240720 add script - ley
-                const navItems = document
-                    .querySelectorAll('.st2');
+		document.addEventListener('DOMContentLoaded',
+			function () {
+				// 20240720 add script - ley
+				const navItems = document
+					.querySelectorAll('.st2');
 
-                navItems.forEach(item => {
-                    item.addEventListener('click',
-                        function () {
-                            navItems.forEach(navItem => navItem
-                                .classList.remove('active'));
-                            this.classList.add('active');
-                        });
-                });
-            });
-    </script>
+				navItems.forEach(item => {
+					item.addEventListener('click',
+						function () {
+							navItems.forEach(navItem => navItem
+								.classList.remove('active'));
+							this.classList.add('active');
+						});
+				});
+			});
+	</script>
 
 
 	<!-- template..account -->
