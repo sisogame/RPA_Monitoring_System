@@ -8,7 +8,8 @@
 
     --ag-header-foreground-color: white;  /* ag-grid Header 글씨 색상  */
     --ag-header-background-color: black;  /* ag-grid Header 배경 색상  */
-    --ag-header-cell-hover-background-color: rgb(40, 173, 255);
+    /* --ag-header-cell-hover-background-color: rgb(40, 173, 255); */
+    --ag-header-cell-hover-background-color: rgb(146, 161, 200);
     --ag-header-cell-moving-background-color: rgb(38, 103, 14);
 
     --ag-row-height: 40px;   /* ag-grid Row 높이  */
