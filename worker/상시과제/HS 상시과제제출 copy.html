@@ -23165,7 +23165,7 @@
 									<div class="ag-header-viewport" role="presentation">
 										<div class="ag-header-container" ref="eCenterContainer" role="rowgroup" style="width: 1350px;">
 											<div class="ag-header-row ag-header-row-column" role="row" aria-rowindex="1" style="top: 0px; height: 40px; width: 1350px;">
-												<div class="ag-header-cell ag-column-first ag-header-cell-sortable ag-focus-managed cell-bgColor" role="columnheader" tabindex="-1" col-id="idate" aria-colindex="2" aria-sort="none" aria-description=" Press ENTER to sort. Press CTRL ENTER to open column menu." style="top: 0px; height: 40px; width: 160px; left: 0px;">
+												<div class="ag-header-cell ag-column-first ag-header-cell-sortable ag-focus-managed" role="columnheader" tabindex="-1" col-id="idate" aria-colindex="2" aria-sort="none" aria-description=" Press ENTER to sort. Press CTRL ENTER to open column menu." style="top: 0px; height: 40px; width: 160px; left: 0px;">
 													<div ref="eResize" class="ag-header-cell-resize" role="presentation" aria-hidden="false"></div>
 													<div role="presentation" class="ag-labeled ag-label-align-right ag-checkbox ag-input-field ag-header-select-all ag-hidden" aria-hidden="true">
 														<div ref="eLabel" class="ag-input-field-label ag-label ag-hidden ag-checkbox-label" aria-hidden="true" role="presentation" id="ag-33-label"></div>
@@ -23648,8 +23648,7 @@
 										
 
 										<button id="onetrust-reject-all-handler" onclick="click_close();" style="top:10px;">
-											<img src="../../images/btn-close.svg" alt="닫기"  class="btn-close">
-											
+											<img src="/images/icon_X.svg" alt="닫기"  class="btn-close">
 											<!-- Close -->
 											</button>
 									</div>
@@ -23686,7 +23685,7 @@
 										</select>
 									</div>
 									<div id="onetrust-policy-title">
-										<p style="width:15.0%;">제목</p> <input id="rr_rn_tt" value="" name="과제명칭" placeholder="과제명칭" style="width:80%">
+										<p>제목</p> <input id="rr_rn_tt" value="" name="과제명칭" placeholder="과제명칭" style="width:80%">
 									</div>
 									<div id="onetrust-policy-text">
 										<textarea id="rr_rn_desc" placeholder="내용글"></textarea>
@@ -23753,35 +23752,28 @@
 
 
 	<!-- contents_footer -->
-	<div id="wrapper" class="result-msg-box" style="display:none; position:fixed; top: 0; width:100%!important; height:100%; margin:0; z-index:1100; background:#181d26; overflow-y: hidden; overflow-x: hidden;">
-		<div class="wrap_slidebar" style="width:500px; height:40%; background:#5e5e5e; border:1px solid #000000; margin:0; position:absolute; margin-left: 50%; left:-250px; margin-top:5%;">
-			<div class="tt-input-box" style="width:100%; height:10%; background:#000000; margin-left:0;  padding:0;">
+	<div id="wrapper" class="result-msg-box">
+		<div class="wrap_slidebar" style="">
+			<!--  <div class="tt-input-box" style="width:100%; height:10%; background:#000000; padding:0; margin: 0 !important;">
+				
+			</div> -->
+
+			<div class="tt-input-box" style="">
 				<!-- 상담입력창 이벤트처리 -->
-				<ul style="width:100%; height:30px; float:left; border:0px solid #000000;">
-					<li class="" style="width:100%;">
-						<h3 style="color:#FFFFFF; font-size:0.9rem; line-height:2.0rem;">메세지</h3>
+				<ul class="" style="">
+					<li class="msg-header" style="">
+						<h3 style="">메세지</h3>
+						<a href="http://localhost:5080/tt/cu/page/rd#" onclick="btn_click_close(); return false;" style="display:inline-block; color:#FFFFFF; width:auto;">
+							<!-- <div class="btn_b" style="width:100%; height:30px; margin-left:2%; background:#1C86EE; border:1px solid #5e5e5e; border-radius: 5px; font-size:0.8rem; font-weight:600; line-height:200%; color:#FFFFFF;">창 닫기</div>-->
+
+								<img src="/images/icon_X.svg" alt="닫기" class="btn-close">
+							</a>
 					</li>
 				</ul>
-			</div>
 
-			<div class="tt-input-box" style="width:100%; height:100%; margin:0px 0px 0 0; padding:0; border:1px solid #5e5e5e;">
-
-
-				<div class="tt-input-box" style="margin:0px; width:100%; height:88%; padding:0; border:0px solid #000000; background:#FFFFFF;">
-					<p id="msg_box-row1" style="width:100%; height: 60px; font-size:0.9rem; text-align:center; border:0px solid #FFFFFF;">
-
-					</p>
-					<p id="msg_box-row2" style="width:100%; height: 60px; font-size:0.9rem; text-align:center; border:0px solid #FFFFFF;">
-
-					</p>
-					<p id="msg_box-row3" style="width:100%; height: 60px; font-size:0.9rem; text-align:center; border:0px solid #FFFFFF;">
+				<div class="tt-input-box" style="margin:0px; width:100%; height:200px; padding:0; border:0px solid #000000; background:#26262A;display: flex;align-items: center;justify-content: center; border-radius:0 0 25px 25px">
+					<p id="msg_box-row3" style="width:100%; height: 60px; font-size:16px; text-align:center; border:0px solid #FFFFFF;left: 0;top: 0;line-height: 60px;color: #fff !important; font-weight: 700;">
 						저장 등록 되었습니다.
-					</p>
-					<p id="msg_box-row4" style="width:100%; height: 60px; font-size:0.9rem; text-align:center; border:0px solid #FFFFFF;">
-
-					</p>
-					<p id="msg_box-row5" style="width:100%; height: 60px; font-size:0.9rem; text-align:center; border:0px solid #FFFFFF;">
-
 					</p>
 				</div>
 
@@ -23789,9 +23781,9 @@
 					<!-- 상담입력창 이벤트처리 -->
 					<ul style="width:100%; height:100%; float:left;">
 						<li class="" style="width:100%;">
-							<a href="http://localhost:5080/tt/cu/page/rd#" onclick="btn_click_close(); return false;" style="display:inline-block; color:#FFFFFF; width:40%;">
-								<div class="btn_b" style="width:100%; height:30px; margin-left:2%; background:#1C86EE; border:1px solid #5e5e5e; border-radius: 5px; font-size:0.8rem; font-weight:600; line-height:200%; color:#FFFFFF;">창 닫기</div>
-							</a>
+							 <!-- <a href="http://localhost:5080/tt/cu/page/rd#" onclick="btn_click_close(); return false;" style="display:inline-block; color:#FFFFFF; width:40%;">
+							 	<div class="btn_b" style="width:100%; height:30px; margin-left:2%; background:#1C86EE; border:1px solid #5e5e5e; border-radius: 5px; font-size:0.8rem; font-weight:600; line-height:200%; color:#FFFFFF;">창 닫기</div>
+							</a>-->
 						</li>
 					</ul>
 				</div>
@@ -23810,7 +23802,7 @@
 			function alert_msg_show() {
 				$('.result-msg-box').css('display', '');
 
-				$('#msg_box-row3').css('color', 'red');
+				$('#msg_box-row3').css('color', 'ffffff');
 				$('#msg_box-row3').css('font-weight', '600');
 			}
 
