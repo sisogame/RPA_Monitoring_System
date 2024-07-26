@@ -49,7 +49,14 @@
 	}
 
 	/* 20240429 css add [s] */
-	#wrapper.rpaWrap{display: inline-block; width:100%; height:100%;padding-top: 5px; padding-left: 5px; min-width: 1200xp;}
+	#wrapper.rpaWrap{
+		display: inline-block; 
+		width:100%; 
+		height:100%;
+		padding-top: 5px; 
+		padding-left: 5px; 
+		min-width: 1200px;
+	}
 	/* 20240429 css add [e] */
 </style>
 
@@ -65,8 +72,24 @@
 
 
 <!---------------- 컨텐츠 시작 MN ---------------->
-<div id="wrapper" class="move rpaWrap" style="">
 
+<div class="modal">
+	<div class="modal-body">
+		<div class="modal-tit">
+			<p class="tt">RPA 설계부문 절감추이</p>
+			<button onclick="click_close();" class="btn-close"><img src="/images/icon_X.svg" alt="닫기"></button>
+		</div>
+		<div class="modal-content">
+			<div class="content"></div>
+			<!-- <div class="btn-wrap">
+				<a href="#"><button class="btn-save">저장</button></a>
+				<a href="#"><button class="btn-remove">삭제</button></a>
+			</div> -->
+		</div>
+	</div>
+</div>
+
+<div id="wrapper" class="move rpaWrap" style="">
 	<div class="tt-btn-box" style="margin:20px 15px 0;">
 		<div class="graph-wrap">
 			<ul>
@@ -75,7 +98,7 @@
 					<div class="btn btn-space">
 						<div class="btn-reg">
 							<!-- http://localhost:5080/tt/ex/report/chart/rpa-ds01-c01.loader -->
-							<a href="#" onclick="btn_click_show_modal(&#39;&#39;)">
+							<a href="#" class="btn-open-modal">
 								<img src="/images/icon_plus.svg" alt="확대">
 							</a>
 						</div>
@@ -95,7 +118,7 @@
 				<div class="btn btn-space">
 					<div class="btn-reg">
 						<!-- http://localhost:5080/tt/ex/report/rpa-ds01.loader#none -->
-						<a href="#" onclick="btn_click_show_modal(&#39;&#39;)"><img src="/images/icon_plus.svg" alt="확대"></a>
+						<a href="#" class="btn-open-modal"><img src="/images/icon_plus.svg" alt="확대"></a>
 					</div>
 				</div>
 			</li>
@@ -111,7 +134,7 @@
 				<h3 class="title">RPA 부서별 절감추이</h3>
 				<div class="btn btn-space">
 					<div class="btn-reg">
-						<a href="http://localhost:5080/tt/ex/report/rpa-ds01.loader#none" onclick="btn_click_show_modal(&#39;&#39;)"><img src="/images/icon_plus.svg" alt="확대"></a>
+						<a href="#" class="btn-open-modal"><img src="/images/icon_plus.svg" alt="확대"></a>
 					</div>
 				</div>
 			</li>
@@ -198,6 +221,28 @@
 
 
 </script>
+
+<!-- 확대버튼 클릭시 모달팝업 -->
+<script>
+	const modal = document.querySelector('.modal');
+	const btnOpenModal=document.querySelectorAll('.btn-open-modal');
+	const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+
+	for(var i = 0; i <= 3; i++) {
+			btnOpenModal[i].addEventListener("click", ()=>{
+			modal.style.display="flex";
+    document.body.style.overflow = 'hidden';
+    document.body.style.paddingRight = `${scrollbarWidth}px`;
+		});
+	}
+  // 창닫기
+	function click_close() {
+	document.querySelector('.modal').style.display = 'none';
+	document.body.style.overflow = '';
+	document.body.style.paddingRight = '';
+	}
+</script>
+
 
 <!----------------- (Style) AG_GRID Style RESORCE ------------------->
 <style>
@@ -310,8 +355,5 @@
 
 
 <!----------------- (Style) AG_GRID CHART RESORCE ------------------->
-
-
-
 
 </body></html>
