@@ -23176,7 +23176,7 @@
 					<li class="title tt">
 						<h2>FAQ유형구분</h2>
 					</li>
-					<li class="input">
+					<li class="input input-select">
 						<input type="hidden" id="rr_rnidx" value="" placeholder="">
 
 						<select id="sch_rn_ty" class="name">
@@ -23821,12 +23821,15 @@
 								<textarea type="text" id="rr_memo" style="display:none; width:90%; height:200px; float:left; color:#e5e5e5;" value="" placeholder="-"></textarea>
 
 								<div id="onetrust-policy-title">
-									<p>제목</p> 
+									<p>유형</p>
 									<select id="rr_rn_ty">
 										<option value="">--FAQ유형항목-</option>
 										<option value="0">문의</option>
 										<option value="1">메뉴얼</option>
-									</select>
+										</select>
+								</div>
+								<div id="onetrust-policy-title">
+									<p>제목</p> <input id="rr_rn_tt" value="" name="과제명칭" placeholder="과제명칭" style="width:80%">
 								</div>
 								<div id="onetrust-policy-text">
 									<textarea id="rr_rn_desc" placeholder="문의내용"></textarea>
@@ -23883,44 +23886,26 @@
 
 	</div>
 
-
-
-
-
 	<!-- contents_footer -->
-	<div id="wrapper" class="result-msg-box"  style="display:none; position:fixed; top: 0; width:100%!important; height:100%; margin:0; z-index:1100; background:#181d26; overflow-y: hidden; overflow-x: hidden;">
+	<div id="wrapper" class="result-msg-box" style="display:none;">
 		<div class="wrap_slidebar">
+			<!--  <div class="tt-input-box" style="width:100%; height:10%; background:#000000; padding:0; margin: 0 !important;">
+			</div> -->
 			<div class="tt-input-box">
 				<!-- 상담입력창 이벤트처리 -->
-				<ul>
+				<ul class="">
 					<li class="msg-header">
 						<h3>메세지</h3>
-<a href="http://localhost:5080/tt/cu/page/rd#" onclick="btn_click_close(); return false;">
-	<!-- <div class="btn_b" style="width:100%; height:30px; margin-left:2%; background:#1C86EE; border:1px solid #5e5e5e; border-radius: 5px; font-size:0.8rem; font-weight:600; line-height:200%; color:#FFFFFF;">창 닫기</div>-->
-	<img src="/images/icon_X.svg" alt="닫기" class="btn-close">
-</a>
+						<a href="http://localhost:5080/tt/cu/page/rd#" onclick="btn_click_close(); return false;">
+							<!-- <div class="btn_b" style="width:100%; height:30px; margin-left:2%; background:#1C86EE; border:1px solid #5e5e5e; border-radius: 5px; font-size:0.8rem; font-weight:600; line-height:200%; color:#FFFFFF;">창 닫기</div>-->
+							<img src="/images/icon_X.svg" alt="닫기" class="btn-close">
+						</a>
 					</li>
 				</ul>
-			</div>
 
-			<div class="tt-input-box" style="width:100%; height:100%; margin:0px 0px 0 0; padding:0; border:1px solid #5e5e5e;">
-
-
-				<div class="tt-input-box" style="margin:0px; width:100%; height:88%; padding:0; border:0px solid #000000; background:#FFFFFF;">
-					<p id="msg_box-row1" style="width:100%; height: 60px; font-size:0.9rem; text-align:center; border:0px solid #FFFFFF;">
-
-					</p>
-					<p id="msg_box-row2" style="width:100%; height: 60px; font-size:0.9rem; text-align:center; border:0px solid #FFFFFF;">
-
-					</p>
-					<p id="msg_box-row3" style="width:100%; height: 60px; font-size:0.9rem; text-align:center; border:0px solid #FFFFFF;">
+				<div class="tt-input-box" style="margin:0px; width:100%; height:200px; padding:0; border:0px solid #000000; background:#26262A;display: flex;align-items: center;justify-content: center; border-radius:0 0 25px 25px">
+					<p id="msg_box-row3" style="width:100%; height: 60px; font-size:16px; text-align:center; border:0px solid #FFFFFF;left: 0;top: 0;line-height: 60px;color: #fff !important; font-weight: 700;">
 						저장 등록 되었습니다.
-					</p>
-					<p id="msg_box-row4" style="width:100%; height: 60px; font-size:0.9rem; text-align:center; border:0px solid #FFFFFF;">
-
-					</p>
-					<p id="msg_box-row5" style="width:100%; height: 60px; font-size:0.9rem; text-align:center; border:0px solid #FFFFFF;">
-
 					</p>
 				</div>
 
@@ -23928,9 +23913,9 @@
 					<!-- 상담입력창 이벤트처리 -->
 					<ul style="width:100%; height:100%; float:left;">
 						<li class="" style="width:100%;">
-							<a href="http://localhost:8080/tt/mn/page/fa#" onclick="btn_click_close(); return false;" style="display:inline-block; color:#FFFFFF; width:40%;">
-								<div class="btn_b" style="width:100%; height:30px; margin-left:2%; background:#1C86EE; border:1px solid #5e5e5e; border-radius: 5px; font-size:0.8rem; font-weight:600; line-height:200%; color:#FFFFFF;">창 닫기</div>
-							</a>
+							<!-- <a href="http://localhost:5080/tt/cu/page/rd#" onclick="btn_click_close(); return false;" style="display:inline-block; color:#FFFFFF; width:40%;">
+							 	<div class="btn_b" style="width:100%; height:30px; margin-left:2%; background:#1C86EE; border:1px solid #5e5e5e; border-radius: 5px; font-size:0.8rem; font-weight:600; line-height:200%; color:#FFFFFF;">창 닫기</div>
+							</a>-->
 						</li>
 					</ul>
 				</div>
@@ -23938,6 +23923,7 @@
 
 
 		</div>
+	
 
 		<!----------------- ShowHide Script Result-MessageBox ------------------->
 		<script type="text/javascript">
@@ -23949,7 +23935,7 @@
 			function alert_msg_show() {
 				$('.result-msg-box').css('display', '');
 
-				$('#msg_box-row3').css('color', 'red');
+				$('#msg_box-row3').css('color', '#fff');
 				$('#msg_box-row3').css('font-weight', '600');
 			}
 
