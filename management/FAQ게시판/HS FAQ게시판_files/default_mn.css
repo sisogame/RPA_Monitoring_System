@@ -764,7 +764,7 @@ textarea::-ms-input-placeholder { font-size: 0.85rem; font-style: italic; color:
 .btn-reg.btn-new .btn-innerTxt { color: #2A2A2A; } 
 
 /* 20240724 modify [s] */
-.tt-input-box .title h2 { color: #fff; font-size: 12px !important; line-height: 12px; } 
+.tt-input-box .title h2 { color: #fff; font-size: 14px !important; line-height: 12px; } 
 
 .date-wrap .date-list { display: flex !important; gap: 8px; } 
 

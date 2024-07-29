@@ -23251,7 +23251,7 @@
 			<div class="tt-grid-box" style="margin:0px 10px;">
 
 
-				<ul class="titleWrap">
+				<ul class="">
 					<li class="title">
 						<h3 class="title">공지사항목록</h3>
 						<div class="btn-wrap">
@@ -23445,7 +23445,7 @@
 
 														11</div>
 												</div>
-												<div comp-id="63" style="transform: translateY(35px); height: 35px;" role="row" row-index="1" class="ag-row-odd ag-row-no-focus ag-row-not-inline-editing ag-row ag-row-level-0 ag-row-position-absolute ag-row-last" aria-rowindex="3" row-id="1">
+												<div comp-id="63" style="transform: translateY(40px); height: 35px;" role="row" row-index="1" class="ag-row-odd ag-row-no-focus ag-row-not-inline-editing ag-row ag-row-level-0 ag-row-position-absolute ag-row-last" aria-rowindex="3" row-id="1">
 													<div comp-id="64" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-first" role="gridcell" col-id="idate" tabindex="-1" aria-colindex="2" style="left: 0px; width: 160px; text-align: center;">24-07-05</div>
 													<div comp-id="65" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height" role="gridcell" col-id="rn_ty_txt" tabindex="-1" aria-colindex="3" style="left: 160px; width: 100px; text-align: center; color: blue;"></div>
 													<div comp-id="66" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height" role="gridcell" col-id="btn_rnidx" tabindex="-1" aria-colindex="4" style="left: 260px; width: 90px; text-align: center;"><span>
@@ -23868,52 +23868,42 @@
 
 
 		<!-- contents_footer -->
-		<div id="wrapper" class="result-msg-box" style="display:none; position:fixed; top: 0; width:100%!important; height:100%; margin:0; z-index:1100; background:#181d26; overflow-y: hidden; overflow-x: hidden;">
-			<div class="wrap_slidebar" style="width:500px; height:40%; background:#5e5e5e; border:1px solid #000000; margin:0; position:absolute; margin-left: 50%; left:-250px; margin-top:5%;">
-				<div class="tt-input-box" style="width:100%; height:10%; background:#000000; margin-left:0;  padding:0;">
+		<div id="wrapper" class="result-msg-box" style="display:none;">
+		<div class="wrap_slidebar">
+			<!--  <div class="tt-input-box" style="width:100%; height:10%; background:#000000; padding:0; margin: 0 !important;">
+			</div> -->
+			<div class="tt-input-box">
+				<!-- 상담입력창 이벤트처리 -->
+				<ul class="">
+					<li class="msg-header">
+						<h3>메세지</h3>
+						<a href="http://localhost:5080/tt/cu/page/rd#" onclick="btn_click_close(); return false;">
+							<!-- <div class="btn_b" style="width:100%; height:30px; margin-left:2%; background:#1C86EE; border:1px solid #5e5e5e; border-radius: 5px; font-size:0.8rem; font-weight:600; line-height:200%; color:#FFFFFF;">창 닫기</div>-->
+							<img src="/images/icon_X.svg" alt="닫기" class="btn-close">
+						</a>
+					</li>
+				</ul>
+
+				<div class="tt-input-box" style="margin:0px; width:100%; height:200px; padding:0; border:0px solid #000000; background:#26262A;display: flex;align-items: center;justify-content: center; border-radius:0 0 25px 25px">
+					<p id="msg_box-row3" style="width:100%; height: 60px; font-size:16px; text-align:center; border:0px solid #FFFFFF;left: 0;top: 0;line-height: 60px;color: #fff !important; font-weight: 700;">
+						저장 등록 되었습니다.
+					</p>
+				</div>
+
+				<div class="tt-input-box" style="margin:0; padding:0; width:100%; height:12%; border:0px solid #000000; background:#1c1c1c;">
 					<!-- 상담입력창 이벤트처리 -->
-					<ul style="width:100%; height:30px; float:left; border:0px solid #000000;">
+					<ul style="width:100%; height:100%; float:left;">
 						<li class="" style="width:100%;">
-							<h3 style="color:#FFFFFF; font-size:0.9rem; line-height:2.0rem;">메세지</h3>
+							<!-- <a href="http://localhost:5080/tt/cu/page/rd#" onclick="btn_click_close(); return false;" style="display:inline-block; color:#FFFFFF; width:40%;">
+							 	<div class="btn_b" style="width:100%; height:30px; margin-left:2%; background:#1C86EE; border:1px solid #5e5e5e; border-radius: 5px; font-size:0.8rem; font-weight:600; line-height:200%; color:#FFFFFF;">창 닫기</div>
+							</a>-->
 						</li>
 					</ul>
 				</div>
-
-				<div class="tt-input-box" style="width:100%; height:100%; margin:0px 0px 0 0; padding:0; border:1px solid #5e5e5e;">
-
-
-					<div class="tt-input-box" style="margin:0px; width:100%; height:88%; padding:0; border:0px solid #000000; background:#FFFFFF;">
-						<p id="msg_box-row1" style="width:100%; height: 60px; font-size:0.9rem; text-align:center; border:0px solid #FFFFFF;">
-
-						</p>
-						<p id="msg_box-row2" style="width:100%; height: 60px; font-size:0.9rem; text-align:center; border:0px solid #FFFFFF;">
-
-						</p>
-						<p id="msg_box-row3" style="width:100%; height: 60px; font-size:0.9rem; text-align:center; border:0px solid #FFFFFF;">
-							저장 등록 되었습니다.
-						</p>
-						<p id="msg_box-row4" style="width:100%; height: 60px; font-size:0.9rem; text-align:center; border:0px solid #FFFFFF;">
-
-						</p>
-						<p id="msg_box-row5" style="width:100%; height: 60px; font-size:0.9rem; text-align:center; border:0px solid #FFFFFF;">
-
-						</p>
-					</div>
-
-					<div class="tt-input-box" style="margin:0; padding:0; width:100%; height:12%; border:0px solid #000000; background:#1c1c1c;">
-						<!-- 상담입력창 이벤트처리 -->
-						<ul style="width:100%; height:100%; float:left;">
-							<li class="" style="width:100%;">
-								<a href="http://localhost:8080/tt/mn/page/nt#" onclick="btn_click_close(); return false;" style="display:inline-block; color:#FFFFFF; width:40%;">
-									<div class="btn_b" style="width:100%; height:30px; margin-left:2%; background:#1C86EE; border:1px solid #5e5e5e; border-radius: 5px; font-size:0.8rem; font-weight:600; line-height:200%; color:#FFFFFF;">창 닫기</div>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-
-
 			</div>
+
+
+		</div>
 
 			<!----------------- ShowHide Script Result-MessageBox ------------------->
 			<script type="text/javascript">
@@ -23925,7 +23915,7 @@
 				function alert_msg_show() {
 					$('.result-msg-box').css('display', '');
 
-					$('#msg_box-row3').css('color', 'red');
+					$('#msg_box-row3').css('color', 'fff');
 					$('#msg_box-row3').css('font-weight', '600');
 				}
 
@@ -23936,7 +23926,7 @@
 					$('#msg_box-row1').css('font-weight', '');
 					$('#msg_box-row2').css('color', '#000000');
 					$('#msg_box-row2').css('font-weight', '');
-					$('#msg_box-row3').css('color', '#000000');
+					$('#msg_box-row3').css('color', '#ffffff');
 					$('#msg_box-row3').css('font-weight', '');
 					$('#msg_box-row4').css('color', '#000000');
 					$('#msg_box-row4').css('font-weight', '');

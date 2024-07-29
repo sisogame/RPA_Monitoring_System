@@ -1739,7 +1739,7 @@ textarea::-ms-input-placeholder { font-size: 0.85rem; font-style: italic; color:
 /* 20240724 modify [s] */
 .tt-input-box .title h2 {
     color: #fff;
-    font-size: 12px !important;
+    font-size: 14px !important;
     line-height: 12px;
 }
 
