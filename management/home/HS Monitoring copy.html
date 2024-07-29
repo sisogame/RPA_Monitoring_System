@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0032)http://localhost:8080/tt/mn/home -->
+<!-- saved from url=(0032)http://localhost:5080/tt/ds/home -->
 <html>
 
 <head>
@@ -10,13 +10,13 @@
 	<!--<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />-->
 	<title>HS Monitoring</title>
 
-	<link rel="stylesheet" href="./HS Monitoring_files/ag-grid-scrollbar-user.css">
+	<link rel="stylesheet" href="./Monitoring_files/ag-grid-scrollbar-user.css">
 
 	<link rel="stylesheet" href="./HS Monitoring_files/default_mn.css">
 	<link rel="stylesheet" href="./HS Monitoring_files/layout_mn.css">
 	<link rel="stylesheet" href="./HS Monitoring_files/element.css">
 	<!--
-	<link rel="stylesheet" href="/assets/css/slidebars.css?t=25103931" />
+	<link rel="stylesheet" href="/assets/css/slidebars.css?t=18171010" />
 	-->
 
 	<!--region ag-grid -->
@@ -22823,6 +22823,7 @@
 		#sb-site,
 		.sb-site-container {
 			background: transparent;
+			height: 100%;
 		}
 
 
@@ -22841,13 +22842,13 @@
 			}
 
 			#top_menu {
-				/* height: 39px!important; */
+				height: 60px !important;
 			}
 		}
 
 		.top_tit {
-			// padding: 10px 30px 0 10px;
-			// border-bottom: 1px solid #5E5E5E;
+			/* padding: 10px 30px 0 10px;
+			 border-bottom: 1px solid #5E5E5E; */
 		}
 
 		.top_tit .top_menu_btn {
@@ -22855,55 +22856,49 @@
 		}
 
 		#wrapper {
-			/* width: 98.5%!important; */
-			background: #181d26;
+			/*width: 98.5% !important;
+			margin-left: 120px;
+			background: #181d26;*/
+			background: #1a1a1f;
+			display: inline-block;
 		}
 
 		#wrapper.move {
-			margin-left: 120px;
-		}
-	</style>
-
-	<!-- Calendar -->
-	<style>
-		.pignose-calendar {
-			font-size: 0.8rem !important;
-		}
-
-		.pignose-calendar-wrapper {
-			width: 400px !important;
-			border-radius: 8px !important;
+			 /*margin-left:120px;
+			margin-left: 150px;;*/
+			
 		}
 	</style>
 
 </head>
 
 <body>
-
+	<!-- <div class="modal">
+		<div class="modal-body">
+			
+		</div>
+	</div> -->
 
 	<div class="sb-slidebar sb-left" style="max-width:420px!important; background:#000; border:0px solid #FFFFFF; border-right:1px solid #e5e5e5; orverflow-y:none;">
 
 		<div class="wrap_slidebar">
 
 			<!--leftmenu-->
-			<!--leftmenu-->
 			<div id="allmenu">
 
 				<div class="al_acc navbarWrap">
-				
-
-<a href="http://localhost:5080/" class="logo-text">
-	<img src="./HS Monitoring_files/left_menu_m.png" alt="" class="navbar__logoimg">
-	<h3 class="navbar__logo__tit">RPA Monitoring System</h3>
-</a>					<div style="display: none; width: 50px; height: 18px; margin-top:-28px; margin-left:180px; position:absolute; text-align:center; border-radius:4px; line-height:18px; border:1px solid #66CDAA;">
-						<h2 style="color:#e5e5e5;">관리자</h2>
+					<a href="http://localhost:5080/" class="logo-text">
+						<img src="./HS Monitoring_files/left_menu_m.png" alt="" class="navbar__logoimg">
+						<h3 class="navbar__logo__tit">RPA Monitoring System</h3>
+					</a>
+					<div style="display: none; width: 50px; height: 18px; margin-top:-28px; margin-left:180px; position:absolute; text-align:center; border-radius:5px; line-height:18px; border:1px solid #287dfa;">
+						<h2 style="color:#e5e5e5;">대시보드</h2>
 					</div>
 				</div>
 
 				<ul id="al_1dul" class="al_1dul" style="padding-top:0px;">
 					<li class="al_1dul_lnbTop"></li>
 				</ul>
-
 				<ul id="al_1dul" class="al_1dul" style="padding:0px 0 0 0;">
 					<li>
 
@@ -22913,9 +22908,9 @@
 							<li class="btn-nav">
 								<div class="circle"></div>
 								<a rel="모니터링" href="http://localhost:5080/tt/cu/home" class="st2">
-									<p class="ico-08">모니터링</p>
+									<p class="ico-01">Home</p>
 								</a>
-							</li>
+						</li>
 						</ul>
 					</li>
 				</ul>
@@ -22931,141 +22926,112 @@
 							<!-- 기본 서비스 메뉴 -->
 							<li class="btn-nav">
 								<div class="circle"></div>
-								<a rel="가동율모니터링" href="http://localhost:5080/tt/cu/page/rpa-stay" class="st2">
+								<a rel="가동율모니터링" href="http://localhost:5080/tt/ds/page/dash-act" class="st2">
 									<p class="ico-08">가동률</p>
 								</a>
 							</li>
-							
 							<li class="btn-nav">
 								<div class="circle"></div>
-								<a rel="리소스모니터링" href="http://localhost:5080/tt/cu/page/rpa-stay" class="st2">
+								<a rel="리소스모니터링" href="http://localhost:5080/tt/ds/page/dash-sys" class="st2">
 									<p class="ico-09">리소스</p>
 								</a>
 							</li>
-							<!--
-						<li><a style="padding:0;" href="/tt/mn/page/dash-bot" class="st2"><img src="/assets/img/icon/icon_011.png" alt="BOT실행모니터링">RPA Bot-Monitoring</a></li>
-						-->
 						</ul>
 					</li>
 				</ul>
 
 				<ul id="al_1dul" class="al_1dul" style="padding-top:0;">
-					<li style="width:100%; height:1px; background:#2e2e2e;">
-					</li>
-				</ul>
-				<ul id="al_1dul" class="al_1dul" style="padding:0px 0 0 0;">
-					<li>
+                    <li style="width:100%; height:1px; background:#2e2e2e;">
+                    </li>
+                </ul>
+                <ul id="al_1dul" class="al_1dul" style="padding:0px 0 0 0;">
+                    <li>
 
-						<ul id="al_2dul" class="al_2dul" style="padding:0;">
+                        <ul id="al_2dul" class="al_2dul" style="padding:0;">
 
-							<!-- 기본 서비스 메뉴 -->
-							<li class="btn-nav">
-								<div class="circle"></div>
-								<a rel="RPA 과제별 대기현황" href="http://localhost:5080/tt/cu/page/rpa-stay" class="st2">
-									<p class="ico-02">대기현황</p>
-								</a>
-							</li>
-							<li class="btn-nav">
-								<div class="circle"></div>
-								<a rel="과제별동작현황" href="http://localhost:5080/tt/cu/page/rpa-act" class="st2">
-									<p class="ico-03">동작현황</p>
-								</a>
-							</li>
-							
-							<li class="btn-nav">
-								<div class="circle"></div>
-								<a rel="과제별작업현황" href="http://localhost:5080/tt/cu/page/rpa-wk" class="st2">
-									<p class="ico-04">작업현황</p>
-								</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
+                            <!-- 기본 서비스 메뉴 -->
+                            <li class="btn-nav">
+                                <div class="circle"></div>
+                                <a rel="RPA 과제별 대기현황" href="http://localhost:5080/tt/cu/page/rpa-stay" class="st2">
+                                    <p class="ico-02">대기현황</p>
+                                </a>
+                            </li>
+                            <li class="btn-nav">
+                                <div class="circle"></div>
+                                <a rel="과제별동작현황" href="http://localhost:5080/tt/cu/page/rpa-act" class="st2">
+                                    <p class="ico-03">동작현황</p>
+                                </a>
+                            </li>
 
-				<ul id="al_1dul" class="al_1dul" style="display:none; padding:0px 0 0 0;">
-					<li>
+                            <li class="btn-nav">
+                                <div class="circle"></div>
+                                <a rel="과제별작업현황" href="http://localhost:5080/tt/cu/page/rpa-wk" class="st2">
+                                    <p class="ico-04">작업현황</p>
+                                </a>
+                            </li>
 
-						<ul id="al_2dul" class="al_2dul" style="padding:0;">
+                        </ul>
+                    </li>
+                </ul>
 
-							<!-- 기본 서비스 메뉴 -->
-							<li>
-								<a style="padding:0;" href="http://localhost:8080/tt/mn/page/rpa-err" class="st2"><img src="./HS Monitoring_files/icon_009.png" alt="RPA 오류발생내역">
-									<p style="color:#aeaeae; font-size:0.8rem; float: left; font-weight:600;">오류발생 내역</p>
-								</a>
-							</li>
-							<li>
-								<a style="padding:0;" href="http://localhost:8080/tt/mn/page/rpa-log-res" class="st2"><img src="./HS Monitoring_files/icon_009.png" alt="RPA 리소스정보 수신내역">
-									<p style="color:#aeaeae; font-size:0.8rem; float: left; font-weight:600;">리소스정보 내역</p>
-								</a>
-							</li>
-							<li>
-								<a style="padding:0;" href="http://localhost:8080/tt/mn/page/rpa-log-data" class="st2"><img src="./HS Monitoring_files/icon_009.png" alt="RPA 처리결과 수신내역">
-									RPA 처리결과 내역
-								</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
+								<ul id="al_1dul" class="al_1dul" style="padding-top:0;">
+                    <li style="width:100%; height:1px; background:#2e2e2e;">
+                    </li>
+                </ul>
+                <ul id="al_1dul" class="al_1dul" style="padding:0px 0 0 0;">
+                    <li>
 
-				<ul id="al_1dul" class="al_1dul" style="padding-top:0;">
-					<li style="width:100%; height:1px; background:#2e2e2e;">
-					</li>
-				</ul>
-				<ul id="al_1dul" class="al_1dul" style="padding:0px 0 0 0;">
-					<li>
+                        <ul id="al_2dul" class="al_2dul" style="padding:0;">
 
-						<ul id="al_2dul" class="al_2dul" style="padding:0;">
+                            <!-- 기본 서비스 메뉴 -->
+                            <li class="btn-nav">
+                                <div class="circle"></div>
+                                <a rel="사용자관리" href="http://localhost:5080/tt/cu/page/nt" class="st2">
+                                    <p class="ico-10">사용자관리</p>
+                                </a>
+                            </li>
+                            
+                            <li class="btn-nav">
+                                <div class="circle"></div>
+                                <a rel="RPA-BOT매핑" href="http://localhost:5080/tt/cu/page/nt" class="st2">
+                                    <p class="ico-11">BOT매핑</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
 
-							<!-- 기본 서비스 메뉴 -->
-							<li class="btn-nav">
-								<div class="circle"></div>
-								<a rel="사용자관리" href="http://localhost:5080/tt/cu/page/nt" class="st2">
-									<p class="ico-10">사용자관리</p>
-								</a>
-							</li>
-							
-							<li class="btn-nav">
-								<div class="circle"></div>
-								<a rel="RPA-BOT매핑" href="http://localhost:5080/tt/cu/page/nt" class="st2">
-									<p class="ico-11">BOT매핑</p>
-								</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
+								<ul id="al_1dul" class="al_1dul" style="padding-top:0;">
+                    <li style="width:100%; height:1px; background:#2e2e2e;">
+                    </li>
+                </ul>
+                <ul id="al_1dul" class="al_1dul" style="padding:0px 0 0 0;">
+                    <li>
 
-				<ul id="al_1dul" class="al_1dul" style="padding-top:0;">
-					<li style="width:100%; height:1px; background:#2e2e2e;">
-					</li>
-				</ul>
-				<ul id="al_1dul" class="al_1dul" style="padding:0px 0 0 0;">
-					<li>
+                        <ul id="al_2dul" class="al_2dul" style="padding:0;">
 
-						<ul id="al_2dul" class="al_2dul" style="padding:0;">
-
-							<!-- 기본 서비스 메뉴 -->
-								<li class="btn-nav">
-									<div class="circle"></div>
-									<a rel="공지사항" href="http://localhost:5080/tt/cu/page/nt" class="st2">
-										<p class="ico-05">공지사항</p>
-									</a>
-								</li>
-								</li>
-								<li class="btn-nav">
-									<div class="circle"></div>
-									<a rel="FAQ게시판" href="http://localhost:5080/tt/cu/page/fa" class="st2">
-										<p class="ico-06">FAQ</p>
-									</a>
-								</li>
-								<li class="btn-nav">
-									<div class="circle"></div>
-									<a rel="상시과제제출" href="http://localhost:5080/tt/cu/page/rd" class="st2">
-										<p class="ico-07">상시과제</p>
-									</a>
-								</li>
-						</ul>
-					</li>
-				</ul>
+                            <!-- 기본 서비스 메뉴 -->
+                            <li class="btn-nav">
+                                <div class="circle"></div>
+                                <a rel="공지사항" href="http://localhost:5080/tt/cu/page/nt" class="st2">
+                                    <p class="ico-05">공지사항</p>
+                                </a>
+                            </li>
+                            <li class="btn-nav">
+                                <div class="circle"></div>
+                                <a rel="FAQ게시판" href="http://localhost:5080/tt/cu/page/fa" class="st2">
+                                    <p class="ico-06">FAQ</p>
+                                </a>
+                            </li>
+                            <li class="btn-nav">
+                                <div class="circle"></div>
+                                <a rel="상시과제제출" href="http://localhost:5080/tt/cu/page/rd" class="st2">
+                                    <p class="ico-07">상시과제</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
 
 				<ul id="al_1dul" class="al_1dul" style="padding-top:0;">
 					<li style="width:100%; height:1px; background:#2e2e2e;">
@@ -23094,23 +23060,21 @@
 				<a href="http://localhost:5080/ds" id="url_btn_1" class="home__contact btn btn-bluePurple"> Dashboard </a>
 				<a href="http://localhost:5080/mn" id="url_btn_2" class="home__contact btn btn-tea active"> Management </a>
 			</div>
-			<div id="top_menu">
+			<div id="top_menu" class="top_menu-right">
 
 				<div class="top_tit">
 
 
 					<span class="top_menu_btn" style="display:none; width: 80px; margin-top: -10px; margin-left: -10px; padding-top:0px; background:#FFFAFA;">
-						<a href="http://localhost:8080/tt/mn/home#none" class="sb-toggle-left">
+						<a href="http://localhost:5080/tt/ds/home#none" class="sb-toggle-left">
 							<img src="./HS Monitoring_files/top_btn_menu_a.png" alt="menu" style="width:70px; margin-top: 15px; margin-left: 5px;">
 						</a>
 					</span>
 					<div class="logo_home" style="display:none; float:left; margin-left:90px; margin-top: 14px;">
 						<img id="top_logo" src="./HS Monitoring_files/login_logo.png" alt="HD" style="width:220px; margin:0; padding:0; top:50px; float:left; left:100px; opacity:1.0;">
 					</div>
-					<h3 style="width: 200px; height:16px; padding:0 10px 0 0; color:#c5c5c5; float:right; line-height: 10px; margin-left:130px; margin-top:37px; font-size:0.8rem; font-weight:400; text-align:right;">Monitoring</h3>
-					<span class="top_home_btn">
-
-					</span>
+					<h3 class="gnb_btn_rt">RPA Activity-Monitoring</h3>
+					<span class="top_home_btn"></span>
 				</div>
 			</div>
 
@@ -23120,14 +23084,14 @@
 
 
 
+
 		<!---------------- 컨텐츠 시작 MN ---------------->
 		<div id="wrapper" class="move" style="display: inline-block; width:100%; height:92vh;">
 
-			<iframe src="./HS Monitoring_files/rpa-ds01.html" style="display:block; width:97vw; height:100%; background:transparent; margin:0; padding:0; border:0px solid #FFFFFF;">
+			<iframe src="./HS Monitoring_files/rpa-ds01.html" style="display:block; width:100vw; height:100%; background:transparent; margin:0; padding:0; border:0px solid #FFFFFF;">
 
 			</iframe>
 		</div>
-
 		<!----------------- 컨텐츠 끝 ------------------->
 
 
@@ -23139,7 +23103,7 @@
 
 
 	<!-- contents_footer -->
-	<div id="wrapper" class="result-msg-box" style="display:none; position:fixed; top: 0; width:100%!important; height:100%; margin:0; z-index:1100; background:#222227; overflow-y: hidden; overflow-x: hidden;">
+	<div id="wrapper" class="result-msg-box" style="display:none; position:fixed; top: 0; width:100%!important; height:100%; margin:0; z-index:1100; background:#181d26; overflow-y: hidden; overflow-x: hidden;">
 		<div class="wrap_slidebar" style="width:500px; height:40%; background:#5e5e5e; border:1px solid #000000; margin:0; position:absolute; margin-left: 50%; left:-250px; margin-top:5%;">
 			<div class="tt-input-box" style="width:100%; height:10%; background:#000000; margin-left:0;  padding:0;">
 				<!-- 상담입력창 이벤트처리 -->
@@ -23175,7 +23139,7 @@
 					<!-- 상담입력창 이벤트처리 -->
 					<ul style="width:100%; height:100%; float:left;">
 						<li class="" style="width:100%;">
-							<a href="http://localhost:8080/tt/mn/home#" onclick="btn_click_close(); return false;" style="display:inline-block; color:#FFFFFF; width:40%;">
+							<a href="http://localhost:5080/tt/ds/home#" onclick="btn_click_close(); return false;" style="display:inline-block; color:#FFFFFF; width:40%;">
 								<div class="btn_b" style="width:100%; height:30px; margin-left:2%; background:#1C86EE; border:1px solid #5e5e5e; border-radius: 5px; font-size:0.8rem; font-weight:600; line-height:200%; color:#FFFFFF;">창 닫기</div>
 							</a>
 						</li>
@@ -23248,6 +23212,24 @@
 		})(jQuery);
 	</script>
 
+
+	<script>
+		document.addEventListener('DOMContentLoaded',
+			function () {
+				// 20240720 add script - ley
+				const navItems = document
+					.querySelectorAll('.st2');
+
+				navItems.forEach(item => {
+					item.addEventListener('click',
+						function () {
+							navItems.forEach(navItem => navItem
+								.classList.remove('active'));
+							this.classList.add('active');
+						});
+				});
+			});
+	</script>
 	<!-- template..account -->
 </body>
 
