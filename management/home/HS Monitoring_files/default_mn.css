@@ -893,6 +893,15 @@ li { list-style:none; margin:0px; padding:0px; }
 .btn:hover {
     color: var(--color-white) !important;
 }
+.tt-wrap .title { color: #fff !important; } 
+
+.tt-wrap .btn-reg { 
+    width: 20px; 
+    height: 20px; 
+    position: absolute;
+    right: 45px;
+    top: 13px;
+  } 
 
 @-webkit-keyframes fadeIn {
     0% {
@@ -920,33 +929,14 @@ li { list-style:none; margin:0px; padding:0px; }
     display: inline-block;
 }
 
+
 /* 20240723 modify [s] */
-.btn-search {
-    /* width: 92px; */
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    border-radius: 20px !important;
-    height: 36px !important;
-    text-align: center;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    font-weight: 100;
-    line-height: 1.5rem !important;
-    padding: 0 25px;
-}
+.btn-search { width: 100%; height: 26px; float: right; text-align: center; background: #191970; border: 1px solid #0000FF; border-radius: 5px; font-weight: 100; line-height: 1.5rem !important; } 
 
 /* 20240723 modify [e] */
 
-.btn-search>a {
-    color: #e5e5e5;
-    /* line-height:0; */
-    font-size: 0.9rem;
-    width: 100%;
-    height: 100%;
-    display: inline-block;
-    font-weight: 400;
-}
+.btn-search>a { color: #e5e5e5; /* line-height:0; */
+    font-size: 0.9rem; width: 100%; height: 100%; display: inline-block; } 
 
 
 .logo-text>h3:hover {
@@ -1458,11 +1448,17 @@ textarea::-ms-input-placeholder { font-size: 0.85rem; font-style: italic; color:
 
 .home_talk3 .title.tt-wrap,
 .tt-btn-box .title.tt-wrap {
-    float: left;
-    display: flex !important;
-    justify-content: space-between;
+    display: flex !important; 
+    justify-content: space-between; 
     align-items: center;
+    height: 45px;
+    background: #2a2a2f;
+    width: 100% !important;
+    padding-left: 25px;
+    position: relative;
 }
+
+.tt-btn-box .graph-wrap { border-radius: 35px; } 
 
 .home_talk3 .title.tt-wrap.tt-wrap-tit-rt {
     width: 49.0%;
@@ -1596,7 +1592,7 @@ textarea::-ms-input-placeholder { font-size: 0.85rem; font-style: italic; color:
 /* 20240724 modify [s] */
 .tt-input-box .title h2 {
     color: #fff;
-    font-size: 12px !important;
+    font-size: 14px !important;
     line-height: 12px;
 }
 
@@ -1732,3 +1728,66 @@ textarea::-ms-input-placeholder { font-size: 0.85rem; font-style: italic; color:
 }
 
 /* 20240726 add css [e] */
+
+/* 20240726 modal popup [s] */
+.modal {
+    position:absolute;
+    display:none;
+    justify-content: center;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 9;
+  
+    /*position:fixed;
+     position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); */
+  }
+  
+  .modal-body {
+    position:absolute;
+    top:50%;
+    text-align: center;
+    background-color: rgb(255,255,255,0); 
+    border-radius: 20px; 
+    /* box-shadow:0 2px 3px 0 rgba(34,36,38,0.15);  */
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,  rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transform:translateY(-50%); 
+    overflow: hidden;
+  }
+  
+  .modal-body .modal-tit {
+    background: #7c4ed9;
+    padding: 0 20px;
+    text-align: left;
+    line-height: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .modal-body .modal-tit .tt {
+    left: 0;
+    top: 0;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .modal-body .modal-tit .btn-close {
+    background: none;
+    outline: none;
+    border:none;
+  }
+  
+  .modal-content {
+    background: #26262a;
+  }
+  
+  .modal-content .content {
+    width: 1500px;
+    height: 600px;
+  }

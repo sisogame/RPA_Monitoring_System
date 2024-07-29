@@ -1,5 +1,5 @@
 
-<!-- saved from url=(0050)http://localhost:8080/tt/ex/report/rpa-ds01.loader -->
+<!-- saved from url=(0050)http://localhost:5080/tt/ex/report/rpa-ds01.loader -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Main Dashboard</title>
 
@@ -9,15 +9,20 @@
 <link rel="stylesheet" href="./ag-grid-scrollbar-user(1).css">
 
 <link rel="stylesheet" href="./default_mn(1).css">
-<link rel="stylesheet" href="./layout_mn(1).css">
+<link rel="stylesheet" href="./layout_mn.css">
 <link rel="stylesheet" href="./element(1).css">
+<link rel="stylesheet" href="./default_mn.css">
 
 <style>
+	/* 20240719 modify[s] */
 	#wrapper {
-		background:#181d26;
+		/* background:#181d26; */
+		background:#1a1a1f;
 	}
+	/* 20240719 modify[e] */
+	
 	h3 {
-		color:#aeaeae;
+		/* color:#aeaeae; */
 		font-size: 0.8rem;
 		padding:0;
 	}
@@ -36,11 +41,31 @@
 		position:relative;
 		float:left;
 		font-size: 0.8rem;
-		background: #181d26;
+		background: #222227;
+		margin-right: 20px !important;
 	}
 	.tt-noti-box {
 		padding-bottom: 56.25%; /* 16:9 비율 */
 	}
+
+	/* 20240429 css add [s] */
+	#wrapper.rpaWrap{
+		display: inline-block; 
+		width:100%; 
+		height:100%;
+		padding-top: 5px; 
+		padding-left: 5px; 
+		/* min-width: 1200px; */
+		/* min-width: 100%; */
+		position: relative;
+		overflow: hidden;
+
+
+		/* 20240727 modify */
+		margin-left:-120px;
+		padding-left: 150px;
+	}
+	/* 20240429 css add [e] */
 </style>
 
 <!--region ag-grid -->
@@ -55,52 +80,74 @@
 
 
 <!---------------- 컨텐츠 시작 MN ---------------->
-<div id="wrapper" class="move" style="display: inline-block; width:100%; height:100%;">
 
-	<div class="tt-btn-box" style="margin:20px 25px;">
+<div class="modal">
+	<div class="modal-body">
+		<div class="modal-tit">
+			<p class="tt">RPA 설계부문 절감추이</p>
+			<button onclick="click_close();" class="btn-close"><img src="/images/icon_X.svg" alt="닫기"></button>
+		</div>
+		<div class="modal-content">
+			<div class="content"></div>
+			<!-- <div class="btn-wrap">
+				<a href="#"><button class="btn-save">저장</button></a>
+				<a href="#"><button class="btn-remove">삭제</button></a>
+			</div> -->
+		</div>
+	</div>
+</div>
+
+<div id="wrapper" class="move rpaWrap" style="">
+	<div class="tt-btn-box" style="margin:20px 15px 0;">
+		<div class="graph-wrap">
+			<ul>
+				<li class="title tt-wrap">
+					<h3 class="title">RPA 설계부문 절감추이</h3>
+					<div class="btn btn-space">
+						<div class="btn-reg">
+							<!-- http://localhost:5080/tt/ex/report/chart/rpa-ds01-c01.loader -->
+							<a href="#" class="btn-open-modal">
+								<img src="/images/icon_plus.svg" alt="확대">
+							</a>
+						</div>
+					</div>
+				</li>
+				<li class="input">
+					<div class="tt-noti-box">
+						<iframe src="./rpa-ds01-c01.html" style="display:inline-block; width:100%; height:100%;">
+						</iframe>
+					</div>
+				</li>
+			</ul>
+		</div>
 		<ul>
-			<li class="title">
-				<h3 class="title" style="float:left;">RPA 설계부문 절감추이</h3>
-				<div class="btn" style="width:60px; float:right; margin-right: 40px; margin-top:15px;">
+			<li class="title tt-wrap">
+				<h3 class="title">RPA 과제별 절감추이</h3>
+				<div class="btn btn-space">
 					<div class="btn-reg">
-						<a href="http://localhost:8080/tt/ex/report/chart/rpa-ds01-c01.loader" target="_blank">확대</a>
+						<!-- http://localhost:5080/tt/ex/report/rpa-ds01.loader#none -->
+						<a href="#" class="btn-open-modal"><img src="/images/icon_plus.svg" alt="확대"></a>
 					</div>
 				</div>
 			</li>
 			<li class="input">
-				<div class="tt-noti-box" style="margin:20px 25px;">
-					<iframe src="./rpa-ds01-c01.html" style="display:inline-block; width:100%; height:100%;">
-					</iframe>
-				</div>
-			</li>
-		</ul>
-		<ul>
-			<li class="title">
-				<h3 class="title" style="float:left;">RPA 과제별 절감추이</h3>
-				<div class="btn" style="width:60px; float:right; margin-right: 40px; margin-top:15px;">
-					<div class="btn-reg">
-						<a href="http://localhost:8080/tt/ex/report/rpa-ds01.loader#none" onclick="btn_click_show_modal(&#39;&#39;)">확대</a>
-					</div>
-				</div>
-			</li>
-			<li class="input">
-				<div class="tt-noti-box" style="margin:20px 25px;">
+				<div class="tt-noti-box">
 					<iframe src="./rpa-ds01-c02.html" style="display:inline-block; width:100%; height:100%;">
 					</iframe>
 				</div>
 			</li>
 		</ul>
 		<ul>
-			<li class="title">
-				<h3 class="title" style="float:left;">RPA 부서별 절감추이</h3>
-				<div class="btn" style="width:60px; float:right; margin-right: 40px; margin-top:15px;">
+			<li class="title tt-wrap">
+				<h3 class="title">RPA 부서별 절감추이</h3>
+				<div class="btn btn-space">
 					<div class="btn-reg">
-						<a href="http://localhost:8080/tt/ex/report/rpa-ds01.loader#none" onclick="btn_click_show_modal(&#39;&#39;)">확대</a>
+						<a href="#" class="btn-open-modal"><img src="/images/icon_plus.svg" alt="확대"></a>
 					</div>
 				</div>
 			</li>
 			<li class="input">
-				<div class="tt-noti-box" style="margin:20px 25px;">
+				<div class="tt-noti-box">
 					<iframe src="./rpa-ds01-c03.html" style="display:inline-block; width:100%; height:100%;">
 					</iframe>
 				</div>
@@ -108,51 +155,51 @@
 		</ul>
 	</div>
 
-	<div class="tt-btn-box" style="margin:20px 25px;">
+	<div class="tt-btn-box" style="margin:0 15px">
 		<ul>
-			<li class="title">
-				<h3 class="title" style="float:left;">RPA 설계부문 절감추이목록</h3>
-				<div class="btn" style="width:60px; float:right; margin-right: 40px; margin-top:15px;">
+			<li class="title tt-wrap">
+				<h3 class="title">RPA 설계부문 절감추이목록</h3>
+				<div class="btn btn-space">
 					<div class="btn-reg">
-						<a href="http://localhost:8080/tt/ex/report/rpa-ds01.loader#none" onclick="btn_click_show_modal(&#39;&#39;)">이동</a>
+						<a href="http://localhost:5080/tt/ex/report/rpa-ds01.loader#none" onclick="btn_click_show_modal(&#39;&#39;)"><img src="/images/icon_arrow.svg" alt="이동"></a>
 					</div>
 				</div>
 			</li>
-			<li class="input">
-				<div class="tt-noti-box" style="margin:20px 25px;">
-					<iframe src="./rpa-ds01-g01.html" style="display:inline-block; width:100%; height:100%; background:#000000;">
+			<li class="input input-list">
+				<div class="tt-noti-box" style="margin-top: 20px;">
+					<iframe src="./rpa-ds01-g01.html" style="display:inline-block; width:93% !important; height:88%; background:#000000;">
 					</iframe>
 				</div>
 			</li>
 		</ul>
 		<ul>
-			<li class="title">
-				<h3 class="title" style="float:left;">RPA 과제별 절감추이목록</h3>
-				<div class="btn" style="width:60px; float:right; margin-right: 40px; margin-top:15px;">
+			<li class="title tt-wrap">
+				<h3 class="title">RPA 과제별 절감추이목록</h3>
+				<div class="btn btn-space">
 					<div class="btn-reg">
-						<a href="http://localhost:8080/tt/ex/report/rpa-ds01.loader#none" onclick="btn_click_show_modal(&#39;&#39;)">이동</a>
+						<a href="http://localhost:5080/tt/ex/report/rpa-ds01.loader#none" onclick="btn_click_show_modal(&#39;&#39;)"><img src="/images/icon_arrow.svg" alt="이동"></a>
 					</div>
 				</div>
 			</li>
-			<li class="input">
-				<div class="tt-noti-box" style="margin:20px 25px;">
-					<iframe src="./rpa-ds01-g02.html" style="display:inline-block; width:100%; height:100%; background:#000000;">
+			<li class="input input-list">
+				<div class="tt-noti-box" style="margin-top: 20px;">
+					<iframe src="./rpa-ds01-g02.html" style="display:inline-block; width:93%; height:88%; background:#000000;">
 					</iframe>
 				</div>
 			</li>
 		</ul>
 		<ul>
-			<li class="title">
-				<h3 class="title" style="float:left;">RPA 부서별 절감추이목록</h3>
-				<div class="btn" style="width:60px; float:right; margin-right: 40px; margin-top:15px;">
+			<li class="title tt-wrap">
+				<h3 class="title">RPA 부서별 절감추이목록</h3>
+				<div class="btn btn-space">
 					<div class="btn-reg">
-						<a href="http://localhost:8080/tt/ex/report/rpa-ds01.loader#none" onclick="btn_click_show_modal(&#39;&#39;)">이동</a>
+						<a href="http://localhost:5080/tt/ex/report/rpa-ds01.loader#none" onclick="btn_click_show_modal(&#39;&#39;)"><img src="/images/icon_arrow.svg" alt="이동"></a>
 					</div>
 				</div>
 			</li>
-			<li class="input">
-				<div class="tt-noti-box" style="margin:20px 25px;">
-					<iframe src="./rpa-ds01-g03.html" style="display:inline-block; width:100%; height:100%; background:#000000;">
+			<li class="input input-list">
+				<div class="tt-noti-box" style="margin-top: 20px;">
+					<iframe src="./rpa-ds01-g03.html" style="display:inline-block; width:93%; height:88%; background:#000000;">
 					</iframe>
 				</div>
 			</li>
@@ -183,6 +230,28 @@
 
 </script>
 
+<!-- 확대버튼 클릭시 모달팝업 -->
+<script>
+	const modal = document.querySelector('.modal');
+	const btnOpenModal=document.querySelectorAll('.btn-open-modal');
+	const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+
+	for(var i = 0; i <= 3; i++) {
+			btnOpenModal[i].addEventListener("click", ()=>{
+			modal.style.display="flex";
+    document.body.style.overflow = 'hidden';
+    document.body.style.paddingRight = `${scrollbarWidth}px`;
+		});
+	}
+  // 창닫기
+	function click_close() {
+	document.querySelector('.modal').style.display = 'none';
+	document.body.style.overflow = '';
+	document.body.style.paddingRight = '';
+	}
+</script>
+
+
 <!----------------- (Style) AG_GRID Style RESORCE ------------------->
 <style>
 	.ag-header { /* Header Cell 높이 조정 */
@@ -205,9 +274,9 @@
 
 <style>
 	.tt-btn-box {
-		margin: 0px ! important;
+		/* margin: 0px ! important; */
 		padding:0 5px ! important;
-		width: 100% ! important;
+		/* width: 100% ! important; */
 		height: 50% ! important;
 		border: 0px solid #FFFFFF;
 		display:inline-block;
@@ -216,9 +285,9 @@
 	.tt-btn-box ul {
 		display: inline-block ! important;
 		width: 31.2% ! important;
-		height: 100% ! important;
-		margin: 0px ! important;
-		padding: 0px ! important;
+		height: 95% ! important;     
+		border-radius: 15px !important;
+		overflow: hidden;
 	}
 
 	.tt-btn-box > ul.bottom {
@@ -235,25 +304,26 @@
 		width: 100% ! important;
 		/* height: auto ! important; */
 		margin: 0px ! important;
-		padding: 0px ! important;
+		/* padding: 0px ! important; */
 		float: left ! important;
 	}
 
 	.tt-btn-box ul li.title {
 		height: 35px;
 		display: inline-block ! important;
-		margin-left: 25px ! important;
+		/* margin-left: 25px ! important;
+		margin-left: 6px ! important; */
 		margin-bottom: 0px ! important;
 		padding-bottom: 0px ! important;
 	}
 
 	.tt-btn-box ul li.input {
 		display: inline-block ! important;
-		width: 100% ! important;
-		height: 93% ! important;
+		/* width: 100% ! important; */
+		/* height: 93% ! important; */
+		height: 90% ! important;
 		margin: 0px ! important;
 		margin-top: 0px ! important;
-		padding: 0px ! important;
 		float: left ! important;
 	}
 
@@ -271,7 +341,7 @@
 		display: inline-block ! important;
 		width: 100% ! important;
 		height: 100% ! important;
-		margin: 5px ! important;
+		/* margin: 5px ! important; */
 		padding: 0px ! important;
 		border : 0px solid #FFFFFF;
 	}
@@ -293,8 +363,5 @@
 
 
 <!----------------- (Style) AG_GRID CHART RESORCE ------------------->
-
-
-
 
 </body></html>
