@@ -23171,16 +23171,15 @@
 					<li class="title tt">
 						<h2>사용자사용여부</h2>
 					</li>
-					<li class="input">
-
-						<select id="sch_delyn" class="name">
+					<li class="input input-select">
+						<input type="hidden" id="rr_rnidx" value="" placeholder="">
+						<select id="sch_rn_ty" class="name">
 							<option value="">--전체--</option>
 							<option value="Y">사용</option>
 							<option value="N">미사용</option>
 						</select>
 					</li>
 				</ul>
-
 				<ul class="date-wrap">
 					<li class="title">
 						<h2>날짜구간</h2>
@@ -23191,13 +23190,12 @@
 						<input type="text" id="sch_date_e" class="calendar" placeholder="" value="2024-07-18">
 					</li>
 				</ul>
-
 				<ul>
 					<li class="title">
 						<h2>검색 키워드(업무사용자명칭)</h2>
 					</li>
 					<li class="input input-search">
-						<input type="text" id="sch_txt" value="" placeholder="">
+						<input type="text" id="sch_rn_tt" placeholder="" value="">
 					</li>
 				</ul>
 				<ul class="btn-flex-end">
@@ -23802,34 +23800,37 @@
 		<!-- MODAL POPUP --------------------------------------------------------------------------------------------------- -->
 
 		<input type="hidden" id="index_key" value="" placeholder="">
-		<input type="hidden" id="rr_cu_id_chk" value="N" placeholder="">
+			<input type="hidden" id="rr_cu_id_chk" value="N" placeholder=""> 
 
 		<div id="modal-dtl" class="modal-dtl">
 			<div id="onetrust-banner-sdk" class="otFloatingRoundedCorner ot-bottom-left ot-wo-title vertical-align-content" tabindex="0" role="region" aria-label="Cookie banner">
 				<div class="ot-sdk-container" role="alertdialog" aria-describedby="onetrust-policy-text" aria-label="Privacy">
 					<div class="ot-sdk-row">
 						<div id="onetrust-group-container" class="ot-sdk-twelve ot-sdk-columns" style="display: flex;    flex-direction: column;">
-							<div id="onetrust-policy" style="height:100%;">
-								<div class="banner-header">
-									<div class="banner-actions-container">
-									<p style="float:left;">상시과제등록관리</p>
+							<div class="banner-header">
+								<div class="banner-actions-container">
+									<p style="float:left;">사용자등록정보</p>
 
 
 									<button id="onetrust-reject-all-handler" onclick="click_close();" style="top:10px;">
 										<img src="/images/icon_X.svg" alt="닫기" class="btn-close">
 										<!-- Close -->
 									</button>
-									</div>
 								</div>
+							</div>
 
-								<input type="hidden" id="rr_cuidx" value="" readonly="readonly">
+							<div id="onetrust-policy" class="modal-container">
+
+								<input type="hidden" id="rr_rnidx" value="" readonly="readonly">
+								<input type="hidden" id="rr_rn_no" style="width:80%; float:left; background:#1c1c1c;" value="" placeholder="-" readonly="readonly">
 								<input type="hidden" id="rr_idate" style="width:80%; float:left; background:#1c1c1c;" value="" placeholder="-" readonly="readonly">
+								<textarea type="text" id="rr_memo" style="display:none; width:90%; height:200px; float:left; color:#e5e5e5;" value="" placeholder="-"></textarea>
 
 								<div id="onetrust-policy-title" style="width:50%;">
-									<p>소속부서</p> <input id="rr_cu_dept" value="" placeholder="소속부서">
+									<p>소속부서</p> <input id="rr_rn_dept" value="" type="text" name="소속부서" placeholder="소속부서">
 								</div>
 								<div id="onetrust-policy-title" style="width:50%;">
-									<p>삭제여부</p>
+									<p>삭제여부</p> 
 									<select id="rr_cu_delyn">
 										<option value="">-선택-</option>
 										<option value="N" selected="">사용</option>
@@ -23837,39 +23838,50 @@
 									</select>
 								</div>
 								<div id="onetrust-policy-title" style="width:50%;">
-									<p id="lb_cu_id_chk">아이디</p> <input id="rr_cu_id" value="" placeholder="아이디">
-									<div class="btn-reg" style="position:absolute; width:60px; height:25px; left: 320px; background:#1E90FF; border:0px solid #e5e5e5; border-radius: 10px; font-size:0.8rem; font-weight:400; line-height:20%;">
-										<a href="http://localhost:8080/tt/mn/page/us#none" onclick="btn_click_chkbsn()" class="btn-search" style="background:#00acc1">중복확인</a>
-									</div>
+									<p id="lb_cu_id_chk">아이디</p>
+									<input id="rr_rn_dept" value="" type="text" name="아이디" placeholder="아이디">
+									<div class="btn-reg btn-check" style="position:absolute;/* width:60px; */height: 25px; line-height: 20px;/* left: 320px; */background: #8D58EB ! important;border:0px solid #e5e5e5;/* border-radius: 10px; *//* font-size: 15px; */font-weight:400;top: 7px;right: 12px;padding: 0 12px;width: auto;">
+									<a href="#none" onclick="btn_click_chkbsn()" class="" style="/* background: red; */">중복확인</a>
+								</div>
 								</div>
 								<div id="onetrust-policy-title" style="width:50%;">
-									<p>비밀번호</p> <input id="rr_cu_pw" value="" placeholder="비밀번호">
+									<p>비밀번호</p> <input id="rr_rn_min" value="" type="text" name="비밀번호" placeholder="비밀번호">
 								</div>
 								<div id="onetrust-policy-title" style="width:50%;">
-									<p>사용자명</p> <input id="rr_cu_nm" value="" placeholder="사용자명">
+									<p>사용자명</p> <input id="rr_rn_cnt" value="" type="text" name="ㅍ" placeholder="사용자명">
 								</div>
 								<div id="onetrust-policy-title" style="width:50%;">
-									<p>사용자별칭</p> <input id="rr_cu_nnm" value="" placeholder="사용자별칭">
+									<p>사용자별칭</p> <input id="rr_rn_min" value="" type="text" name="사용자별칭" placeholder="사용자별칭">
 								</div>
 								<div id="onetrust-policy-title" style="width:50%;">
-									<p>연락처</p> <input id="rr_cu_tel" value="" placeholder="연락처">
+									<p>연락처</p> <input id="rr_cu_tel" value="" name="연락처" placeholder="연락처">
 								</div>
 								<div id="onetrust-policy-title" style="width:50%;">
-									<p>이메일</p> <input id="rr_cu_email" value="" placeholder="이메일">
+									<p>이메일</p>
+									<input id="rr_cu_email" value="" placeholder="이메일">
+								</div>
+								<div id="onetrust-policy-title">
+									<p>제목</p> <input id="rr_rn_tt" value="" name="과제명칭" placeholder="과제명칭">
 								</div>
 								<div id="onetrust-policy-text">
-									<textarea id="rr_cu_memo" placeholder="기타 메모"></textarea>
+									<textarea id="rr_rn_desc" placeholder="내용글"></textarea>
+								</div>
+							</div>
+
+							<div id="onetrust-button-group-parent">
+								<div id="onetrust-button-group">
+									<div class="banner-actions-container banner-btn-wrap">
+										<!-- <button id="onetrust-reject-all-handler" onclick="click_close();" style="top:10px;">Close</button> -->
+										<button onclick="btn_click_save();" class="btn-save">저장</button>
+										<button onclick="btn_click_del();" class="btn-del">삭제</button>
+
+
+									</div>
 								</div>
 							</div>
 						</div>
 
-						<div id="onetrust-button-group-parent">
-							<div id="onetrust-button-group">
-								<div class="banner-actions-container">
-									<button id="onetrust-reject-all-handler" onclick="click_close();" style="top:10px;">Close</button>
-								</div>
-							</div>
-						</div>
+
 
 						<!-- Close Button -->
 						<div id="onetrust-close-btn-container"></div>
@@ -23906,101 +23918,78 @@
 
 
 	<!-- contents_footer -->
-	<div id="wrapper" class="result-msg-box" style="display:none; position:fixed; top: 0; width:100%!important; height:100%; margin:0; z-index:1100; background:#181d26; overflow-y: hidden; overflow-x: hidden;">
-		<div class="wrap_slidebar" style="width:500px; height:40%; background:#5e5e5e; border:1px solid #000000; margin:0; position:absolute; margin-left: 50%; left:-250px; margin-top:5%;">
-			<div class="tt-input-box" style="width:100%; height:10%; background:#000000; margin-left:0;  padding:0;">
-				<!-- 상담입력창 이벤트처리 -->
-				<ul style="width:100%; height:30px; float:left; border:0px solid #000000;">
-					<li class="" style="width:100%;">
-						<h3 style="color:#FFFFFF; font-size:0.9rem; line-height:2.0rem;">메세지</h3>
-					</li>
-				</ul>
-			</div>
+	<div id="wrapper" class="result-msg-box" style="display:none;">
+    <div class="wrap_slidebar">
+        <div class="tt-input-box">
+            <!-- 상담입력창 이벤트처리 -->
+            <ul>
+                <li  class="msg-header">
+                    <h3>메세지</h3>
+					<a href="http://localhost:5080/tt/cu/page/rd#" onclick="btn_click_close(); return false;">
+							
+							<img src="/images/icon_X.svg" alt="닫기" class="btn-close">
+						</a>
+                </li>
+            </ul>
+        </div>
 
-			<div class="tt-input-box" style="width:100%; height:100%; margin:0px 0px 0 0; padding:0; border:1px solid #5e5e5e;">
-
-
-				<div class="tt-input-box" style="margin:0px; width:100%; height:88%; padding:0; border:0px solid #000000; background:#FFFFFF;">
-					<p id="msg_box-row1" style="width:100%; height: 60px; font-size:0.9rem; text-align:center; border:0px solid #FFFFFF;">
-
-					</p>
-					<p id="msg_box-row2" style="width:100%; height: 60px; font-size:0.9rem; text-align:center; border:0px solid #FFFFFF;">
-
-					</p>
-					<p id="msg_box-row3" style="width:100%; height: 60px; font-size:0.9rem; text-align:center; border:0px solid #FFFFFF;">
-						저장 등록 되었습니다.
-					</p>
-					<p id="msg_box-row4" style="width:100%; height: 60px; font-size:0.9rem; text-align:center; border:0px solid #FFFFFF;">
-
-					</p>
-					<p id="msg_box-row5" style="width:100%; height: 60px; font-size:0.9rem; text-align:center; border:0px solid #FFFFFF;">
-
-					</p>
-				</div>
-
-				<div class="tt-input-box" style="margin:0; padding:0; width:100%; height:12%; border:0px solid #000000; background:#1c1c1c;">
-					<!-- 상담입력창 이벤트처리 -->
-					<ul style="width:100%; height:100%; float:left;">
-						<li class="" style="width:100%;">
-							<a href="http://localhost:8080/tt/mn/page/us#" onclick="btn_click_close(); return false;" style="display:inline-block; color:#FFFFFF; width:40%;">
-								<div class="btn_b" style="width:100%; height:30px; margin-left:2%; background:#1C86EE; border:1px solid #5e5e5e; border-radius: 5px; font-size:0.8rem; font-weight:600; line-height:200%; color:#FFFFFF;">창 닫기</div>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
+            <div class="tt-input-box" style="margin:0px; width:100%; height:200px; padding:0; border:0px solid #000000; background:#26262A;display: flex;align-items: center;justify-content: center; border-radius:0 0 25px 25px">
+                <p id="msg_box-row3" style="width: 100%; height: 60px; font-size: 16px; text-align: center; border: 0px solid rgb(255, 255, 255); left: 0px; top: 0px; line-height: 60px; font-weight: 600;">아이디가 입력되지 않았습니다.</p>
+            </div>
+	
+            
 
 
-		</div>
+    </div>
 
-		<!----------------- ShowHide Script Result-MessageBox ------------------->
-		<script type="text/javascript">
-			function result_msg_show() {
-				$('.result-msg-box').css('display', '');
-				$('#msg_box-row1').attr('tabindex', -1).focus();
-			}
+    <!----------------- ShowHide Script Result-MessageBox ------------------->
+    <script type="text/javascript">
+        function result_msg_show(){
+            $('.result-msg-box').css('display', '');
+            $('#msg_box-row1').attr('tabindex', -1).focus();
+        }
 
-			function alert_msg_show() {
-				$('.result-msg-box').css('display', '');
+        function alert_msg_show(){
+            $('.result-msg-box').css('display', '');
 
-				$('#msg_box-row3').css('color', 'red');
-				$('#msg_box-row3').css('font-weight', '600');
-			}
+            $('#msg_box-row3').css('color' , 'white');
+            $('#msg_box-row3').css('font-weight' , '600');
+        }
 
-			function btn_click_close() {
-				$('.result-msg-box').css('display', 'none');
+        function btn_click_close(){
+            $('.result-msg-box').css('display', 'none');
 
-				$('#msg_box-row1').css('color', '#000000');
-				$('#msg_box-row1').css('font-weight', '');
-				$('#msg_box-row2').css('color', '#000000');
-				$('#msg_box-row2').css('font-weight', '');
-				$('#msg_box-row3').css('color', '#000000');
-				$('#msg_box-row3').css('font-weight', '');
-				$('#msg_box-row4').css('color', '#000000');
-				$('#msg_box-row4').css('font-weight', '');
-				$('#msg_box-row5').css('color', '#000000');
-				$('#msg_box-row5').css('font-weight', '');
+            $('#msg_box-row1').css('color' , '#000000');
+            $('#msg_box-row1').css('font-weight' , '');
+            $('#msg_box-row2').css('color' , '#000000');
+            $('#msg_box-row2').css('font-weight' , '');
+            $('#msg_box-row3').css('color' , '#ffffff');
+            $('#msg_box-row3').css('font-weight' , '');
+            $('#msg_box-row4').css('color' , '#000000');
+            $('#msg_box-row4').css('font-weight' , '');
+            $('#msg_box-row5').css('color' , '#000000');
+            $('#msg_box-row5').css('font-weight' , '');
 
-				$('.btn-reg').attr('tabindex', -1).focus();
-			}
+            $('.btn-reg').attr('tabindex', -1).focus();
+        }
 
-			function result_msg(r1, r2, r3, r4, r5) {
-				$('#msg_box-row1').text(r1);
-				$('#msg_box-row2').text(r2);
-				$('#msg_box-row3').text(r3);
-				$('#msg_box-row4').text(r4);
-				$('#msg_box-row5').text(r5);
-			}
+        function result_msg(r1, r2, r3, r4, r5){
+            $('#msg_box-row1').text(r1);
+            $('#msg_box-row2').text(r2);
+            $('#msg_box-row3').text(r3);
+            $('#msg_box-row4').text(r4);
+            $('#msg_box-row5').text(r5);
+        }
 
-			function result_msg_clear() {
-				$('#msg_box-row1').text('');
-				$('#msg_box-row2').text('');
-				$('#msg_box-row3').text('');
-				$('#msg_box-row4').text('');
-				$('#msg_box-row5').text('');
-			}
-		</script>
-	</div>
+        function result_msg_clear(){
+            $('#msg_box-row1').text('');
+            $('#msg_box-row2').text('');
+            $('#msg_box-row3').text('');
+            $('#msg_box-row4').text('');
+            $('#msg_box-row5').text('');
+        }
+    </script>
+</div>
 	<!-- contents_footer end -->
 
 

@@ -408,7 +408,7 @@ li{list-style:none; margin:0px; padding:0px;}
     width: 1.25rem; height: 1.25rem; } 
    
    .btn-reg>a { color: #FFFFFF; /* line-height:0; */
-    font-size: 12px; width: 100%; height: 100%; display: inline-block; } 
+    font-size: 13px; width: 100%; height: 100%; display: inline-block;  text-align: center;} 
    
    /* 20240723 modify [s] */
    .btn-search { /* width: 92px; */
@@ -448,296 +448,203 @@ li{list-style:none; margin:0px; padding:0px;}
 /* 20240725 modify [s] */
 
 /****************** MODAL Detail (상세) 표현 팝업 ***********************************/
-#modal-dtl {
-    width: 800px;
-    height: 700px;
-    z-index: 1000;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    margin-left: -300px;
-    margin-top: -180px;
-    opacity: 1;
-    background: #181d26;
-    border-radius: 10px;
+#modal-dtl { /* width: 600px; height: 550px; z-index: 1000; */
+    /* position: absolute; top: 30%; left: 50%; margin-left: -300px; margin-top: -180px; */
+    /* opacity: 1; */
+    /* background: #181d26; */
+    /* border-radius: 10px; */
     /* opacity: 0.7; */
-    border: 3px solid #00588A;
-    display: none;
-}
-
-.otFloatingRoundedCorner{
-    display: inline-block;
-    position: relative;
-    z-index: 2147483645;
-    background-color: #fff;
-    width: 96%;
-    max-width: 95%;
-    height: 100%;
-    max-height: 97%;
-    border-radius: 2.5px;
-    top: 1em;
-    left: 1em;
-    font-size: 1.0rem;
-    overflow-x: hidden;
-    overflow-y: auto;
-    box-shadow: 0 0 18px rgba(0,0,0,.2);
-    background: #181d26;
-    opacity: 0.8;
-}
-
-.banner-header{
-    display: inline-block;
-    position: relative;
-    /* z-index: 2147483645; */
-    background-color: #fff;
-    width: 100%;
-    max-width: 100%;
-    height: 8%;
-    max-height: 10%;
-    border-radius: 2.5px;
-    font-size: 1.0rem;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    box-shadow: 0 0 18px rgba(0,0,0,.2);
-    background: #181d26;
-    opacity: 1.0;
-    text-align: right;
-}
-.banner-header .banner-actions-container {
-    width: 100% !important;
-    height: 30px;
-    display: inline-block;
-}
-
-.ot-sdk-container {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    height: 98%;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-.ot-sdk-row {
-    display:inline-block;
-    margin: 0;
-    height: 100%;
-    max-width: none;
-    display: block;
-}
-.ot-sdk-twelve ot-sdk-columns {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0;
-    display: initial;
-}
-#onetrust-group-container {
-    height: 95%;
-    orverflow: hidden;
-    border-bottom: 1px solid #0060FF;
-}
-
-#onetrust-policy-title {
-    display: inline-block;
-    padding: 0 !important;
-    margin-bottom: 4px !important;
-    line-height: 1.30769231 !important;
-    width: 100%;
-    height: 5%;
-    border-bottom: 1px solid #0060FF;
-    color: #e5e5e5;
-    float: left;
-}
-#onetrust-policy-title > input {
-    display: inline-block;
-    padding: 0 0 0 5px !important;
-    margin-bottom: 8px !important;
-    line-height: 1.30769231 !important;
-    width: 60%;
-    height: 100%;
-    font-size: 0.85rem;
-    border:0px solid #000000;
-    border-bottom: 1px solid #0060FF;
-    border-left: 1px solid #0060FF;
-    color: #e5e5e5;
-    outline: none;
-    float: left;
-}
-input::-webkit-input-placeholder {
-    font-size: 0.85rem;
-    font-style: italic;
-    color: #FFFFFF !important;
-}
-input::-ms-input-placeholder {
-    font-size: 0.85rem;
-    font-style: italic;
-    color: #FFFFFF !important;
-}
-
-#onetrust-policy-title > select {
-    display: inline-block;
-    padding: 0 0 0 5px !important;
-    margin-bottom: 8px !important;
-    line-height: 1.30769231 !important;
-    width: 60%;
-    height: 100%;
-    font-size: 0.85rem;
-    border:0px solid #000000;
-    border-bottom: 0px solid #0060FF;
-    border-left: 1px solid #0060FF;
-    color: #e5e5e5;
-    outline: none;
-    float: left;
-    background: #181d26;
-}
-
-#onetrust-policy-title > select::placeholder {
-    color: blue;
-    font-weight: bold;
-}
-
-#onetrust-policy-title > p {
-    display: inline-block;
-    padding: 0 0 0 5px !important;
-    margin-bottom: 8px !important;
-    line-height: 0.85rem !important;
-    width: 30%;
-    height: 100%;
-    font-size: 1.0rem;
-    color: #a5a5a5;
-    outline: none;
-    float: left;
-}
-
-#onetrust-policy-title > input:focus {
-    background: #000000;
-}
-#onetrust-policy-text {
-    display: inline-block;
-    padding: 0 !important;
-    margin-bottom: 8px !important;
-    line-height: 1.30769231 !important;
-    width: 100%;
-    height: 95%;
-    max-height: 450px;
-    color: #a5a5a5;
-    overflow-x: hidden;
-}
-#onetrust-policy-text > textarea {
-    display: inline-block;
-    padding: 5px 0 0 15px !important;
-    margin-bottom: 8px !important;
-    line-height: 1.30769231 !important;
-    width: 100%;
-    height: 94%;
-    font-size: 0.85rem;
-    overflow-x: hidden;
-    border:0px solid #000000;
+    /* border: 3px solid #00588A; */
+    /* display: none; */
+    display: flex; background: #26262A; border-radius: 32px; position: fixed; z-index: 100; width: 100%; height: 100%; overflow: auto; background-color: rgb(0, 0, 0); background-color: rgba(0, 0, 0, 0.4); display: none; left: 0; top: 0; } 
+   .otFloatingRoundedCorner {
+       display: inline-block;
+       position: relative;
+       z-index: 2147483645;
+       /* background-color: #fff; */
+       /* width: 96%; max-width: 95%; */
+       /* height: 100%; */
+       /* max-height: 95%; */
+       max-height: 100%;
+       /* border-radius: 2.5px; */
+       /* top: 1em; left: 1em; */
+       font-size: 1.0rem;
+       overflow-x: hidden;
+       /* overflow-y: auto; */
+       box-shadow: 0 0 18px rgba(0, 0, 0, .2);
+       background: #181d26;
+       /* opacity: 0.8; */
+       /* width: 100%; max-width: 100%; */
+       left: 0;
+       top: 0;
+       border-radius: 32px;
+       overflow-y: hidden;
+       width: 800px;
+       height: auto;
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+       background-color: #26262A;
+   }
+   
+   
+   .banner-header { /* display: inline-block; */
+    position: relative; /* z-index: 2147483645; */
+    /* background-color: #fff; */
+    width: 100%; max-width: 100%; /* height: 8%; */
+    height: 50px; /* max-height: 10%; */
+    border-radius: 2.5px; /* font-size: 1.0rem; */
+    overflow-x: hidden; overflow-y: hidden; box-shadow: 0 0 18px rgba(0, 0, 0, .2); /* background: #181d26; */
+    background: #7C4ED9; opacity: 1.0; text-align: right; display: flex; align-items: center; font-size: 18px; } 
+   
+   .banner-header .banner-actions-container { width: 100% !important; height: 30px; /* display: inline-block; */
+    line-height: 1.5; } 
+   
+   .ot-sdk-container { position: relative; width: 100%; max-width: 100%; height: 98%; margin: 0 auto; /* padding: 0 20px; */
+    padding: 0 0px; box-sizing: border-box; } 
+   
+   .ot-sdk-row { display: inline-block; margin: 0; height: 100%; max-width: none; display: block; } 
+   
+   .ot-sdk-twelve ot-sdk-columns { width: 100%; box-sizing: border-box; padding: 0; display: initial; } 
+   
+   #onetrust-group-container { height: 93%; orverflow: hidden; } 
+   
+   #onetrust-policy-title { display: inline-block; padding: 0 !important; /* margin-bottom: 4px !important; */
+    /* line-height: 1.30769231 !important; */
+    width: 100%; /* height: 5%; */
     /* border-bottom: 1px solid #0060FF; */
-    /* border-left: 1px solid #0060FF; */
+    /* border-bottom: 1px solid rgba(112, 112, 112, 0.4); */
+    color: #e5e5e5; float: left; height: 42px; line-height: 42px !important; /* margin-top: 5px; */
+position: relative;}
+   
+   #onetrust-policy-title>input { display: inline-block;
+    /* padding: 0 0 0 5px !important; */
+    /* padding: 0 0 0 15px !important; */
+    /* margin-bottom: 8px !important; */
+    margin-bottom: 0 !important;
+    /* line-height: 1.30769231 !important; */
+    /* width: 60%; height: 100%; */
+    font-size: 16px;
+    border: 0px solid #000000;
+    /* border-bottom: 1px solid #0060FF; border-left: 4px dotted #0060FF; */
+    border: 1px solid #707070;
     color: #e5e5e5;
     outline: none;
-}
-textarea::-webkit-input-placeholder {
-    font-size: 0.85rem;
-    font-style: italic;
-    color: #FFFFFF !important;
-}
-textarea::-ms-input-placeholder {
-    font-size: 0.85rem;
-    font-style: italic;
-    color: #FFFFFF !important;
-}
-#onetrust-policy-text > textarea:focus {
-    background: #000000;
-}
-#onetrust-policy-text > pre {
-    width: 100%;
-    max-width: 100%;
-    height: 95%;
-    font-size: 0.9rem;
-    font-weight: 500;
-    display: inline-block;
     float: left;
-    text-align: left;
-    margin:15px 0 0 0;
-    padding:0;
-    overflow: auto;
-    color: #f5f5f5;
-}
-
-.ot-sdk-twelve.ot-sdk-columns.has-reject-all-button {
-    margin-right: 70px;
-    margin-top: 8px;
-}
-
-#onetrust-button-group-parent {
-    top:0px;
-    position: relative;
-}
-
-#onetrust-banner-sdk #onetrust-button-group button {
-    width: 15% !important;
-    height: 30px;
-    text-decoration: none !important;
-    border-radius: 6px !important;
-    border: 1px solid transparent !important;
-    border-color: #90C4F9;
-    line-height: 1.4;
-    background-color: #90C4F9;
-    margin: 0 !important;
-    color: #FFFFFF;
-    padding: 2px 10px;
-    font-size: .82em;
-    font-weight: 600;
-    letter-spacing: .05em;
-    white-space: normal;
-    word-break: break-word;
-    word-wrap: break-word;
-    outline-offset: 1px;
-    font-family: inherit;
-    position: absolute;
-    display: inline-block;
-}
-
-#onetrust-banner-sdk #onetrust-button-group button:hover {
-    background: #4682B4;
-}
-
-.banner-header .banner-actions-container > button {
-    width: 15% !important;
-    height: 26px;
-    text-decoration: none !important;
-    border-radius: 6px !important;
-    border: 1px solid transparent !important;
-    border-color: #90C4F9;
-    line-height: 1.4;
-    background-color: #90C4F9;
-    margin: 0 !important;
-    color: #FFFFFF;
-    padding: 2px 10px;
-    font-size: .82em;
-    font-weight: 600;
-    letter-spacing: .05em;
-    white-space: normal;
-    word-break: break-word;
-    word-wrap: break-word;
-    outline-offset: 1px;
-    font-family: inherit;
-    position: relative;
-    display: inline-block;
-}
-.banner-header .banner-actions-container > button:hover {
-    background: #4682B4 !important;
-}
-
-.banner-header .banner-actions-container > p {
-    color: #E5E5E5 !important;
-    border-left: 5px solid blue;
-    padding-left: 15px;
-    left: 0;
-}
-
+    height: 36px;
+    line-height: 36px !important;
+    margin-left: 6px;
+    border-radius: 0 !important;
+    width: calc(100% - 90px - 30px);
+     /* width: 258px; */
+     padding: 0 9px !important;
+     margin: 0 5px
+ } 
+   
+   
+   
+   #onetrust-policy-title>select {
+       display: inline-block;
+       padding: 0 0 0 5px !important;
+       /* margin-bottom: 8px !important; */
+       /* line-height: 1.30769231 !important; */
+       /* width: 60%; */
+       /* height: 100%; */
+       font-size: 0.85rem;
+       /* border: 0px solid #000000; */
+       /* border-bottom: 1px solid #0060FF; border-left: 4px dotted #0060FF; */
+       color: #e5e5e5;
+       outline: none;
+       float: left;
+       border: 1px solid #707070;
+       margin-left: 6px;
+       /* background-color:#121214; */
+       height: 38px;
+       line-height: 38px !important;
+       width: 284px;
+   }
+   
+   
+   
+   /* 20240725 add css */
+   
+   #onetrust-policy-title>select:hover,
+   #onetrust-policy-title>select:focus { color: #ffffff; background-color: #121214; } 
+   
+   #onetrust-policy-title>p { /* display: inline-block; padding: 0 0 0 5px !important; margin-bottom: 8px !important; line-height: 0.85rem !important; width: 30%; height: 100%; font-size: 1.0rem; color: #a5a5a5; outline: none; float: left; */
+    display: inline-block; padding: 0 0 0 0 !important; /* margin-bottom: 8px !important; */
+    /* line-height: 29px !important; */
+    width: 30%; /* height: 28px; */
+    font-size: 16px; /* color: #a5a5a5; */
+    color: #ffffff; outline: none; float: left; background: #121214; text-align: center; left: 0 !important; top: 0 !important; height: 38px; line-height: 38px; width: 90px; } 
+   
+   #onetrust-policy-title>input:focus { background: #000000; } 
+   
+   #onetrust-policy-text { display: inline-block; padding: 0 !important; margin-bottom: 8px !important; line-height: 1.30769231 !important; width: 100%; height: 95%; max-height: 350px; color: #a5a5a5; overflow-x: hidden; margin-top: 0; } 
+   
+   #onetrust-policy-text>textarea { display: inline-block; /* padding: 5px 0 0 15px !important; margin-bottom: 8px !important; line-height: 1.30769231 !important; width: 100%; height: 90%; */
+    /* font-size: 0.85rem; */
+    overflow-x: hidden; /* border: 0px solid #000000; border-bottom: 1px solid #0060FF; */
+    /* border-left: 1px solid #0060FF; */
+    color: #e5e5e5; /* outline: none; */
+   
+    width: calc(100% - 37px); height: 150px; padding: 15px; box-sizing: border-box; border: 1px solid #707070; /* border-radius: 4px; */
+    background: transparent; font-size: 16px; resize: none; } 
+   
+   /* 20240725 add css [s] */
+   
+   #onetrust-policy-text>textarea:focus { background: #000000; outline: none; border: none; height: 152px; } 
+   
+   #onetrust-policy-title>input::placeholder { color: #666666; opacity: 1; } 
+   
+   #onetrust-policy-text>textarea::placeholder { font-size: 16px; color: #666666; opacity: 1; } 
+   
+   #onetrust-policy-title>input:focus::-webkit-input-placeholder { color: transparent; } 
+   
+   #onetrust-banner-sdk #onetrust-button-group button.btn-save { background: #9F85E6; } 
+   
+   #onetrust-banner-sdk #onetrust-button-group button.btn-del { background: #6E6E6E; margin-left: 5px !important; } 
+   
+   
+   #onetrust-banner-sdk #onetrust-button-group button.btn-save:hover { background: #5A478E; } 
+   
+   #onetrust-banner-sdk #onetrust-button-group button.btn-del:hover { background: #48464B; } 
+   
+   
+   #onetrust-button-group .banner-btn-wrap { display: flex; justify-content: center; align-items: center; padding-bottom: 30px; } 
+   
+   #onetrust-policy.modal-container { padding: 15px; height: calc(100% - 110px); } 
+   
+   /* 20240725 add css [e] */
+   
+   
+   #onetrust-policy-text>pre { width: 100%; max-width: 100%; height: 95%; font-size: 0.9rem; font-weight: 500; display: inline-block; float: left; text-align: left; margin: 15px 0 0 0; padding: 0; overflow: auto; color: #f5f5f5; } 
+   
+   .ot-sdk-twelve.ot-sdk-columns.has-reject-all-button { margin-right: 70px; margin-top: 8px; } 
+   
+   #onetrust-button-group-parent { /* top: 5px; */
+    position: relative; top: 0; } 
+   
+   #onetrust-banner-sdk #onetrust-button-group button { width: 15% !important; height: 30px; text-decoration: none !important; /* border-radius: 6px !important; */
+    border-radius: 15px !important; border: 1px solid transparent !important; border-color: #90C4F9; line-height: 1.4; background-color: #90C4F9; margin: 0 !important; color: #FFFFFF; padding: 2px 10px; /* font-size: .82em; */
+    font-size: 14px; font-weight: 600; letter-spacing: .05em; white-space: normal; word-break: break-word; word-wrap: break-word; outline-offset: 1px; font-family: inherit; /* position: absolute; */
+    display: inline-block; } 
+   
+   #onetrust-banner-sdk #onetrust-button-group button:hover { background: #48464B; } 
+   
+   .banner-header .banner-actions-container>button { width: 32px !important; height: 32px; /* text-decoration: none !important; border-radius: 6px !important; border: 1px solid transparent !important; border-color: #90C4F9; line-height: 1.4; background-color: #90C4F9; margin: 0 !important; color: #FFFFFF; padding: 2px 10px; font-size: .82em; font-weight: 600; letter-spacing: .05em; white-space: normal; word-break: break-word; word-wrap: break-word; outline-offset: 1px; font-family: inherit; position: relative; display: inline-block; */
+    top: 3px !important; right: 30px; } 
+   
+   /* .banner-header .banner-actions-container>button:hover { background: #4682B4 !important; } */
+   
+   .banner-header .banner-actions-container>p { color: #ffffff !important; /* border-left: 5px solid blue; */
+    /* padding-left: 15px; */
+    padding-left: 30px; left: 0; font-weight: 700; } 
+   
+   
+   .banner-header .banner-actions-container>button>img.btn-close { width: 24px; height: 24px; right: 30px; position: absolute; top: -6px; position: absolute; top: 50%; right: 30px; transform: translate(0, -50%); } 
 /* 20240719 css add [s] - ley */
  
 * { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; } 
@@ -844,8 +751,21 @@ height: 1.5625rem; padding-right: 1.25rem; color: #aeaeae; line-height: 1.5625re
 
 /* 20240724 modify [e] */
 /* 20240726 add css [s] - contents_footer area */
-#wrapper.result-msg-box { /* display: none; */
-position: fixed; top: 0; width: 100% !important; height: 100%; margin: 0; z-index: 1100; background: #181d26; overflow-y: hidden; overflow-x: hidden; top: 50%; left: 50%; transform: translate(-50%, -50%); } 
+#wrapper.result-msg-box { 
+   /* display: none;  */
+   position: fixed;
+   top: 0;
+   width: 100% !important;
+   height: 100%;
+   margin: 0;
+   z-index: 1100;
+   background: rgba(0, 0, 0, 0.4);
+   overflow-y: hidden;
+   overflow-x: hidden;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+    }
 
 #wrapper.result-msg-box .wrap_slidebar { /*width:500px; height:40%; margin-left: 50%; left:-250px; margin-top:5%; background:#5e5e5e; border:1px solid #000000; */
 position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; flex-direction: column; width: 300px; box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; border-radius: 25px; } 
@@ -860,4 +780,7 @@ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); displ
 
 #wrapper.result-msg-box .wrap_slidebar .tt-input-box ul li.msg-header a { display: inline-block; width: auto; } 
 
+
+.ot-sdk-row .btn-check{position:absolute;/* width:60px; */height: 25px; line-height: 20px;/* left: 320px; */background: #8D58EB ! important;border:0px solid #e5e5e5;/* border-radius: 10px; *//* font-size: 15px; */font-weight:400;top: 7px;right: 12px;padding: 0 12px;width: auto;}
 /* 20240726 add css [e] */
+
