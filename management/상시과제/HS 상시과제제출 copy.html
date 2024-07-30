@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0035)http://localhost:8080/tt/mn/page/rd -->
+<!-- saved from url=(0040)http://localhost:5080/tt/cu/page/rd#none -->
 <html style="cursor: auto;">
 
 <head>
@@ -10,14 +10,13 @@
 	<!--<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />-->
 	<title>HS 상시과제제출</title>
 
-
 	<link rel="stylesheet" href="./HS 상시과제제출_files/ag-grid-scrollbar-user.css">
 
-	<link rel="stylesheet" href="../상시과제/HS 상시과제제출_files/default_mn.css">
+	<link rel="stylesheet" href="./HS 상시과제제출_files/default_mn.css">
 	<link rel="stylesheet" href="./HS 상시과제제출_files/layout_mn.css">
 	<link rel="stylesheet" href="./HS 상시과제제출_files/element.css">
 	<!--
-	<link rel="stylesheet" href="/assets/css/slidebars.css?t=25104334" />
+	<link rel="stylesheet" href="/assets/css/slidebars.css?t=18171148" />
 	-->
 
 	<!--region ag-grid -->
@@ -17562,7 +17561,8 @@
 		.ag-theme-alpine,
 		.ag-theme-alpine-auto-dark,
 		.ag-theme-alpine-dark {
-			--ag-alpine-active-color: #2196f3;
+			/* --ag-alpine-active-color: #2196f3; */
+			--ag-alpine-active-color: #92a1c8;
 			--ag-selected-row-background-color: rgba(33, 150, 243, 0.3);
 			--ag-row-hover-color: rgba(33, 150, 243, 0.1);
 			--ag-column-hover-color: rgba(33, 150, 243, 0.1);
@@ -22828,18 +22828,32 @@
 
 	<style>
 		#myGrid button {
-			background: #104E8B ! important;
+			/* 20240724 modify [s] */
+			/* background: #104E8B ! important; 
 			border-radius: 3px;
 			font-size: 0.75rem ! important;
 			padding: 2px 0 4px 0;
 			color: #e5e5e5;
+			margin-left: -13px;*/
+
+			background: #58468B ! important;
+			border-radius: 25px;
+			font-size: 14px ! important;
+			padding: 4px;
+			color: #e5e5e5;
 			margin-left: -13px;
+			border: 1px solid rgba(255, 255, 255, 0.2);
+			width: 100%;
+			margin-bottom: 7px;
+		}
+
+		.ag-ltr .ag-cell {
+			margin-top: 0.4rem !important;
 		}
 
 		#sb-site,
-		#container {
+		.sb-site-container {
 			background: transparent;
-			height: 100%;
 		}
 
 		@media (max-width: 1500px) {
@@ -22857,12 +22871,12 @@
 			}
 
 			#top_menu {
-				/* height: 39px!important; */
+				height: 60px !important;
 			}
 		}
 
 		.top_tit {
-			padding: 10px 30px 0 10px;
+			padding: 0 30px 0 10px;
 			border-bottom: 0px solid #5E5E5E;
 		}
 
@@ -22872,7 +22886,7 @@
 
 		#wrapper {
 			width: 100% !important;
-			margin-left: 105px;
+			margin-left: 150px;
 			display: inline-block;
 			background: #181d26;
 		}
@@ -22906,10 +22920,10 @@
 			border-radius: 8px !important;
 		}
 	</style>
+
 </head>
 
 <body>
-
 
 	<div class="sb-slidebar sb-left" style="max-width:420px!important; background:#000; border:0px solid #FFFFFF; border-right:1px solid #e5e5e5; orverflow-y:none;">
 
@@ -22919,24 +22933,20 @@
 			<div id="allmenu">
 
 				<div class="al_acc navbarWrap">
-
 					<a href="http://localhost:5080/" class="logo-text">
 						<img src="./HS 상시과제제출_files/left_menu_m.png" alt="" class="navbar__logoimg">
 						<h3 class="navbar__logo__tit">RPA Monitoring System</h3>
 					</a>
-
-
-					<div style="display: none; width: 50px; height: 18px; margin-top:-28px; margin-left:180px; position:absolute; text-align:center; border-radius:4px; line-height:18px; border:1px solid #66CDAA;">
-						<h2 style="color:#e5e5e5;">관리자</h2>
+					<div style="display: none; width: 50px; height: 18px; margin-top:-28px; margin-left:180px; position:absolute; text-align:center; border-radius:5px; line-height:18px; border:1px solid #287dfa;">
+						<h2 style="color:#e5e5e5;">사용자</h2>
 					</div>
 				</div>
 
 				<ul id="al_1dul" class="al_1dul" style="padding-top:0px;">
 					<li class="al_1dul_lnbTop"></li>
-
 				</ul>
 
-				<ul id="al_1dul" class="al_1dul" style="padding:0px 0 0 0;">
+				<ul id="al_1dul" class="al_1dul" style="padding:0;">
 					<li>
 
 						<ul id="al_2dul" class="al_2dul" style="padding:0;">
@@ -22945,7 +22955,7 @@
 							<li class="btn-nav">
 								<div class="circle"></div>
 								<a rel="모니터링" href="http://localhost:5080/tt/cu/home" class="st2">
-									<p class="ico-08">모니터링</p>
+									<p class="ico-01">모니터링</p>
 								</a>
 							</li>
 						</ul>
@@ -22974,18 +22984,18 @@
 									<p class="ico-09">리소스</p>
 								</a>
 							</li>
+
 							<!--
 						<li><a style="padding:0;" href="/tt/mn/page/dash-bot" class="st2"><img src="/assets/img/icon/icon_011.png" alt="BOT실행모니터링">RPA Bot-Monitoring</a></li>
 						-->
 						</ul>
 					</li>
 				</ul>
-
 				<ul id="al_1dul" class="al_1dul" style="padding-top:0;">
 					<li style="width:100%; height:1px; background:#2e2e2e;">
 					</li>
 				</ul>
-				<ul id="al_1dul" class="al_1dul" style="padding:0px 0 0 0;">
+				<ul id="al_1dul" class="al_1dul" style="padding:0;">
 					<li>
 
 						<ul id="al_2dul" class="al_2dul" style="padding:0;">
@@ -22993,7 +23003,7 @@
 							<!-- 기본 서비스 메뉴 -->
 							<li class="btn-nav">
 								<div class="circle"></div>
-								<a rel="RPA 과제별 대기현황" href="http://localhost:5080/tt/cu/page/rpa-stay" class="st2">
+								<a rel="과제별대기현황" href="http://localhost:5080/tt/cu/page/rpa-stay" class="st2">
 									<p class="ico-02">대기현황</p>
 								</a>
 							</li>
@@ -23003,36 +23013,10 @@
 									<p class="ico-03">동작현황</p>
 								</a>
 							</li>
-
 							<li class="btn-nav">
 								<div class="circle"></div>
 								<a rel="과제별작업현황" href="http://localhost:5080/tt/cu/page/rpa-wk" class="st2">
 									<p class="ico-04">작업현황</p>
-								</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-
-				<ul id="al_1dul" class="al_1dul" style="display:none; padding:0px 0 0 0;">
-					<li>
-
-						<ul id="al_2dul" class="al_2dul" style="padding:0;">
-
-							<!-- 기본 서비스 메뉴 -->
-							<li>
-								<a style="padding:0;" href="http://localhost:8080/tt/mn/page/rpa-err" class="st2"><img src="./HS 업무사용자정보관리_files/icon_009.png" alt="RPA 오류발생내역">
-									<p style="color:#aeaeae; font-size:0.8rem; float: left; font-weight:600;">오류발생 내역</p>
-								</a>
-							</li>
-							<li>
-								<a style="padding:0;" href="http://localhost:8080/tt/mn/page/rpa-log-res" class="st2"><img src="./HS 업무사용자정보관리_files/icon_009.png" alt="RPA 리소스정보 수신내역">
-									<p style="color:#aeaeae; font-size:0.8rem; float: left; font-weight:600;">리소스정보 내역</p>
-								</a>
-							</li>
-							<li>
-								<a style="padding:0;" href="http://localhost:8080/tt/mn/page/rpa-log-data" class="st2"><img src="./HS 업무사용자정보관리_files/icon_009.png" alt="RPA 처리결과 수신내역">
-									RPA 처리결과 내역
 								</a>
 							</li>
 						</ul>
@@ -23103,9 +23087,9 @@
 					</li>
 				</ul>
 
-				<div class="al_bottom" style="width:80%; height: 25px; margin-top:5px; margin-left:7px; background:#222222; border-radius:5px;">
-
-					<a href="http://localhost:8080/account/login/mn/logout?param_apps=" style="width:100%; font-size:0.6rem; line-height: 230%; color:#5E5E5E;">로그아웃</a>
+				<div class="al_bottom">
+					<div class="circle"></div>
+					<a href="http://localhost:5080/account/login/cu/logout?param_apps=" class="logout">로그아웃</a>
 				</div>
 			</div>
 			<!--leftmenu-->
@@ -23118,30 +23102,28 @@
 
 	<div id="sb-site">
 
-		<header id="top_header">
-			<div class="navbar__menu" style="width:auto; height:40px; position:absolute; text-align:right; display:block; margin-left:225px; margin-top:15px; z-index:1000;">
-				<a href="http://localhost:8080/" id="url_btn_3" class="home__contact btn"> Main </a>
-				<a href="http://localhost:8080/cu" id="url_btn_3" class="home__contact btn"> WorkUser </a>
-				<a href="http://localhost:8080/ds" id="url_btn_1" class="home__contact btn"> Dashboard </a>
-				<a href="http://localhost:8080/mn" id="url_btn_2" class="home__contact btn" style="background: #0000FF; color: #E5E5E5 ! important; font-weight: 600;"> Management </a>
+		<header id="top_header" class="top_headerWrap">
+			<div class="navbar__menu">
+				<a href="http://localhost:5080/" id="url_btn_3" class="home__contact btn btn-purple"> Main </a>
+				<a href=" http://localhost:5080/cu" id="url_btn_3" class="home__contact btn btn-sky"> WorkUser </a>
+				<a href="http://localhost:5080/ds" id="url_btn_1" class="home__contact btn btn-bluePurple"> Dashboard </a>
+				<a href="http://localhost:5080/mn" id="url_btn_2" class="home__contact btn btn-tea active"> Management </a>
 			</div>
-			<div id="top_menu" style="width:20%; min-width:300px; float:right;">
+			<div id="top_menu" class="top_menu-right">
 
 				<div class="top_tit">
 
 
 					<span class="top_menu_btn" style="display:none; width: 80px; margin-top: -10px; margin-left: -10px; padding-top:0px; background:#FFFAFA;">
-						<a href="http://localhost:8080/tt/mn/page/rd#none" class="sb-toggle-left">
+						<a href="http://localhost:5080/tt/cu/page/rd#none" class="sb-toggle-left">
 							<img src="./HS 상시과제제출_files/top_btn_menu_a.png" alt="menu" style="width:70px; margin-top: 15px; margin-left: 5px;">
 						</a>
 					</span>
 					<div class="logo_home" style="display:none; float:left; margin-left:90px; margin-top: 14px;">
 						<img id="top_logo" src="./HS 상시과제제출_files/login_logo.png" alt="HD" style="width:220px; margin:0; padding:0; top:50px; float:left; left:100px; opacity:1.0;">
 					</div>
-					<h3 style="width: 200px; height:16px; padding:0 10px 0 0; color:#c5c5c5; float:right; line-height: 10px; margin-left:130px; margin-top:37px; font-size:0.8rem; font-weight:400; text-align:right;">상시과제제출</h3>
-					<span class="top_home_btn">
-
-					</span>
+					<h3 class="gnb_btn_rt">상시과제제출</h3>
+					<span class="top_home_btn"></span>
 				</div>
 			</div>
 
@@ -23149,78 +23131,47 @@
 
 
 
-
-
-
-
 		<!---------------- 컨텐츠 시작 MN ---------------->
-		<div id="wrapper" style="width:100%; height:100%;">
+		<div id="wrapper" class="move" style="width:100%; height:100%;">
 
-			<div class="tt-input-box" style="margin:10px 10px;">
+			<div class="tt-input-box input-wrap">
 				<ul>
-					<li class="title">
+					<li class="title tt">
 						<h2>과제구분항목</h2>
 					</li>
-					<li class="input">
+					<li class="input input-select">
 						<input type="hidden" id="rr_rnidx" value="" placeholder="">
-
 						<select id="sch_rn_ty" class="name">
-
-
-
 							<option value="">--과제구분항목 선택--</option>
-
-
-
-
-
-
-
-
-							<option value="1">중요</option>
-
-
-
-
-
-
-
-							<option value="0">일반</option>
-
-
-
+							<option value="1">일반</option>
+							<option value="2">중요</option>
 						</select>
 					</li>
 				</ul>
-
-				<ul>
+				<ul class="date-wrap">
 					<li class="title">
 						<h2>날짜구간</h2>
 					</li>
-					<li class="input" style="width:38%; float:left;">
+					<li class="input date-list">
 						<input type="text" id="sch_date_s" class="calendar" placeholder="" value="2024-07-01">
-					</li>
-					<li class="input" style="width:15%; float:left; text-align:center;">
-						<h3>~</h3>
-					</li>
-					<li class="input" style="width:38%; float:left;">
-						<input type="text" id="sch_date_e" class="calendar" placeholder="" value="2024-07-25">
+						<span class="wave">~</span>
+						<input type="text" id="sch_date_e" class="calendar" placeholder="" value="2024-07-18">
 					</li>
 				</ul>
-
 				<ul>
 					<li class="title">
 						<h2>검색 키워드</h2>
 					</li>
-					<li class="input">
-						<input type="text" id="sch_rn_tt" value="" placeholder="매출/매입 사업자명 검색">
+					<li class="input input-search">
+						<input type="text" id="sch_rn_tt" placeholder="" value="과제키워드">
 					</li>
 				</ul>
-				<ul style="width: 50px; height:60px; min-width: 100px;">
-					<li class="" style="width:100%; height:100%;">
-						<div class="btn" style="width:96%; height:100%; margin-top:28px;">
+				<ul class="btn-flex-end">
+					<li>
+						<div class="btn btn-wrap">
 							<div class="btn-search">
-								<a href="http://localhost:8080/tt/mn/page/rd#none" onclick="btn_click_search()" class="btn-search">검색하기</a>
+								<div class="circle"></div>
+								<a href="http://localhost:5080/tt/cu/page/nt#none" onclick="btn_click_search()" class="link-search">검색하기</a>
 							</div>
 						</div>
 					</li>
@@ -23232,40 +23183,48 @@
 				<ul style="width:100%; height:40px; float:left;">
 					<li class="" style="width:100%;">
 						<div id="btn_toggle" class="btn" style="width:100%;">
-							<div class="btn_b" style="width:100%; height:35px; background:#e5e5e5; border:2px solid #e5e5e5; border-radius: 10px; font-size:1.0rem; font-weight:600; line-height:200%; color:blue;"><a href="http://localhost:8080/tt/mn/page/rd#none" onclick="btn_click_showhide()">검색기능 숨기기/열기</a></div>
+							<div class="btn_b" style="width:100%; height:35px; background:#e5e5e5; border:2px solid #e5e5e5; border-radius: 10px; font-size:1.0rem; font-weight:600; line-height:200%; color:blue;"><a href="http://localhost:5080/tt/cu/page/rd#none" onclick="btn_click_showhide()">검색기능 숨기기/열기</a></div>
 						</div>
 					</li>
 				</ul>
 			</div>
 
 			<div class="tt-grid-box" style="margin:0px 10px;">
-
-
-				<ul style="width:100%; height:40px; position:relative; float:left;">
-					<li class="title" style="width:50%;">
+				<ul class="titleWrap">
+					<li class="title">
 						<h3 class="title">상시과제제출목록</h3>
+						<div class="btn-wrap">
+							<a href="" class="btn-down">
+								<div class="circle"></div>
+								<button class="btn-excel">엑셀다운로드</button>
+							</a>
+							<a href="#" class="btn-link btn-innerTxt" onclick="click_row(&#39;&#39;, &#39;&#39;);">
+								<div class="circle"></div>
+								<button class="btn-pj">신규과제등록</button>
+							</a>
+						</div>
 					</li>
 					<li style="width:50%;">
-
-						<div class="btn" style="width:320px; float:right;">
-							<div class="btn-excel" style="width:45%; height:22px; margin-top:10px; margin-left:20px; float: right; background:#00acc1; border:0px solid #e5e5e5; border-radius: 10px; font-size:0.65rem; font-weight:100; line-height:220%;">
-								<a href="http://localhost:8080/tt/mn/page/rd#none" onclick="click_row(&#39;&#39;, &#39;&#39;)" style="display:block; width:100%; color:#FFFFFF;">신규과제등록</a>
+						<div class="btn" style="display:none; width:320px; float:right;">
+							<div class="btn-reg btn-new">
+								<a href="#" onclick="click_row(&#39;&#39;, &#39;&#39;);" class="btn-innerTxt">신규과제등록</a>
 							</div>
-							<div class="btn-excel" style="display:; width:45%; height:22px; margin-top:10px; background:#1e1e1e; border:1px solid #0D47A1; border-radius: 10px; font-size:0.65rem; font-weight:100; line-height:220%; background-image: url(/assets/img/icon_excel.png); background-repeat: no-repeat; background-size:14px; background-position-x:10px; background-position-y:5px; ">
-								<a href="http://localhost:8080/tt/mn/page/rd#" onclick="export_excel();" style="display:block; width:100%;  color:#e5e5e5;">엑셀다운로드</a>
+							<div class="btn-reg" style="display:none; width:45%; height:22px; margin-top:10px; background:#1e1e1e; border:1px solid #0D47A1; border-radius: 10px; font-size:0.65rem; font-weight:100; line-height:220%; background-image: url(/assets/img/icon_excel.png); background-repeat: no-repeat; background-size:14px; background-position-x:10px; background-position-y:5px; ">
+								<a href="http://localhost:5080/path/form/upload_tax_report.xlsx" download="RAP_과제별_시간대별_동작현황_.xlsx" style="display:block; width:100%;  color:#e5e5e5;" target="_self">엑셀다운로드</a>
 							</div>
 						</div>
 					</li>
 				</ul>
 
+
 				<!-- gridArea -->
-				<div id="myGrid" style="width: 100%; height: 740px; float: left; --ag-line-height: 35px;" class="ag-theme-quartz">
+				<div id="myGrid" class="ag-theme-quartz gridAreaWrap">
 					<div class="ag-root-wrapper ag-layout-normal ag-ltr" role="presentation" grid-id="1">
 
 						<div class="ag-root-wrapper-body ag-layout-normal ag-focus-managed" ref="rootWrapperBody" role="presentation">
 							<div class="ag-tab-guard ag-tab-guard-top" role="presentation" tabindex="0"></div>
 							<!--AG-GRID-BODY-->
-							<div class="ag-root ag-unselectable ag-layout-normal" role="treegrid" ref="gridBody" aria-colcount="5" aria-rowcount="8">
+							<div class="ag-root ag-unselectable ag-layout-normal" role="treegrid" ref="gridBody" aria-colcount="5" aria-rowcount="6">
 								<!--AG-HEADER-ROOT-->
 								<div class="ag-header ag-focus-managed ag-pivot-off ag-header-allow-overflow" role="presentation" ref="gridHeader" style="height: 41px; min-height: 41px;">
 									<div class="ag-pinned-left-header ag-hidden" role="presentation" aria-hidden="true" style="width: 0px; max-width: 0px; min-width: 0px;"></div>
@@ -23281,7 +23240,7 @@
 														</div>
 													</div>
 													<div ref="eHeaderCompWrapper" class="ag-header-cell-comp-wrapper" role="presentation">
-														<div class="ag-cell-label-container" role="presentation">
+														<div class="ag-cell-label-container pd0" role="presentation">
 															<span ref="eMenu" class="ag-header-icon ag-header-cell-menu-button" aria-hidden="true"><span class="ag-icon ag-icon-menu" unselectable="on" role="presentation"></span></span>
 															<div ref="eLabel" class="ag-header-cell-label" role="presentation">
 																<span ref="eText" class="ag-header-cell-text">등록일자</span>
@@ -23392,66 +23351,25 @@
 								<div class="ag-body ag-layout-normal" ref="eBody" role="presentation">
 									<div class="ag-body-viewport ag-layout-normal ag-row-animation" ref="eBodyViewport" role="presentation" style="width: calc(100% + 0px);">
 										<!--AG-ROW-CONTAINER-->
-										<div class="ag-pinned-left-cols-container ag-hidden" ref="leftContainer" name="left" role="presentation" aria-hidden="true" style="height: 245px; width: 0px; max-width: 0px; min-width: 0px;"></div>
+										<div class="ag-pinned-left-cols-container ag-hidden" ref="leftContainer" name="left" role="presentation" aria-hidden="true" style="height: 175px; width: 0px; max-width: 0px; min-width: 0px;"></div>
 										<!--AG-ROW-CONTAINER-->
-										<div class="ag-center-cols-viewport" ref="centerContainer" role="presentation" name="center" style="height: 245px;">
-											<div class="ag-center-cols-container" ref="eContainer" role="rowgroup" style="width: 1350px; height: 245px;">
-												<div comp-id="53" style="transform: translateY(0px); height: 35px;" role="row" row-index="0" class="ag-row-even ag-row-no-focus ag-row-not-inline-editing ag-row ag-row-level-0 ag-row-position-absolute ag-row-first" aria-rowindex="2" row-id="0">
-													<div comp-id="54" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-first" role="gridcell" col-id="idate" tabindex="-1" aria-colindex="2" style="left: 0px; width: 160px; text-align: center;">24-07-20</div>
+										<div class="ag-center-cols-viewport" ref="centerContainer" role="presentation" name="center" style="height: 175px;">
+											<div class="ag-center-cols-container" ref="eContainer" role="rowgroup" style="width: 1350px; height: 175px;">
+												<div comp-id="53" style="transform: translateY(0px);" role="row" row-index="0" class="ag-row-even ag-row-no-focus ag-row-not-inline-editing ag-row ag-row-level-0 ag-row-position-absolute ag-row-first" aria-rowindex="2" row-id="0">
+													<div comp-id="54" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-first" role="gridcell" col-id="idate" tabindex="-1" aria-colindex="2" style="left: 0px; width: 160px; text-align: center;">24-07-17</div>
 													<div comp-id="55" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height" role="gridcell" col-id="btn_rnidx" tabindex="-1" aria-colindex="3" style="left: 160px; width: 90px; text-align: center;"><span>
-															<div><button style="font-size:1.0rem; width:100%;">상세</button></div>
+															<div><button>상세</button></div>
 														</span></div>
-													<div comp-id="56" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height" role="gridcell" col-id="rn_tt" tabindex="-1" aria-colindex="4" style="left: 250px; width: 300px; text-align: left;">요청 사항 수정 보완 진행 (Req.조철호 책임님 7/17)</div>
-													<div comp-id="57" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-last" role="gridcell" col-id="rn_desc" tabindex="-1" aria-colindex="5" style="left: 550px; width: 800px; text-align: left;">[현대삼호 조철호 책임]
-
-														위 항목에 설명을 위해 넣은 값은 클릭하면 자동으로 사라지게 업데이트 바랍니다.
-														--&gt; 기존 Text 에서 PlaceHolder 기능으로 변환
-
-														해당 화면의 크기도 조금 더 키워주세요
-														--&gt; 화면 가로 200pixel, 세로 150pixel 각각 약 30%, 25% Up
-
-														감사합니다.
-
-														등록을 하면 해당 화면이 사라져야 하는데 안 사라집니다.
-														--&gt; 등록(저장/삭제) 시 해당 팝업창 사리지도록 처리 완료
-
-														1</div>
+													<div comp-id="56" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height" role="gridcell" col-id="rn_tt" tabindex="-1" aria-colindex="4" style="left: 250px; width: 300px; text-align: left;">과제명칭</div>
+													<div comp-id="57" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-last" role="gridcell" col-id="rn_desc" tabindex="-1" aria-colindex="5" style="left: 550px; width: 800px; text-align: left;">내용글</div>
 												</div>
-												<div comp-id="58" style="transform: translateY(35px); height: 35px;" role="row" row-index="1" class="ag-row-odd ag-row-no-focus ag-row-not-inline-editing ag-row ag-row-level-0 ag-row-position-absolute" aria-rowindex="3" row-id="1">
-													<div comp-id="59" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-first" role="gridcell" col-id="idate" tabindex="-1" aria-colindex="2" style="left: 0px; width: 160px; text-align: center;">24-07-20</div>
+												<div comp-id="58" style="transform: translateY(40px);" role="row" row-index="1" class="ag-row-odd ag-row-no-focus ag-row-not-inline-editing ag-row ag-row-level-0 ag-row-position-absolute" aria-rowindex="3" row-id="1">
+													<div comp-id="59" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-first" role="gridcell" col-id="idate" tabindex="-1" aria-colindex="2" style="left: 0px; width: 160px; text-align: center;">24-07-17</div>
 													<div comp-id="60" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height" role="gridcell" col-id="btn_rnidx" tabindex="-1" aria-colindex="3" style="left: 160px; width: 90px; text-align: center;"><span>
-															<div><button style="font-size:1.0rem; width:100%;">상세</button></div>
+															<div><button>상세</button></div>
 														</span></div>
-													<div comp-id="61" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height" role="gridcell" col-id="rn_tt" tabindex="-1" aria-colindex="4" style="left: 250px; width: 300px; text-align: left;">Excel 다운로드 기능 적용 (.csv)</div>
-													<div comp-id="62" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-last" role="gridcell" col-id="rn_desc" tabindex="-1" aria-colindex="5" style="left: 550px; width: 800px; text-align: left;">엑셀 다운로드기능 추가 적용 (확장자 .CSV -&gt; 엑셀 호환)
-
-														사용자 : 공지사항, FAQ, 상시과제 메뉴별 각각 적용
-														관리자 : 공지사항, FAQ, 상시과제 메뉴별 각각 적용</div>
-												</div>
-												<div comp-id="63" style="transform: translateY(70px); height: 35px;" role="row" row-index="2" class="ag-row-even ag-row-no-focus ag-row-not-inline-editing ag-row ag-row-level-0 ag-row-position-absolute" aria-rowindex="4" row-id="2">
-													<div comp-id="64" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-first" role="gridcell" col-id="idate" tabindex="-1" aria-colindex="2" style="left: 0px; width: 160px; text-align: center;">24-07-06</div>
-													<div comp-id="65" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height" role="gridcell" col-id="btn_rnidx" tabindex="-1" aria-colindex="3" style="left: 160px; width: 90px; text-align: center;"><span>
-															<div><button style="font-size:1.0rem; width:100%;">상세</button></div>
-														</span></div>
-													<div comp-id="66" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height" role="gridcell" col-id="rn_tt" tabindex="-1" aria-colindex="4" style="left: 250px; width: 300px; text-align: left;">상시과제제출 테스트#001</div>
-													<div comp-id="67" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-last" role="gridcell" col-id="rn_desc" tabindex="-1" aria-colindex="5" style="left: 550px; width: 800px; text-align: left;">상시과제 제출 등록 테스트 진행32 2
-														2</div>
-												</div>
-												<div comp-id="68" style="transform: translateY(105px); height: 35px;" role="row" row-index="3" class="ag-row-odd ag-row-no-focus ag-row-not-inline-editing ag-row ag-row-level-0 ag-row-position-absolute" aria-rowindex="5" row-id="3">
-													<div comp-id="69" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-first" role="gridcell" col-id="idate" tabindex="-1" aria-colindex="2" style="left: 0px; width: 160px; text-align: center;">24-07-17</div>
-													<div comp-id="70" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height" role="gridcell" col-id="btn_rnidx" tabindex="-1" aria-colindex="3" style="left: 160px; width: 90px; text-align: center;"><span>
-															<div><button style="font-size:1.0rem; width:100%;">상세</button></div>
-														</span></div>
-													<div comp-id="71" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height" role="gridcell" col-id="rn_tt" tabindex="-1" aria-colindex="4" style="left: 250px; width: 300px; text-align: left;">과제명칭</div>
-													<div comp-id="72" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-last" role="gridcell" col-id="rn_desc" tabindex="-1" aria-colindex="5" style="left: 550px; width: 800px; text-align: left;">내용글</div>
-												</div>
-												<div comp-id="73" style="transform: translateY(140px); height: 35px;" role="row" row-index="4" class="ag-row-even ag-row-no-focus ag-row-not-inline-editing ag-row ag-row-level-0 ag-row-position-absolute" aria-rowindex="6" row-id="4">
-													<div comp-id="74" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-first" role="gridcell" col-id="idate" tabindex="-1" aria-colindex="2" style="left: 0px; width: 160px; text-align: center;">24-07-17</div>
-													<div comp-id="75" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height" role="gridcell" col-id="btn_rnidx" tabindex="-1" aria-colindex="3" style="left: 160px; width: 90px; text-align: center;"><span>
-															<div><button style="font-size:1.0rem; width:100%;">상세</button></div>
-														</span></div>
-													<div comp-id="76" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height" role="gridcell" col-id="rn_tt" tabindex="-1" aria-colindex="4" style="left: 250px; width: 300px; text-align: left;">확인해주세요</div>
-													<div comp-id="77" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-last" role="gridcell" col-id="rn_desc" tabindex="-1" aria-colindex="5" style="left: 550px; width: 800px; text-align: left;">[현대삼호 조철호 책임]
+													<div comp-id="61" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height" role="gridcell" col-id="rn_tt" tabindex="-1" aria-colindex="4" style="left: 250px; width: 300px; text-align: left;">확인해주세요</div>
+													<div comp-id="62" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-last" role="gridcell" col-id="rn_desc" tabindex="-1" aria-colindex="5" style="left: 550px; width: 800px; text-align: left;">[현대삼호 조철호 책임]
 
 														위 항목에 설명을 위해 넣은 값은 클릭하면 자동으로 사라지게 업데이트 바랍니다.
 														해당 화면의 크기도 조금 더 키워주세요
@@ -23459,33 +23377,41 @@
 
 														등록을 하면 해당 화면이 사라져야 하는데 안 사라집니다.</div>
 												</div>
-												<div comp-id="78" style="transform: translateY(175px); height: 35px;" role="row" row-index="5" class="ag-row-odd ag-row-no-focus ag-row-not-inline-editing ag-row ag-row-level-0 ag-row-position-absolute" aria-rowindex="7" row-id="5">
-													<div comp-id="79" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-first" role="gridcell" col-id="idate" tabindex="-1" aria-colindex="2" style="left: 0px; width: 160px; text-align: center;">24-07-06</div>
-													<div comp-id="80" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height" role="gridcell" col-id="btn_rnidx" tabindex="-1" aria-colindex="3" style="left: 160px; width: 90px; text-align: center;"><span>
+												<div comp-id="63" style="transform: translateY(80px);" role="row" row-index="2" class="ag-row-even ag-row-no-focus ag-row-not-inline-editing ag-row ag-row-level-0 ag-row-position-absolute" aria-rowindex="4" row-id="2">
+													<div comp-id="64" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-first" role="gridcell" col-id="idate" tabindex="-1" aria-colindex="2" style="left: 0px; width: 160px; text-align: center;">24-07-06</div>
+													<div comp-id="65" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height" role="gridcell" col-id="btn_rnidx" tabindex="-1" aria-colindex="3" style="left: 160px; width: 90px; text-align: center;"><span>
 															<div><button style="font-size:1.0rem; width:100%;">상세</button></div>
 														</span></div>
-													<div comp-id="81" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height" role="gridcell" col-id="rn_tt" tabindex="-1" aria-colindex="4" style="left: 250px; width: 300px; text-align: left;">상시과제제출 테스트 #003</div>
-													<div comp-id="82" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-last" role="gridcell" col-id="rn_desc" tabindex="-1" aria-colindex="5" style="left: 550px; width: 800px; text-align: left;">003 번 과제 제출 합니다.</div>
+													<div comp-id="66" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height" role="gridcell" col-id="rn_tt" tabindex="-1" aria-colindex="4" style="left: 250px; width: 300px; text-align: left;">상시과제제출 테스트 #003</div>
+													<div comp-id="67" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-last" role="gridcell" col-id="rn_desc" tabindex="-1" aria-colindex="5" style="left: 550px; width: 800px; text-align: left;">003 번 과제 제출 합니다.</div>
 												</div>
-												<div comp-id="83" style="transform: translateY(210px); height: 35px;" role="row" row-index="6" class="ag-row-even ag-row-no-focus ag-row-not-inline-editing ag-row ag-row-level-0 ag-row-position-absolute ag-row-last" aria-rowindex="8" row-id="6">
-													<div comp-id="84" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-first" role="gridcell" col-id="idate" tabindex="-1" aria-colindex="2" style="left: 0px; width: 160px; text-align: center;">24-07-06</div>
-													<div comp-id="85" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height" role="gridcell" col-id="btn_rnidx" tabindex="-1" aria-colindex="3" style="left: 160px; width: 90px; text-align: center;"><span>
+												<div comp-id="68" style="transform: translateY(120px);" role="row" row-index="3" class="ag-row-odd ag-row-no-focus ag-row-not-inline-editing ag-row ag-row-level-0 ag-row-position-absolute" aria-rowindex="5" row-id="3">
+													<div comp-id="69" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-first" role="gridcell" col-id="idate" tabindex="-1" aria-colindex="2" style="left: 0px; width: 160px; text-align: center;">24-07-06</div>
+													<div comp-id="70" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height" role="gridcell" col-id="btn_rnidx" tabindex="-1" aria-colindex="3" style="left: 160px; width: 90px; text-align: center;"><span>
 															<div><button style="font-size:1.0rem; width:100%;">상세</button></div>
 														</span></div>
-													<div comp-id="86" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height" role="gridcell" col-id="rn_tt" tabindex="-1" aria-colindex="4" style="left: 250px; width: 300px; text-align: left;">상시과제제출 등록 #002</div>
-													<div comp-id="87" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-last" role="gridcell" col-id="rn_desc" tabindex="-1" aria-colindex="5" style="left: 550px; width: 800px; text-align: left;">상시과제 제출 등록 테스트 진행</div>
+													<div comp-id="71" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height" role="gridcell" col-id="rn_tt" tabindex="-1" aria-colindex="4" style="left: 250px; width: 300px; text-align: left;">상시과제제출 등록 #002</div>
+													<div comp-id="72" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-last" role="gridcell" col-id="rn_desc" tabindex="-1" aria-colindex="5" style="left: 550px; width: 800px; text-align: left;">상시과제 제출 등록 테스트 진행</div>
+												</div>
+												<div comp-id="73" style="transform: translateY(160px);" role="row" row-index="4" class="ag-row-even ag-row-no-focus ag-row-not-inline-editing ag-row ag-row-level-0 ag-row-position-absolute ag-row-last" aria-rowindex="6" row-id="4">
+													<div comp-id="74" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-first" role="gridcell" col-id="idate" tabindex="-1" aria-colindex="2" style="left: 0px; width: 160px; text-align: center;">24-07-06</div>
+													<div comp-id="75" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height" role="gridcell" col-id="btn_rnidx" tabindex="-1" aria-colindex="3" style="left: 160px; width: 90px; text-align: center;"><span>
+															<div><button style="font-size:1.0rem; width:100%;">상세</button></div>
+														</span></div>
+													<div comp-id="76" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height" role="gridcell" col-id="rn_tt" tabindex="-1" aria-colindex="4" style="left: 250px; width: 300px; text-align: left;">상시과제제출 테스트#001</div>
+													<div comp-id="77" class="ag-cell-value ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-last" role="gridcell" col-id="rn_desc" tabindex="-1" aria-colindex="5" style="left: 550px; width: 800px; text-align: left;">상시과제 제출 등록 테스트 진행32 2</div>
 												</div>
 											</div>
 										</div>
 										<!--AG-ROW-CONTAINER-->
-										<div class="ag-pinned-right-cols-container ag-hidden" ref="rightContainer" name="right" role="presentation" aria-hidden="true" style="height: 245px; width: 0px; max-width: 0px; min-width: 0px;"></div>
+										<div class="ag-pinned-right-cols-container ag-hidden" ref="rightContainer" name="right" role="presentation" aria-hidden="true" style="height: 175px; width: 0px; max-width: 0px; min-width: 0px;"></div>
 										<!--AG-ROW-CONTAINER-->
-										<div class="ag-full-width-container" ref="fullWidthContainer" name="fullWidth" role="presentation" style="height: 245px;"></div>
+										<div class="ag-full-width-container" ref="fullWidthContainer" name="fullWidth" role="presentation" style="height: 175px;"></div>
 									</div>
 									<!--AG-FAKE-VERTICAL-SCROLL-->
 									<div class="ag-body-vertical-scroll ag-hidden" aria-hidden="true" style="width: 0px; max-width: 0px; min-width: 0px;">
 										<div class="ag-body-vertical-scroll-viewport" ref="eViewport" style="width: 0px; max-width: 0px; min-width: 0px;">
-											<div class="ag-body-vertical-scroll-container" ref="eContainer" style="height: 245px; width: 0px; max-width: 0px; min-width: 0px;"></div>
+											<div class="ag-body-vertical-scroll-container" ref="eContainer" style="height: 175px; width: 0px; max-width: 0px; min-width: 0px;"></div>
 										</div>
 									</div>
 								</div>
@@ -23546,9 +23472,9 @@
 							<span class="ag-paging-row-summary-panel" role="status">
 								<span id="ag-25-first-row" ref="lbFirstRowOnPage" class="ag-paging-row-summary-panel-number">1</span>
 								<span id="ag-25-to">to</span>
-								<span id="ag-25-last-row" ref="lbLastRowOnPage" class="ag-paging-row-summary-panel-number">7</span>
+								<span id="ag-25-last-row" ref="lbLastRowOnPage" class="ag-paging-row-summary-panel-number">5</span>
 								<span id="ag-25-of">of</span>
-								<span id="ag-25-row-count" ref="lbRecordCount" class="ag-paging-row-summary-panel-number">7</span>
+								<span id="ag-25-row-count" ref="lbRecordCount" class="ag-paging-row-summary-panel-number">5</span>
 							</span>
 							<span class="ag-paging-page-summary-panel" role="presentation">
 								<div ref="btFirst" class="ag-button ag-paging-button ag-disabled" role="button" aria-label="First Page" tabindex="0" aria-disabled="true"><span class="ag-icon ag-icon-first" unselectable="on" role="presentation"></span></div>
@@ -23574,7 +23500,7 @@
 		<!----------------- 컨텐츠 끝 ------------------->
 
 		<!----------------- Page Script ------------------->
-		<script type="text/javascript" src="./HS 상시과제제출_files/ttmn_script_rd.js.다운로드">"></script>
+		<script type="text/javascript" src="./HS 상시과제제출_files/ttcu_script_rd.js.다운로드">"></script>
 
 		<!----------------- Pluging Script ------------------->
 		<link rel="stylesheet" type="text/css" href="./HS 상시과제제출_files/pignose.calendar.css">
@@ -23583,13 +23509,6 @@
 		<script type="text/javascript" src="./HS 상시과제제출_files/pignose.calendar.js.다운로드"></script>
 
 		<script type="text/javascript">
-
-			$(document).ready(function () {
-				setTimeout(function () {
-					btn_click_search();
-				}, 500);
-			});
-
 			$(function () {
 				$('.calendar').pignoseCalendar({
 					lang: 'ko'
@@ -23603,9 +23522,7 @@
 				resizeH('myGrid');
 			});
 
-			function export_excel() {
-				gridApi.exportDataAsCsv();
-			}
+
 		</script>
 
 		<!----------------- Util Script ------------------->
@@ -23654,7 +23571,8 @@
 						console.log(params.data);
 
 						click_row(3, params.data.rnidx);
-						// btn_click_show_modal_dtl(params.data.rnidx);
+
+						//btn_click_show_modal_dtl(params.data.rnidx);
 					}
 				},
 			};
@@ -23678,8 +23596,8 @@
 		<style>
 			.ag-header {
 				/* Header Cell 높이 조정 */
-				height: 35px !important;
-				min-height: 35px !important;
+				height: 40px !important;
+				min-height: 40px !important;
 				background: #1c1c1c;
 				border-bottom: 1px solid #333333;
 			}
@@ -23690,8 +23608,10 @@
 
 			.ag-header-cell-text {
 				/* Header Cell 값 표시 Font-size */
-				font-size: 0.85rem;
-				color: #858585;
+				/*font-size: 0.85rem;
+			 	color: #858585; */
+				font-size: 15px;
+				color: #ffffff;
 				font-weight: 600;
 			}
 
@@ -23704,11 +23624,12 @@
 			}
 
 			.ag-cell-value {
-				/* Row Cell 값 표시 Font-size */
-				font-size: 0.85rem;
-				line-height: 1.2rem;
+				/* Row Cell 값 표시 Font-size 
+				font-size: 0.85rem;*/
+				line-height: 1.0rem;
 				color: #E5E5E5;
 				/* background: #0C1314!important; */
+				font-size: 14px;
 			}
 
 			.ag-root-wrapper {
@@ -23736,13 +23657,39 @@
 			}
 
 			.ag-row {
-				height: 1.8rem !important;
+				/* height: 2.0rem !important; */
+				height: 40px !important;
 				border-bottom: 1px solid #2e2e2e;
 			}
 
 			.ag-ltr .ag-cell {
-				/* margin-top: 0.4rem !important; */
-				line-height: 1.6rem;
+				margin-top: 0.0rem !important;
+				/* line-height: 1.6rem;*/
+				line-height: 40px;
+			}
+		</style>
+
+		<style>
+			.tt-btn-box {
+
+				/* 20240724 add css [s] */
+
+				margin: 0px !important;
+				padding: 0px !important;
+				width: 100% !important;
+				height: 50% !important;
+				border: 0px solid #FFFFFF;
+			}
+
+			.tt-btn-box ul {
+				display: inline-block ! important;
+				width: 30.0% ! important;
+				height: 100% ! important;
+				/* margin: 0 5px 5px 5px ! important;*/
+				padding: 0px ! important;
+				font-size: 0.8rem;
+				/* 20240720 modify[s] */
+				margin: 5px 5px 5px 5px ! important;
 			}
 		</style>
 
@@ -23755,19 +23702,25 @@
 
 		<input type="hidden" id="index_key" value="" placeholder="">
 
+
 		<div id="modal-dtl" class="modal-dtl">
 			<div id="onetrust-banner-sdk" class="otFloatingRoundedCorner ot-bottom-left ot-wo-title vertical-align-content" tabindex="0" role="region" aria-label="Cookie banner">
 				<div class="ot-sdk-container" role="alertdialog" aria-describedby="onetrust-policy-text" aria-label="Privacy">
 					<div class="ot-sdk-row">
-						<div id="onetrust-group-container" class="ot-sdk-twelve ot-sdk-columns">
-							<div id="onetrust-policy" style="height:100%;">
-								<div class="banner-header">
-									<div class="banner-actions-container">
-										<p style="float:left;">상시과제등록관리</p>
-										<button onclick="btn_click_save();" style="background: #1E90FF">저장</button>
-										<button onclick="btn_click_del();" style="background: #FF6347">삭제</button>
-									</div>
+						<div id="onetrust-group-container" class="ot-sdk-twelve ot-sdk-columns" style="display: flex;    flex-direction: column;">
+							<div class="banner-header">
+								<div class="banner-actions-container">
+									<p style="float:left;">상시과제등록관리</p>
+
+
+									<button id="onetrust-reject-all-handler" onclick="click_close();" style="top:10px;">
+										<img src="/images/icon_X.svg" alt="닫기" class="btn-close">
+										<!-- Close -->
+									</button>
 								</div>
+							</div>
+
+							<div id="onetrust-policy" class="modal-container">
 
 								<input type="hidden" id="rr_rnidx" value="" readonly="readonly">
 								<input type="hidden" id="rr_rn_no" style="width:80%; float:left; background:#1c1c1c;" value="" placeholder="-" readonly="readonly">
@@ -23775,44 +23728,50 @@
 								<textarea type="text" id="rr_memo" style="display:none; width:90%; height:200px; float:left; color:#e5e5e5;" value="" placeholder="-"></textarea>
 
 								<div id="onetrust-policy-title" style="width:50%;">
-									<p>부서</p> <input id="rr_rn_dept" value="" placeholder="제출자부서">
+									<p>부서</p> <input id="rr_rn_dept" value="" type="text" name="제출자부서" placeholder="제출자부서">
 								</div>
 								<div id="onetrust-policy-title" style="width:50%;">
-									<p>성명</p> <input id="rr_rn_nm" value="" placeholder="제출자성명">
+									<p>성명</p> <input id="rr_rn_nm" value="" type="text" name="제출자성명" placeholder="제출자성명">
 								</div>
 								<div id="onetrust-policy-title" style="width:50%;">
-									<p>범위</p> <input id="rr_rn_area" value="" placeholder="적용범위">
+									<p>범위</p> <input id="rr_rn_area" value="" type="text" name="적용범위" placeholder="적용범위">
 								</div>
 								<div id="onetrust-policy-title" style="width:50%;">
-									<p>시간</p> <input id="rr_rn_min" value="" placeholder="소요시간/1회(분:min)">
+									<p>시간</p> <input id="rr_rn_min" value="" type="text" name="소요시간/1회(분:min)" placeholder="소요시간/1회(분:min)">
 								</div>
 								<div id="onetrust-policy-title" style="width:50%;">
-									<p>횟수</p> <input id="rr_rn_cnt" value="" placeholder="동작횟수(회/월)">
+									<p>횟수</p> <input id="rr_rn_cnt" value="" type="text" name="동작횟수(회/월)" placeholder="동작횟수(회/월)">
 								</div>
 								<div id="onetrust-policy-title" style="width:50%;">
 									<p>유형</p>
 									<select id="rr_rn_ty">
-										<option value="">과제유형선택</option>
+										<option value="">--과제구분항목--</option>
 										<option value="0">일반</option>
 										<option value="1">중요</option>
 									</select>
 								</div>
 								<div id="onetrust-policy-title">
-									<p style="width:15.0%;">제목</p> <input id="rr_rn_tt" value="" placeholder="상시과제제목" style="width:81.5%">
+									<p>제목</p> <input id="rr_rn_tt" value="" name="상시과제제목" placeholder="상시과제제목" style="width:80%">
 								</div>
 								<div id="onetrust-policy-text">
 									<textarea id="rr_rn_desc" placeholder="상시과제설명"></textarea>
 								</div>
 							</div>
-						</div>
 
-						<div id="onetrust-button-group-parent">
-							<div id="onetrust-button-group">
-								<div class="banner-actions-container">
-									<button id="onetrust-reject-all-handler" onclick="click_close();" style="top:10px;">Close</button>
+							<div id="onetrust-button-group-parent">
+								<div id="onetrust-button-group">
+									<div class="banner-actions-container banner-btn-wrap">
+										<!-- <button id="onetrust-reject-all-handler" onclick="click_close();" style="top:10px;">Close</button> -->
+										<button onclick="btn_click_save();" class="btn-save">저장</button>
+										<button onclick="btn_click_del();" class="btn-del">삭제</button>
+
+
+									</div>
 								</div>
 							</div>
 						</div>
+
+
 
 						<!-- Close Button -->
 						<div id="onetrust-close-btn-container"></div>
@@ -23822,6 +23781,7 @@
 			</div>
 
 		</div>
+
 
 		<script>
 			function click_row(brdid, idx) {
@@ -23838,7 +23798,7 @@
 					//reqSearch(method, '/tt/cu/data/fa/search-dtl.api', formdata, result_search_data_dtl_g2);
 				}
 				else if (brdid == 3) {
-					reqSearch(method, '/tt/cu/data/rd/search-dtl.api', formdata, result_search_dtl);
+					//reqSearch(method, '/tt/cu/data/rd/search-dtl.api', formdata, result_search_dtl);
 				}
 			}
 			function click_close() {
@@ -23858,35 +23818,25 @@
 
 
 	<!-- contents_footer -->
-	<div id="wrapper" class="result-msg-box" style="display:none; position:fixed; top: 0; width:100%!important; height:100%; margin:0; z-index:1100; background:#181d26; overflow-y: hidden; overflow-x: hidden;">
-		<div class="wrap_slidebar" style="width:500px; height:40%; background:#5e5e5e; border:1px solid #000000; margin:0; position:absolute; margin-left: 50%; left:-250px; margin-top:5%;">
-			<div class="tt-input-box" style="width:100%; height:10%; background:#000000; margin-left:0;  padding:0;">
+	<div id="wrapper" class="result-msg-box" style="display:none;">
+		<div class="wrap_slidebar">
+			<!--  <div class="tt-input-box" style="width:100%; height:10%; background:#000000; padding:0; margin: 0 !important;">
+			</div> -->
+			<div class="tt-input-box">
 				<!-- 상담입력창 이벤트처리 -->
-				<ul style="width:100%; height:30px; float:left; border:0px solid #000000;">
-					<li class="" style="width:100%;">
-						<h3 style="color:#FFFFFF; font-size:0.9rem; line-height:2.0rem;">메세지</h3>
+				<ul class="">
+					<li class="msg-header">
+						<h3>메세지</h3>
+						<a href="http://localhost:5080/tt/cu/page/rd#" onclick="btn_click_close(); return false;">
+							<!-- <div class="btn_b" style="width:100%; height:30px; margin-left:2%; background:#1C86EE; border:1px solid #5e5e5e; border-radius: 5px; font-size:0.8rem; font-weight:600; line-height:200%; color:#FFFFFF;">창 닫기</div>-->
+							<img src="/images/icon_X.svg" alt="닫기" class="btn-close">
+						</a>
 					</li>
 				</ul>
-			</div>
 
-			<div class="tt-input-box" style="width:100%; height:100%; margin:0px 0px 0 0; padding:0; border:1px solid #5e5e5e;">
-
-
-				<div class="tt-input-box" style="margin:0px; width:100%; height:88%; padding:0; border:0px solid #000000; background:#FFFFFF;">
-					<p id="msg_box-row1" style="width:100%; height: 60px; font-size:0.9rem; text-align:center; border:0px solid #FFFFFF;">
-
-					</p>
-					<p id="msg_box-row2" style="width:100%; height: 60px; font-size:0.9rem; text-align:center; border:0px solid #FFFFFF;">
-
-					</p>
-					<p id="msg_box-row3" style="width:100%; height: 60px; font-size:0.9rem; text-align:center; border:0px solid #FFFFFF;">
+				<div class="tt-input-box" style="margin:0px; width:100%; height:200px; padding:0; border:0px solid #000000; background:#26262A;display: flex;align-items: center;justify-content: center; border-radius:0 0 25px 25px">
+					<p id="msg_box-row3" style="width:100%; height: 60px; font-size:16px; text-align:center; border:0px solid #FFFFFF;left: 0;top: 0;line-height: 60px;color: #fff !important; font-weight: 700;">
 						저장 등록 되었습니다.
-					</p>
-					<p id="msg_box-row4" style="width:100%; height: 60px; font-size:0.9rem; text-align:center; border:0px solid #FFFFFF;">
-
-					</p>
-					<p id="msg_box-row5" style="width:100%; height: 60px; font-size:0.9rem; text-align:center; border:0px solid #FFFFFF;">
-
 					</p>
 				</div>
 
@@ -23894,9 +23844,9 @@
 					<!-- 상담입력창 이벤트처리 -->
 					<ul style="width:100%; height:100%; float:left;">
 						<li class="" style="width:100%;">
-							<a href="http://localhost:8080/tt/mn/page/rd#" onclick="btn_click_close(); return false;" style="display:inline-block; color:#FFFFFF; width:40%;">
-								<div class="btn_b" style="width:100%; height:30px; margin-left:2%; background:#1C86EE; border:1px solid #5e5e5e; border-radius: 5px; font-size:0.8rem; font-weight:600; line-height:200%; color:#FFFFFF;">창 닫기</div>
-							</a>
+							<!-- <a href="http://localhost:5080/tt/cu/page/rd#" onclick="btn_click_close(); return false;" style="display:inline-block; color:#FFFFFF; width:40%;">
+							 	<div class="btn_b" style="width:100%; height:30px; margin-left:2%; background:#1C86EE; border:1px solid #5e5e5e; border-radius: 5px; font-size:0.8rem; font-weight:600; line-height:200%; color:#FFFFFF;">창 닫기</div>
+							</a>-->
 						</li>
 					</ul>
 				</div>
@@ -23915,7 +23865,7 @@
 			function alert_msg_show() {
 				$('.result-msg-box').css('display', '');
 
-				$('#msg_box-row3').css('color', 'red');
+				$('#msg_box-row3').css('color', 'ffffff');
 				$('#msg_box-row3').css('font-weight', '600');
 			}
 
@@ -23926,7 +23876,7 @@
 				$('#msg_box-row1').css('font-weight', '');
 				$('#msg_box-row2').css('color', '#000000');
 				$('#msg_box-row2').css('font-weight', '');
-				$('#msg_box-row3').css('color', '#000000');
+				$('#msg_box-row3').css('color', '#ffffff');
 				$('#msg_box-row3').css('font-weight', '');
 				$('#msg_box-row4').css('color', '#000000');
 				$('#msg_box-row4').css('font-weight', '');
@@ -23966,6 +23916,26 @@
 			});
 		})(jQuery);
 	</script>
+
+
+	<script>
+		document.addEventListener('DOMContentLoaded',
+			function () {
+				// 20240720 add script - ley
+				const navItems = document
+					.querySelectorAll('.st2');
+
+				navItems.forEach(item => {
+					item.addEventListener('click',
+						function () {
+							navItems.forEach(navItem => navItem
+								.classList.remove('active'));
+							this.classList.add('active');
+						});
+				});
+			});
+	</script>
+
 
 	<!-- template..account -->
 </body>
