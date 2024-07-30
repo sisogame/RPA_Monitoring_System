@@ -93,7 +93,7 @@ h6 {font-size:1.4rem;}
 /* 각 항목 타이틀 */
 /* 20240720 modify [s] */
 /* h3.title { font-size:0.95rem; font-weight: 600; color: #aeaeae ! important; } */
-h3.title {  font-size: 1.125rem;
+h3.title {  font-size: 16px;
     font-weight: 600;
     color: #d5c1fc  ! important;
     line-height: 36px;} 
@@ -341,6 +341,26 @@ li{list-style:none; margin:0px; padding:0px;}
  .al_bottom:hover .circle { width: 200%; height: 500%; opacity: 1; top: -70px; left: -70px; } 
  
  .al_bottom:hover .st2 { color: #fff; } 
+
+ .title .circle { width: 0%; height: 0%; opacity: 0; line-height: 40px; border-radius: 50%; background: #88c993; position: absolute; transition: all .5s ease-Out; top: 20px; left: 70px; color: #2a2a2a !important; } 
+
+.btn-down { width: 92px; position: relative; overflow: hidden; cursor: pointer; border-radius: 20px !important; text-align: center; border: 1px solid #fff; border-radius: 5px; } 
+
+.btn-excel { position: relative; transition: all .45s ease-Out; color: #2a2a2a !important; font-size: 15px !important; } 
+
+.btn-down:hover .circle { width: 200%; height: 500%; opacity: 1; top: -70px; left: -70px; } 
+
+.btn-down:hover a { color: #2a2a2a !important; } 
+
+.btn-link .circle { width: 0%; height: 0%; opacity: 0; line-height: 40px; border-radius: 50%; background: #ab98cb; position: absolute; transition: all .5s ease-Out; top: 20px; left: 70px; color: #2a2a2a !important; } 
+
+.btn-link { width: 92px; position: relative; overflow: hidden; cursor: pointer; border-radius: 20px !important; text-align: center; border: 1px solid #fff; border-radius: 5px; } 
+
+.btn-pj { position: relative; transition: all .45s ease-Out; color: #2a2a2a !important; font-size: 15px !important; } 
+
+.btn-link:hover .circle { width: 200%; height: 500%; opacity: 1; top: -70px; left: -70px; } 
+
+.btn-link:hover a { color: #2a2a2a !important; } 
  
  /* 20240723 modify [e] */
 

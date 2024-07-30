@@ -96,7 +96,7 @@ h6 { font-size: 1.4rem; }
 /* 20240720 modify [s] */
 /* h3.title { font-size:0.95rem; font-weight: 600; color: #aeaeae ! important; } */
 h3.title { /* font-size: 1.125rem; */
- font-size: 16px; font-weight: 600; color: #D5C1FC ! important; } 
+ font-size: 16px; font-weight: 600; color: #D5C1FC ! important; line-height: 38px !important; } 
 
 /* 20240720 modify [e] */
 
