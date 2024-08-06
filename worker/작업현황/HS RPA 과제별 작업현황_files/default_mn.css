@@ -2,7 +2,7 @@
 url('../../fonts/nanumsquarer.woff2') format('woff2'),
 url('../../fonts/nanumsquarer.woff') format('woff'),
 url('../../fonts/nanumsquarer.ttf') format('truetype'),
-url('../../fonts/nanumsquarer.svg#nanumsquarerregular') format('svg');font-weight: normal;font-style: normal; } 
+url('../../fonts/nanumsquarer.svg#nanumsquarerregular') format('svg'); font-weight: normal; font-style: normal; } 
 
 
 @font-face { font-family: 'nanumsquarerb'; src: url('../../fonts/nanumsquarerb.eot'); src: url('../../fonts/nanumsquarerb.eot?#iefix') format('embedded-opentype'),
@@ -188,7 +188,7 @@ li { list-style: none; margin: 0px; padding: 0px; }
  background-color: #181d26; width: 150px; height: 100%; padding-left: 0px; border-right: 1px solid #2e2e2e; } 
 
 
-#allmenu .al_acc { width: 200px; /* height: 5rem; */
+#allmenu .al_acc { width: 230px; /* height: 5rem; */
  /* background: #313131; */
  height: 3.75rem; margin-left: .625rem; background-color: #181d26; /* padding: 3.75rem 2.5rem; */ } 
 
@@ -542,9 +542,8 @@ li { list-style: none; margin: 0px; padding: 0px; }
 .navbarWrap { background: #181d26; height: 3.75rem; /* border-bottom: .0625rem solid #0049C4; */
  padding: 0 !important; } 
 
-.navbarWrap .navbar__logoimg { width: 4.6875rem; margin-left: .3125rem; line-height: 0; padding: 0; margin-top: .8125rem; } 
-
-.navbarWrap .navbar__logo__tit { color: #e5e5e5; font-weight: 600; margin-top: 0rem; margin-left: .3125rem; font-size: 1.125rem; padding: 0; line-height: 150%; letter-spacing: -0.0313rem; text-align: left; word-break: break-all; /* font-family: &#39; NotoKrR&#39; , &#39; 나눔 고딕&#39; , NotoKrR Gothic, &#39; 맑은 고딕&#39; , Malgun Gothic, &#39; 돋움&#39; , dotum, Helvetica, sans-serif; } */ } 
+ .navbarWrap .navbar__logoimg { width:75px; margin-left:5px; line-height:0; padding:0; margin-top: 13px; } 
+ .navbarWrap .navbar__logo__tit { color:#e5e5e5; font-weight:600; margin-top:-0px; margin-left: 5px; font-size:18px; padding:0; line-height: 150%; letter-spacing: -0.5px; text-align: left; word-break: break-all; /* font-family: &#39; NotoKrR&#39; , &#39; 나눔 고딕&#39; , NotoKrR Gothic, &#39; 맑은 고딕&#39; , Malgun Gothic, &#39; 돋움&#39; , dotum, Helvetica, sans-serif; } */}
 
 .navbar-wrap { position: absolute; height: 2.5rem; float: left; display: block; margin-left: 15.625rem; margin-top: 0rem; } 
 
@@ -604,7 +603,7 @@ li { list-style: none; margin: 0px; padding: 0px; }
 .cell-bgColor { background-color: #92a1c8 !important; } 
 
 
-.btn-reg.btn-new { width: auto; height: 32px; float: right; background: #C1C3FF; border: 1px solid #707070; border-radius: 25px; line-height: 32px; padding: 0 15px; } 
+.btn-reg.btn-new { width: auto; height: 32px; float: right; background: #84C2B7; border: 1px solid #707070; border-radius: 25px; line-height: 32px; padding: 0 15px; } 
 
 .tt-grid-box .titleWrap { width: 100%; display: flex; align-items: center; margin-left: 15px; } 
 
@@ -623,7 +622,8 @@ li { list-style: none; margin: 0px; padding: 0px; }
 
 .tt-input-box ul .title.tt::before { content: ''; display: inline-block; background: url(/images/icon-triangle.svg); width: 10px; height: 11px; position: absolute; top: 33px; right: 18px; } 
 
-.btn-down { display: inline-block; width: 92px !important; height: 24px; padding: 5px 15px; border: 1px solid #fff; border-radius: 20px; background: #b4e5b0; line-height: 16px; } 
+.btn-down { display: inline-block; width: 92px !important; height: 24px; padding: 5px 15px; /* border: 1px solid #fff; */
+ border: 1px solid rgba(255,255,255,0.2) !important; border-radius: 20px; background: #949ACE; line-height: 16px; } 
 
 .btn-down .btn-excel { outline: none; background: none; border: none; font-size: 15px !important; } 
 

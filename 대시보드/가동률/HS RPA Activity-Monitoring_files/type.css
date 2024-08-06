@@ -807,13 +807,20 @@ input { border: solid 1px #969696; border-radius: 3px; }
 
 .dashborad-table .t-bg-darkGy { background: #292929; } 
 
-.dashborad-table .t-bg-middleGy { background: #4D4D4D; } 
+.dashborad-table .t-bg-middleGy { background: #424656; } 
 
 .dashborad-table .t-bg-lightGy { background: #BBBBBB; } 
 
 .dashborad-table .t-bg-grape { background: #372463; } 
 
 /* 20240723 modify [e] */
+
+/* 20240805 modify[s] */
+.dashborad-table td .c-action { background: #00AE41 ! important; } 
+.dashborad-table td .c-wait { background: #FFE600 ! important; } 
+.dashborad-table td .c-error { background: #FF0000 ! important; } 
+.dashborad-table .t-bg-transparent { background: transparent !important; } 
+/* 20240805 modify[e] */
 
 
 
